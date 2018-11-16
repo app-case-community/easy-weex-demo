@@ -1,51 +1,33 @@
 <template>
-<div class="flymeui">
-    <scroller class="scroller">
-        <div class="list">
+<div>
+    <am-nav-bar
+        title="Easy Weex Demo"
+        :left-btn="[]"
+      ></am-nav-bar>
+    <scroller>
+        <am-list>
             <template v-for="(component, idx) in demoList">
-                <fm-item class="list-item"
+                <am-list-item class="list-item"
                     :key="idx"
                     :title="component.name"
-                    :summary="component.subname"
-                    type="icon-small"
-                    :imgSrc="component.icon"
-                    occupying-color="#FFFFFF"
-                    @fmItemClicked="jump(component.path)"></fm-item>
+                    :extra="component.subname"
+                    :thumb="component.icon"
+                    @click="jump(component.path)" />
             </template>
-        </div>
+        </am-list>
     </scroller>
 </div>
 </template>
-<style scoped>
-.flymeui {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #fafafa;
-}
-
-.scroller {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #fafafa;
-}
-.list-item {
-  background-color: #ffffff;
-}
-</style>
 <script>
-import { FmItem } from 'weex-flymeui';
+import { AmNavBar, AmList, AmListItem, Utils } from "weex-amui";
 const navigator = weex.requireModule('navigator');
 const env = weex.config.env;
 const url = weex.config.bundleUrl;
 export default {
   components: {
-    FmItem
+    AmNavBar, 
+    AmList, 
+    AmListItem
   },
   data() {
     return {

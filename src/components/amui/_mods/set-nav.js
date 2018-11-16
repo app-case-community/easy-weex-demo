@@ -8,7 +8,7 @@ import { Utils } from 'weex-amui'
 const navigationBar = weex.requireModule('navigationBar')
 const navigator = weex.requireModule('navigator')
 
-export const setTitle =  (title) => {
+export function setTitle (title) {
   if (navigationBar && navigationBar.setTitle) {
     const NOOP = () => {}
     navigationBar.setTitle({
