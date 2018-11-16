@@ -27,6 +27,10 @@
     "no-undefined": "off",
     "array-bracket-spacing": "off",
     "no-unused-expressions": "off",
+    "func-style": [
+      "error",
+      "expression"
+    ],
     "comma-dangle": [
       "error",
       "never"

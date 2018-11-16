@@ -21,10 +21,7 @@ const config  = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    {
-      uglifyJs: false
-    }
+    new CleanWebpackPlugin(['dist'])
   ],
   done() {}
 };
