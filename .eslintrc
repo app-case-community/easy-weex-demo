@@ -1,0 +1,44 @@
+{
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "no-tabs": "off",
+    "new-cap": "off",
+    "eol-last": "off",
+    "newline-after-var": "off",
+    "no-invalid-this": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "guard-for-in": "off",
+    "no-console": "off",
+    "no-undefined": "off",
+    "array-bracket-spacing": "off",
+    "no-unused-expressions": "off",
+    "func-style": [
+      "error",
+      "expression"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ]
+  },
+  "globals": {
+    "window": true,
+    "Vue": true
+  },
+  "parser": "babel-eslint"
+}

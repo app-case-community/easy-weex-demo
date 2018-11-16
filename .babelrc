@@ -1,0 +1,28 @@
+{
+  "presets": ["es2015", "stage-0"],
+  "plugins": [
+    "add-module-exports",
+    "transform-object-rest-spread",
+    "syntax-dynamic-import",
+    "transform-object-assign",
+    [
+      "component",
+      {
+        "libraryName": "weex-amui",
+        "libDir": "packages",
+        "style": false
+      },
+      {
+        "libraryName": "weex-ui",
+        "libDir": "packages",
+        "style": false
+      },
+      {
+        "libraryName": "weex-flymeui",
+        "libDir": "packages",
+        "style": false
+      }
+    ]
+  ],
+  "comments": false
+}

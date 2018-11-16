@@ -1,0 +1,64 @@
+{
+  "name": "easy-weex",
+  "version": "1.0.0",
+  "description": "weex native and web build boilerplate",
+  "scripts": {
+    "build": "rm -rf dist && easy build prod",
+    "start": "easy start",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "extend": "^3.0.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0",
+    "weex-amui": "^0.1.1",
+    "weex-flymeui": "^0.1.25",
+    "weex-ui": "^0.6.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "easywebpack-cli": "^3.12.0",
+    "easywebpack-weex": "^3.2.0",
+    "eslint": "^3.18.0",
+    "eslint-config-eslint": "^5.0.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-vue": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "imagemin-webpack-plugin": "^2.3.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "ci": {
+    "version": "6, 8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hubcarl/easywebpack-weex-boilerplate.git"
+  },
+  "author": "hubcarl@126.com",
+  "webpack": {
+    "loaders": {
+      "scss": true
+    }
+  }
+}

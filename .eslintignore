@@ -1,0 +1,13 @@
+test/fixtures
+test/benchmark
+test/client
+
+coverage/
+private/
+run/
+
+public/
+node_modules/
+plugins/
+.temp
+dist/
