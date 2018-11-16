@@ -4,6 +4,6 @@ const config = {
   lib: [helper.rootNode('web/web.js')],
   pageDir: 'src/views',
   templateDir: '.temp',
-  globalFilePath: 'global.js'
+  globalFile: 'global'
 }
 module.exports = config
