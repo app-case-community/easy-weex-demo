@@ -5,8 +5,18 @@
         :left-btn="[]"
       ></am-nav-bar>
     <scroller>
-        <am-list>
-            <template v-for="(component, idx) in demoList">
+        <am-list header="weex 开源组件">
+            <template v-for="(component, idx) in openUiList">
+                <am-list-item class="list-item"
+                    :key="idx"
+                    :title="component.name"
+                    :extra="component.subname"
+                    :thumb="component.icon"
+                    @click="jump(component.path)" />
+            </template>
+        </am-list>
+        <am-list header="weex 开源案例">
+            <template v-for="(component, idx) in openCasesList">
                 <am-list-item class="list-item"
                     :key="idx"
                     :title="component.name"
@@ -31,24 +41,38 @@ export default {
   },
   data() {
     return {
-      demoList: [
+      openUiList: [
         {
           name: "ui",
           subname: "weex-ui",
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
-          path: "ui"
+          path: "uis/ui"
         },
         {
           name: "flymeui",
           subname: "weex-flymeui",
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
-          path: "flyme"
+          path: "uis/flyme"
         },
         {
           name: "amui",
           subname: "weex-amui",
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
-          path: "amui"
+          path: "uis/amui"
+        }
+      ],
+      openCasesList: [
+        {
+          name: "咸鱼",
+          subname: "weex-xianyu",
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path: "cases/xianyu"
+        },
+        {
+          name: "严选",
+          subname: "weex-yanxuan",
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path: "cases/yanxuan"
         }
       ]
     };
