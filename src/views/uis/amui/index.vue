@@ -26,7 +26,7 @@
           title="am-tab-container 多面板"
           @click="handleClick('am-tab-container')"
         />
-        <am-list-item
+        <am-list-item v-if="!isWeb"
           title="am-native-tab-container 多面板(native)"
           @click="handleClick('am-native-tab-container')"
         />
@@ -138,7 +138,9 @@ const navigator = weex.requireModule('navigator')
 export default {
   components: { AmNavBar, AmList, AmListItem },
   data () {
-    return {}
+    return {
+      isWeb: Utils.isWeb()
+    }
   },
   methods: {
     handleClick (name) {
