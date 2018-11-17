@@ -21,6 +21,11 @@
         "libraryName": "weex-flymeui",
         "libDir": "packages",
         "style": false
+      },
+      {
+        "libraryName": "weex-droplet-ui",
+        "libDir": "packages",
+        "style": false
       }
     ]
   ],

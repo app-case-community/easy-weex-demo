@@ -61,6 +61,12 @@ export default {
           path: "uis/amui"
         },
         {
+          name:'droplet',
+          subname: 'weex-droplet-ui',
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path: "uis/droplet"
+        },
+        {
           name:'progress',
           subname: 'wx-progress',
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
