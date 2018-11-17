@@ -2,7 +2,7 @@ const path = require('path')
 const { resolve } = path
 const fs = require('fs-extra')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const { getGlobalCode } = require('./global')
+const { getGlobalCode, getTemplateCode } = require('./global')
 const config = require('./config')
 const helper = require('./helper')
 const glob = require('glob');
@@ -28,6 +28,10 @@ const getEntryFileContent = (entryPath, vueFilePath) => {
   return contents;
 }
 
+const getTemplateContent = vueFilePath => {
+  return getTemplateCode(vueFilePath)
+}
+
 const getEntryFile = (dir) => {
   dir = dir || config.pageDir;
   let entrys = {}
@@ -36,9 +40,11 @@ const getEntryFile = (dir) => {
   entries.forEach(entry => {
     const extname = path.extname(entry);
     const basename = entry.replace(`${dir}/`, '').replace(extname, '')
-    const templatePath = path.join(templateDir, basename + '.js')
-    entrys[basename] = templatePath
-    fs.outputFileSync(templatePath, getEntryFileContent(templatePath, entry));
+    const templateJsPath = path.join(templateDir, basename + '.js')
+    const templateHtmlPath = path.join(templateDir, basename + '.html')
+    entrys[basename] = templateJsPath
+    fs.outputFileSync(templateJsPath, getEntryFileContent(templateJsPath, entry))
+    fs.outputFileSync(templateHtmlPath, getTemplateContent(entry))
   })
   return entrys
 }

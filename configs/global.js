@@ -2,9 +2,7 @@ const fs = require('fs-extra');
 const config = require('./config')
 const helper = require('./helper')
 
-let globalFilePath = helper.root(`${config.globalFile}.js`);
-
-const getGlobalCode = vueFilePath => {
+const getDirName = vueFilePath => {
   let dir
   // xx.${dir}.vue
   const paths = vueFilePath.split('/')
@@ -20,7 +18,13 @@ const getGlobalCode = vueFilePath => {
       dir = undefined
     }
   }
-    // global 配置
+  return dir
+}
+
+const getGlobalCode = vueFilePath => {
+  let globalFilePath = helper.root(`${config.globalName}.js`);
+  let dir = getDirName(vueFilePath)
+  // global 配置
   let globalContents
   const defaultGlobal = () => {
     let content
@@ -31,7 +35,7 @@ const getGlobalCode = vueFilePath => {
   }
   if (dir) {
     // global.${dir}.js
-    const dirGlobalFilePath = helper.root(`${config.globalFile}.${dir}.js`)
+    const dirGlobalFilePath = helper.root(`${config.globalName}.${dir}.js`)
     if (fs.existsSync(dirGlobalFilePath)) {
       globalContents = fs.readFileSync(dirGlobalFilePath).toString();
     } else {
@@ -42,6 +46,32 @@ const getGlobalCode = vueFilePath => {
   }
   return globalContents
 }
+
+const getTemplateCode = (vueFilePath) => {
+  let templateFilePath = helper.rootNode(`${config.templateName}.html`);
+  let dir = getDirName(vueFilePath)
+  let templateCode
+  const defaultTemplate = () => {
+    let content
+    if (fs.existsSync(templateFilePath)) {
+      content = fs.readFileSync(templateFilePath).toString();
+    }
+    return content
+  }
+  if (dir) {
+    const dirTemplateFilePath = helper.rootNode(`${config.templateName}.${dir}.html`)
+    if (fs.existsSync(dirTemplateFilePath)) {
+      templateCode = fs.readFileSync(dirTemplateFilePath).toString();
+    } else {
+      templateCode = defaultTemplate()
+    }
+  } else {
+    templateCode = defaultTemplate()
+  }
+  return templateCode
+}
+
 module.exports = {
-  getGlobalCode
+  getGlobalCode,
+  getTemplateCode
 }

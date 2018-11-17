@@ -52,7 +52,7 @@ export default {
           name: "flymeui",
           subname: "weex-flymeui",
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
-          path: "uis/flyme"
+          path: "flyme"
         },
         {
           name: "amui",
