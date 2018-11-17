@@ -1,6 +1,6 @@
 <template>
   <list class="list" @loadmore="fetch" loadmoreoffset="10">
-    <cell class="cell" v-for="num in lists">
+    <cell class="cell" v-for="(num,index) in lists" :key="index">
       <div :shadow="shadowdata" class="panel">
         <text class="text">{{num}}</text>
       </div>

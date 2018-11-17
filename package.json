@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "weex native and web build boilerplate",
   "scripts": {
-    "build": "easy build prod",
-    "start": "easy start",
+    "build": "cross-env NODE_ENV=production easy build prod",
+    "start": "cross-env NODE_ENV=develop easy start",
     "lint": "eslint .",
     "fix": "eslint --fix ."
   },
@@ -33,6 +33,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
     "easywebpack-cli": "^3.12.0",
     "easywebpack-weex": "^3.2.0",
     "eslint": "^3.18.0",
@@ -44,7 +45,8 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "1.1.5"
   },
   "engines": {
     "node": ">=6.0.0"
