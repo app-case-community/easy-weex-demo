@@ -5,10 +5,12 @@
 
     weex
 
-![weex](https://oss.zhuzhe.wang/imgs/3071542550029_.pic_hd.jpg)
+![weex](https://oss.zhuzhe.wang/imgs/3071542550029_.pic_hd.png)
 
     web
-![web](https://oss.zhuzhe.wang/imgs/3091542550275_.pic_hd.jpg)
+    
+![web](https://oss.zhuzhe.wang/imgs/3091542550275_.pic_hd.png)
+
 
 ## 集成了第三方weex ui
 
