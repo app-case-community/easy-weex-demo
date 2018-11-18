@@ -6,5 +6,10 @@
 * weex-ui
 * weex-amui
 * weex-flymeui
+* weex-bui (改自bui-weex)
 * weex-droplet-ui
 * wx-progress
+
+## 集成了开源案例
+
+* 咸鱼

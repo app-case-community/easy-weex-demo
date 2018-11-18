@@ -1,7 +1,10 @@
 const path = require('path')
 const fs = require('fs-extra')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const { getGlobalCode, getTemplateCode } = require('./global')
+const {
+  getGlobalCode,
+  getTemplateCode
+} = require('./global')
 const config = require('./config')
 const helper = require('./helper')
 const glob = require('glob');
@@ -9,21 +12,28 @@ const isWin = /^win/.test(process.platform);
 
 const templateDir = helper.rootNode(config.templateDir)
 
+const getSingleEntryFileContent = (entryFile, relativeVuePath, vueParser) => {
+  var content = fs.readFileSync(entryFile).toString()
+  // TODO: 还需要替换更多相对路径
+  var rootPath = relativeVuePath.replace(vueParser.base, '')
+  var reg = new RegExp('\'./', 'g')
+  console.log(rootPath)
+  content = content.replace(reg, '\'' + rootPath) // 替换 './ -> 和vue文件同级目录
+  return content
+}
+
 const getEntryFileContent = (entryPath, vueFilePath) => {
   // *.vue 相对地址
   let relativeVuePath = path.relative(path.join(entryPath, '../'), vueFilePath);
   if (isWin) {
     relativeVuePath = relativeVuePath.replace(/\\/g, '\\\\');
   }
+  // 单vue 入口配置
   const vueParser = path.parse(helper.rootNode(vueFilePath))
   const parentPath = vueParser.dir
   const entryFile = path.resolve(parentPath, 'entry.js')
   if (fs.existsSync(entryFile)) {
-    const rootPath = relativeVuePath.replace(vueParser.base, '')
-    var content = fs.readFileSync(entryFile).toString()
-    var reg = new RegExp('\'./', 'g')
-    content = content.replace(reg, '\'' + rootPath)
-    return content
+    return getSingleEntryFileContent(entryFile, relativeVuePath, vueParser)
   }
   // 拼接index.js 内容
   let contents = `import App from '${relativeVuePath}'\n\n`
@@ -68,11 +78,9 @@ const loaders = {
   }
 }
 
-const plugins = [
-  {
-    uglifyJs: false
-  }
-]
+const plugins = [{
+  uglifyJs: false
+}]
 
 if ('production' === process.env.NODE_ENV) {
   plugins.push(new UglifyJsPlugin({
