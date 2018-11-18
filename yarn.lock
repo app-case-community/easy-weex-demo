@@ -3126,9 +3126,9 @@ each-async@^1.0.0, each-async@^1.1.1:
     onetime "^1.0.0"
     set-immediate-shim "^1.0.0"
 
-easywebpack-cli@^3.12.0:
-  version "3.12.1"
-  resolved "https://registry.npmjs.org/easywebpack-cli/-/easywebpack-cli-3.12.1.tgz#f002e7edb59f745ca68fbf07fbc03e61c14c2da1"
+easywebpack-cli@3.12.0:
+  version "3.12.0"
+  resolved "https://registry.npmjs.org/easywebpack-cli/-/easywebpack-cli-3.12.0.tgz#45d9a045b892b423962413fa600b4fbb76c89e53"
   dependencies:
     archive-tool "^1.0.0"
     chalk "^2.0.1"
