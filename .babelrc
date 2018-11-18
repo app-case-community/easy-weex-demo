@@ -26,6 +26,11 @@
         "libraryName": "weex-droplet-ui",
         "libDir": "packages",
         "style": false
+      },
+      {
+        "libraryName": "weex-bui",
+        "libDir": "packages",
+        "style": false
       }
     ]
   ],

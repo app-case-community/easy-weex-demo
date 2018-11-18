@@ -6,3 +6,5 @@
 * weex-ui
 * weex-amui
 * weex-flymeui
+* weex-droplet-ui
+* wx-progress

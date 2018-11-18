@@ -200,7 +200,6 @@ export default {
   },
   methods: {
     handleClick(name) {
-      console.log(name);
       name = name.replace("am-", "");
       const suffix = Utils.isWeb() ? "html" : "js";
       let url = `${name}/index.${suffix}`;
@@ -209,7 +208,9 @@ export default {
       } else {
         url = weex.config.bundleUrl.replace(`index.${suffix}`, url);
       }
-      console.log("url", url);
+      if (!url.endsWith('.' + suffix)) {
+        url += '/index.' + suffix
+      }
       navigator.push({
         url: `${url}?_wx_tpl=${url}`,
         animated: "true"

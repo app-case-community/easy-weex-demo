@@ -13,46 +13,50 @@
     </scroller>
 </template>
 <style type="text/css">
-    .cell {
-        width: 690px;
-        margin-left: 30px;
-    }
+.cell {
+  width: 690px;
+  margin-left: 30px;
+}
 </style>
 <script>
-    import { WxCell } from 'weex-droplet-ui';
-    import * as all from 'weex-droplet-ui';
-    const navigator = weex.requireModule('navigator');
-    const modal = weex.requireModule('modal');
+import { WxCell } from "weex-droplet-ui";
+import * as all from "weex-droplet-ui";
+const navigator = weex.requireModule("navigator");
+const modal = weex.requireModule("modal");
 
-    let componentNameArr = Object.keys(all).map(item => {
-        return item.toLowerCase().replace('wx', '');
-    });
-    componentNameArr = componentNameArr.filter(name => name !== 'checkboxlist')
-    
-    export default {
-        components: { WxCell },
-        data () {
-            return {
-                url: 'https://hbteam.github.io/weex-droplet-ui/',
-                componentNameArr: componentNameArr,
-            }
-        },
+let componentNameArr = Object.keys(all).map(item => {
+  return item.toLowerCase().replace("wx", "");
+});
+componentNameArr = componentNameArr.filter(name => name !== "checkboxlist");
 
-        methods: {
-            go (componentName) {
-                const platform = weex.config.env.platform.toLowerCase();
-                if (platform !== 'web') {
-                    const url = this.url + `${componentName}/index.js`;
-                    navigator.push({
-                        url: url,
-                        animated: "true"
-                    });
-                } else {
-                    const url = this.url + `${componentName}/index.html`;
-                    window.location.href = url;
-                }
-                
-            }
-        }
+export default {
+  components: { WxCell },
+  data() {
+    return {
+      url: weex.config.bundleUrl,
+      componentNameArr: componentNameArr,
+      isWeb: "web" === weex.config.env.platform.toLowerCase()
+    };
+  },
+
+  methods: {
+    go(name) {
+      name = name.replace("am-", "");
+      const suffix = this.isWeb ? "html" : "js";
+      let url = `${name}/index.${suffix}`;
+      if (/\/$/.test(weex.config.bundleUrl)) {
+        url = weex.config.bundleUrl = url;
+      } else {
+        url = weex.config.bundleUrl.replace(`index.${suffix}`, url);
+      }
+      if (!url.endsWith("." + suffix)) {
+        url += "/index." + suffix;
+      }
+      navigator.push({
+        url: `${url}?_wx_tpl=${url}`,
+        animated: "true"
+      });
     }
+  }
+};
 </script>

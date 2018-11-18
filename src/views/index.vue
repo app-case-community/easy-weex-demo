@@ -67,6 +67,12 @@ export default {
           path: "uis/droplet"
         },
         {
+          name:'bui',
+          subname: 'bui-weex',
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path: "bui"
+        },
+        {
           name:'progress',
           subname: 'wx-progress',
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
@@ -99,7 +105,10 @@ export default {
             `${path}/index.html`
           );
         } else {
-          url = window.location.href + path;
+          url = window.location.href + '/' + path;
+          if (url.indexOf('/index.html') === -1) {
+            url += '/index.html'
+          }
         }
         window.location.href = url;
       } else {

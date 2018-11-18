@@ -9876,6 +9876,12 @@ weex-bindingx@^0.0.24:
     simple-lodash "^0.0.2"
     universal-env "0.x.x"
 
+"weex-bui@https://github.com/snice/weex-bui.git":
+  version "0.4.6"
+  resolved "https://github.com/snice/weex-bui.git#9b3558de34f48b1c9cddc561a0a64ed10822a4c1"
+  dependencies:
+    vue "^2.5.17"
+
 weex-droplet-ui@^1.0.0-alpha.100:
   version "1.0.0-alpha.100"
   resolved "https://registry.npmjs.org/weex-droplet-ui/-/weex-droplet-ui-1.0.0-alpha.100.tgz#2740f89c9cf8db5b78193507437a0aa10bdfe301"
