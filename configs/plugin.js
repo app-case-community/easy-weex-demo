@@ -17,7 +17,6 @@ const getSingleEntryFileContent = (entryFile, relativeVuePath, vueParser) => {
   // TODO: 还需要替换更多相对路径
   var rootPath = relativeVuePath.replace(vueParser.base, '')
   var reg = new RegExp('\'./', 'g')
-  console.log(rootPath)
   content = content.replace(reg, '\'' + rootPath) // 替换 './ -> 和vue文件同级目录
   return content
 }

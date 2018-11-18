@@ -21,7 +21,8 @@ const config = {
     '@views': 'src/views',
     '@components': 'src/components',
     '@bui': 'node_modules/weex-bui',
-    '@xianyu': 'src/views/cases/xianyu'
+    '@xianyu': 'src/views/cases/xianyu',
+    '@yanxuan': 'src/views/cases/yanxuan'
   },
   loaders,
   plugins,
