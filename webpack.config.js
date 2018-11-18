@@ -19,7 +19,9 @@ const config = {
   alias: {
     '@': 'src',
     '@views': 'src/views',
-    '@components': 'src/components'
+    '@components': 'src/components',
+    '@bui': 'node_modules/weex-bui',
+    '@xianyu': 'src/views/cases/xianyu'
   },
   loaders,
   plugins,

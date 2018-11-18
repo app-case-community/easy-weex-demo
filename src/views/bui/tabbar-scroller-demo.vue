@@ -25,7 +25,7 @@
         </slider>
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .slider {
   flex: 1;

@@ -20,8 +20,7 @@
         <bui-tabbar :tabItems="tabItems" selectedBackground="#F77845" selectedColor="#ffffff" @change="onItemChange" v-model="currentTab"></bui-tabbar>
     </div>
 </template>
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .slider {
   flex: 1;

@@ -21,8 +21,7 @@
         </div>
     </div>
 </template>
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiPanel, BuiLazyRender, BuiImage } from "weex-bui";
 export default {

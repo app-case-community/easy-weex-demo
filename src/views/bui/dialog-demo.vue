@@ -16,9 +16,7 @@
         </bui-dialog>
     </div>
 </template>
-
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiButton, BuiDialog } from "weex-bui";
 export default {

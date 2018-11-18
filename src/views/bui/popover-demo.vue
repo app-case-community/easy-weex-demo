@@ -16,15 +16,14 @@
 		</list>
 
     <bui-popover duration="100" :offsetX="0" :offsetY="0" arrowColor="#fff" :panelStyle="panelStyle" :maskStyle="maskStyle" width="300" height="300" :placement="placement" v-model="visible" :pos="pos">
- 			<list style="flex:1">
- 				<cell>
- 					<text @click="close" v-for="i in 10" :key="i"  style="font-size:30px;">自定义内容区{{i}}</text>
- 				</cell>
- 			</list>
+      <list style="flex:1">
+        <cell>
+          <text @click="close" v-for="i in 10" :key="i"  style="font-size:30px;">自定义内容区{{i}}</text>
+        </cell>
+      </list>
     </bui-popover>
   </div>
 </template>
-
 <script>
 import { BuiHeader, BuiPopover } from "weex-bui";
 const dom = weex.requireModule("dom");
@@ -145,6 +144,7 @@ export default {
   }
 };
 </script>
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style lang="scss">
 .panel__row {
   flex-direction: row;

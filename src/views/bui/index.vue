@@ -26,12 +26,13 @@
         </scroller>
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import catalog from "@components/bui/catalog.vue";
-import { BuiHeader,BuiCell, BuiIcon } from "weex-bui";
+import { BuiHeader, BuiCell, BuiIcon } from "weex-bui";
 const globalEvent = weex.requireModule("globalEvent");
-module.exports = {
+
+export default {
   data: function() {
     return {
       leftItem: {
@@ -109,8 +110,9 @@ module.exports = {
   methods: {
     jumpTo(file) {
       if (file) {
-        const suffix = "web" === weex.config.env.platform.toLowerCase() ? "html" : "js";
-        var url = file + '.' + suffix;
+        const suffix =
+          "web" === weex.config.env.platform.toLowerCase() ? "html" : "js";
+        var url = file + "." + suffix;
         this.$push(url);
       }
     },

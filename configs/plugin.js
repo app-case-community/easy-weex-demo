@@ -1,5 +1,4 @@
 const path = require('path')
-const { resolve } = path
 const fs = require('fs-extra')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const { getGlobalCode, getTemplateCode } = require('./global')
@@ -15,6 +14,16 @@ const getEntryFileContent = (entryPath, vueFilePath) => {
   let relativeVuePath = path.relative(path.join(entryPath, '../'), vueFilePath);
   if (isWin) {
     relativeVuePath = relativeVuePath.replace(/\\/g, '\\\\');
+  }
+  const vueParser = path.parse(helper.rootNode(vueFilePath))
+  const parentPath = vueParser.dir
+  const entryFile = path.resolve(parentPath, 'entry.js')
+  if (fs.existsSync(entryFile)) {
+    const rootPath = relativeVuePath.replace(vueParser.base, '')
+    var content = fs.readFileSync(entryFile).toString()
+    var reg = new RegExp('\'./', 'g')
+    content = content.replace(reg, '\'' + rootPath)
+    return content
   }
   // 拼接index.js 内容
   let contents = `import App from '${relativeVuePath}'\n\n`

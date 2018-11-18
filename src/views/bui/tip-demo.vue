@@ -15,7 +15,7 @@
     </div>
 
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiTip } from "weex-bui";
 export default {

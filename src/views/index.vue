@@ -7,7 +7,7 @@
     <scroller>
         <am-list header="weex 开源组件">
             <template v-for="(component, idx) in openUiList">
-                <am-list-item class="list-item"
+                <am-list-item class="list-item" v-if="component.isWeb === undefined || !component.isWeb"
                     :key="idx"
                     :title="component.name"
                     :extra="component.subname"
@@ -67,6 +67,7 @@ export default {
           path: "uis/droplet"
         },
         {
+          isWeb: env.platform === 'Web',
           name:'bui',
           subname: 'bui-weex',
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",

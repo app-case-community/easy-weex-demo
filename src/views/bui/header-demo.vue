@@ -43,16 +43,14 @@
         </scroller>
 
         <bui-dropdown v-model="showDropdown" ref="dropdown" center>
-           <bui-cell title="娱乐新闻"></bui-cell>
-           <bui-cell title="体育新闻"></bui-cell>
-           <bui-cell title="社交媒体"></bui-cell>
+          <bui-cell title="娱乐新闻"></bui-cell>
+          <bui-cell title="体育新闻"></bui-cell>
+          <bui-cell title="社交媒体"></bui-cell>
         </bui-dropdown>
     </div>
 
 </template>
-
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiDropdown, BuiCell, BuiIcon } from "weex-bui";
 export default {

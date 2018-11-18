@@ -123,7 +123,7 @@
         </scroller>
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .b-p5 {
   background-color: #dddddd;

@@ -28,11 +28,7 @@
     </div>
 
 </template>
-
-
-<style scoped>
-</style>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader } from "weex-bui";
 var animation = weex.requireModule("animation");

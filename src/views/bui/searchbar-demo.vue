@@ -14,12 +14,7 @@
         </div>
     </div>
 </template>
-
-
-
-<style>
-</style>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiSearchbarCenter, BuiSearchbarLeft } from "weex-bui";
 export default {

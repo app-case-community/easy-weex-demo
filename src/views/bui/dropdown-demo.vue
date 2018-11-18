@@ -38,7 +38,7 @@
             <bui-cell @click="cellClick" title="社交媒体"></bui-cell>
         </bui-dropdown>
 
-         <div class="center" style="padding: 10px">
+        <div class="center" style="padding: 10px">
             <bui-button type="warning" value="气泡向上菜单" @click="openUp"></bui-button>
         </div>
         <bui-dropdown ref="upshows" :up="true" :center=true>
@@ -50,7 +50,7 @@
 
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiButton, BuiCell, BuiDropdown } from "weex-bui";
 export default {

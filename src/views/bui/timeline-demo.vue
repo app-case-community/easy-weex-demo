@@ -26,6 +26,7 @@
         </div>
     </div>
 </template>
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .time {
   font-weight: 700;

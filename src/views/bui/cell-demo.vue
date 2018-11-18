@@ -28,9 +28,7 @@
         </scroller>
     </div>
 </template>
-
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .input {
   height: 40px;

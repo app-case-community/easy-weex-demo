@@ -12,7 +12,7 @@
     </div>
 
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiImageSlider } from "weex-bui";
 export default {
@@ -58,5 +58,3 @@ export default {
   }
 };
 </script>
-<style>
-</style>

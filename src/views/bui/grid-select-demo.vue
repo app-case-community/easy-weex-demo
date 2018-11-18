@@ -50,7 +50,7 @@
 
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style scoped>
 .titleEx {
   margin-bottom: 20px;

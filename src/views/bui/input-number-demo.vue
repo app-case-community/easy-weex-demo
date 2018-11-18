@@ -13,9 +13,7 @@
         </scroller>
     </div>
 </template>
-
-
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiCell, BuiNumberInput } from "weex-bui";
 export default {

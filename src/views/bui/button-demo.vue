@@ -25,7 +25,7 @@
         </scroller>
     </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .ex-btn {
   margin-top: 20px;

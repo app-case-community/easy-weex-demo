@@ -18,7 +18,7 @@
     </bui-poptip>
   </div>
 </template>
-
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
 import { BuiHeader, BuiPoptip } from "weex-bui";
 const dom = weex.requireModule("dom");

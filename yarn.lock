@@ -9878,7 +9878,7 @@ weex-bindingx@^0.0.24:
 
 "weex-bui@https://github.com/snice/weex-bui.git":
   version "0.4.6"
-  resolved "https://github.com/snice/weex-bui.git#9b3558de34f48b1c9cddc561a0a64ed10822a4c1"
+  resolved "https://github.com/snice/weex-bui.git#ea4c570ef721f762579a4beab1e331b21c2d16c3"
   dependencies:
     vue "^2.5.17"
 

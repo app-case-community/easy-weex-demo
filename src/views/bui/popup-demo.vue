@@ -31,6 +31,7 @@
     </div>
 
 </template>
+<style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style>
 .ex-btn {
   margin-bottom: 20px;
@@ -82,5 +83,3 @@ export default {
   }
 };
 </script>
-<style>
-</style>
