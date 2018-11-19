@@ -78,6 +78,12 @@ export default {
           subname: 'wx-progress',
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
           path: "uis/wx-progress"
+        },
+        {
+          name: 'animation',
+          subname: '动画',
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path: "uis/animation"
         }
       ],
       openCasesList: [
