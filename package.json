@@ -19,7 +19,7 @@
     "weex-amui": "^0.1.1",
     "weex-bui": "https://github.com/snice/weex-bui.git",
     "weex-droplet-ui": "^1.0.0-alpha.100",
-    "weex-flymeui": "^0.1.25",
+    "weex-flymeui": "https://github.com/snice/weex-flymeui.git",
     "weex-ui": "^0.6.7"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-component": "0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

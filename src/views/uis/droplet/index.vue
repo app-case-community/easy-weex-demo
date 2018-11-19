@@ -20,11 +20,34 @@
 </style>
 <script>
 import { WxCell } from "weex-droplet-ui";
-import * as all from "weex-droplet-ui";
 const navigator = weex.requireModule("navigator");
 const modal = weex.requireModule("modal");
 
-let componentNameArr = Object.keys(all).map(item => {
+let componentNameArr = [
+  'WxButton',
+  'WxDialog',
+  'WxHeader',
+  'WxNavbar',
+  'WxTabbar',
+  'WxCell',
+  'WxCheckbox',
+  'WxCheckboxList',
+  'WxRadio',
+  'WxField',
+  'WxInput',
+  'WxPopup',
+  'WxActionsheet',
+  'WxLoading',
+  'WxSearch',
+  'WxIcon',
+  'WxIndexlist',
+  'WxScrollerbar',
+  'WxProgress',
+  'WxRange',
+  'WxPicker',
+  'WxSwitch',
+  'WxMarquee'
+].map(item => {
   return item.toLowerCase().replace("wx", "");
 });
 componentNameArr = componentNameArr.filter(name => name !== "checkboxlist");

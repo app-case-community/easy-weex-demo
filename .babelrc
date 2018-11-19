@@ -7,31 +7,33 @@
     "transform-object-assign",
     [
       "component",
-      {
-        "libraryName": "weex-amui",
-        "libDir": "packages",
-        "style": false
-      },
-      {
-        "libraryName": "weex-ui",
-        "libDir": "packages",
-        "style": false
-      },
-      {
-        "libraryName": "weex-flymeui",
-        "libDir": "packages",
-        "style": false
-      },
-      {
-        "libraryName": "weex-droplet-ui",
-        "libDir": "packages",
-        "style": false
-      },
-      {
-        "libraryName": "weex-bui",
-        "libDir": "packages",
-        "style": false
-      }
+      [
+        {
+          "libraryName": "weex-amui",
+          "libDir": "packages",
+          "style": false
+        },
+        {
+          "libraryName": "weex-ui",
+          "libDir": "packages",
+          "style": false
+        },
+        {
+          "libraryName": "weex-flymeui",
+          "libDir": "packages",
+          "style": false
+        },
+        {
+          "libraryName": "weex-droplet-ui",
+          "libDir": "packages",
+          "style": false
+        },
+        {
+          "libraryName": "weex-bui",
+          "libDir": "packages",
+          "style": false
+        }
+      ]
     ]
   ],
   "comments": false
