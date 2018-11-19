@@ -3109,7 +3109,7 @@ each-async@^1.0.0, each-async@^1.1.1:
     onetime "^1.0.0"
     set-immediate-shim "^1.0.0"
 
-easywebpack-cli@^3.12.0:
+easywebpack-cli@^3.12.1:
   version "3.12.1"
   resolved "https://registry.npmjs.org/easywebpack-cli/-/easywebpack-cli-3.12.1.tgz#f002e7edb59f745ca68fbf07fbc03e61c14c2da1"
   dependencies:
@@ -3126,9 +3126,9 @@ easywebpack-cli@^3.12.0:
     speed-measure-webpack-plugin "^1.2.2"
     urllib "^2.24.0"
 
-easywebpack-weex@^3.2.0:
+"easywebpack-weex@https://github.com/snice/easywebpack-weex.git":
   version "3.5.0"
-  resolved "https://registry.npmjs.org/easywebpack-weex/-/easywebpack-weex-3.5.0.tgz#1b5b81d9a31f0e8bb403de5374961737f0536e6f"
+  resolved "https://github.com/snice/easywebpack-weex.git#dedfed474c6a765c0fda79413932a8213fd22307"
   dependencies:
     easywebpack "^3.5.0"
     vue "^2.4.2"
