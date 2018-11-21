@@ -13,14 +13,17 @@
     "flyio": "^0.6.2",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
+    "universal-env": "^0.6.6",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0",
     "weex-amui": "^0.1.1",
+    "weex-bindingx": "^0.0.49",
     "weex-bui": "https://github.com/snice/weex-bui.git",
     "weex-droplet-ui": "^1.0.0-alpha.100",
     "weex-flymeui": "https://github.com/snice/weex-flymeui.git",
+    "weex-gcanvas": "^0.5.49",
     "weex-ui": "^0.6.7"
   },
   "devDependencies": {

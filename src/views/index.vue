@@ -15,6 +15,16 @@
                     @click="jump(component.path)" />
             </template>
         </am-list>
+        <am-list header="weex 插件">
+            <template v-for="(component, idx) in openPluginList">
+                <am-list-item class="list-item"
+                    :key="idx"
+                    :title="component.name"
+                    :extra="component.subname"
+                    :thumb="component.icon"
+                    @click="jump(component.path)" />
+            </template>
+        </am-list>
         <am-list header="weex 开源案例">
             <template v-for="(component, idx) in openCasesList">
                 <am-list-item class="list-item"
@@ -84,6 +94,20 @@ export default {
           subname: '动画',
           icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
           path: "uis/animation"
+        }
+      ],
+      openPluginList: [
+        {
+          name: 'BindingX',
+          subname:'bindingx',
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path:'plugins/bindingx'
+        },
+        {
+          name: 'GCanvas',
+          subname:'gcanvas',
+          icon: "http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png",
+          path:'plugins/gcanvas'
         }
       ],
       openCasesList: [
