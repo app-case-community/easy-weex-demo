@@ -40,6 +40,7 @@
 </template>
 <script>
 import { AmNavBar, AmList, AmListItem, Utils } from "weex-amui";
+import GLog from '@/glog'
 const navigator = weex.requireModule('navigator');
 const env = weex.config.env;
 const url = weex.config.bundleUrl;
@@ -128,6 +129,7 @@ export default {
   },
   methods: {
     jump(path) {
+      GLog.d('jump->' + path)
       if (env.platform === "Web") {
         let url;
         if (window.location.href.indexOf("index.html") !== -1) {
