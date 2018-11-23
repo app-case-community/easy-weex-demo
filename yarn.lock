@@ -94,8 +94,8 @@
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
 "@types/node@^10.11.7":
-  version "10.12.9"
-  resolved "https://registry.npmjs.org/@types/node/-/node-10.12.9.tgz#a07bfa74331471e1dc22a47eb72026843f7b95c8"
+  version "10.12.10"
+  resolved "https://registry.npmjs.org/@types/node/-/node-10.12.10.tgz#4fa76e6598b7de3f0cb6ec3abacc4f59e5b3a2ce"
 
 "@types/semver@^5.5.0":
   version "5.5.0"
@@ -1815,8 +1815,8 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   resolved "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000910.tgz#58cca84780223291c28e92d97a9b1512260a9a8e"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000844:
-  version "1.0.30000907"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000907.tgz#0b9899bde53fb1c30e214fb12402361e02ff5c42"
+  version "1.0.30000910"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000910.tgz#755d5181d4b006e5a2b59b1ffa05d0a0470039f5"
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2202,8 +2202,8 @@ compress-commons@^1.2.0:
     readable-stream "^2.0.0"
 
 compressing@^1.2.3:
-  version "1.3.1"
-  resolved "https://registry.npmjs.org/compressing/-/compressing-1.3.1.tgz#9f11a94d648816eace4a6d97412fb17fc6e2767f"
+  version "1.3.2"
+  resolved "https://registry.npmjs.org/compressing/-/compressing-1.3.2.tgz#770881d1dd52ed268b81ca5537397e2a780df0d9"
   dependencies:
     flushwritable "^1.0.0"
     get-ready "^1.0.0"
@@ -3143,8 +3143,8 @@ easywebpack-cli@^3.12.1:
     weex-vue-render "^0.12.8"
 
 easywebpack@^3.5.0:
-  version "3.10.3"
-  resolved "https://registry.npmjs.org/easywebpack/-/easywebpack-3.10.3.tgz#40c98b3f833fc42c012eb0fc1e8f7b343203a482"
+  version "3.10.4"
+  resolved "https://registry.npmjs.org/easywebpack/-/easywebpack-3.10.4.tgz#b3090853772dc24718af2f01411258fcf92e0c51"
   dependencies:
     babel-core "^6.26.0"
     babel-eslint "^8.0.3"
@@ -3455,8 +3455,8 @@ eslint-loader@^2.1.1:
     rimraf "^2.6.1"
 
 eslint-plugin-es@^1.3.1:
-  version "1.3.2"
-  resolved "https://registry.npmjs.org/eslint-plugin-es/-/eslint-plugin-es-1.3.2.tgz#6d2e94ed40db3b3d92a0eb55c7c06e3a7adbb3db"
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-es/-/eslint-plugin-es-1.4.0.tgz#475f65bb20c993fc10e8c8fe77d1d60068072da6"
   dependencies:
     eslint-utils "^1.3.0"
     regexpp "^2.0.1"
@@ -3910,7 +3910,7 @@ file-loader@^0.11.2:
 
 "file-loader@https://github.com/snice/file-loader.git#0.11.3":
   version "0.11.3"
-  resolved "https://github.com/snice/file-loader.git#a3b4063b158793cb61189ca537795ceb2c6034f7"
+  resolved "https://github.com/snice/file-loader.git#0fd324e8b7a1b35aaebb1f24222fa0d1ab05ab24"
   dependencies:
     loader-utils "^1.0.2"
 
@@ -4070,8 +4070,8 @@ flushwritable@^1.0.0:
   resolved "https://registry.npmjs.org/flushwritable/-/flushwritable-1.0.0.tgz#3e328d8fde412ad47e738e3be750b4d290043498"
 
 flyio@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.npmjs.org/flyio/-/flyio-0.6.2.tgz#54204c3e27ffa355e18bc61ee9d541a54fc1cb2b"
+  version "0.6.4"
+  resolved "https://registry.npmjs.org/flyio/-/flyio-0.6.4.tgz#f2399f3694fd313516b315da2b26785c90003b61"
   dependencies:
     request "^2.85.0"
 
@@ -6170,19 +6170,12 @@ lpad-align@^1.0.1:
     longest "^1.0.0"
     meow "^3.3.0"
 
-lru-cache@^4.0.1:
+lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.2, lru-cache@^4.1.3:
   version "4.1.4"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.4.tgz#51cc46e8e6d9530771c857e24ccc720ecdbcc031"
   dependencies:
     pseudomap "^1.0.2"
     yallist "^3.0.2"
-
-lru-cache@^4.1.1, lru-cache@^4.1.2, lru-cache@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
-  dependencies:
-    pseudomap "^1.0.2"
-    yallist "^2.1.2"
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
@@ -6991,7 +6984,7 @@ os-locale@^2.0.0:
 
 os-name@~1.0.3:
   version "1.0.3"
-  resolved "https://registry.npmjs.org/os-name/-/os-name-1.0.3.tgz#1b379f64835af7c5a7f498b357cb95215c159edf"
+  resolved "http://registry.npmjs.org/os-name/-/os-name-1.0.3.tgz#1b379f64835af7c5a7f498b357cb95215c159edf"
   dependencies:
     osx-release "^1.0.0"
     win-release "^1.0.0"
@@ -8762,7 +8755,7 @@ stdout-stream@^1.4.0:
 
 stream-browserify@^2.0.0, stream-browserify@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.npmjs.org/stream-browserify/-/stream-browserify-2.0.1.tgz#66266ee5f9bdb9940a4e4514cafb43bb71e5c9db"
+  resolved "http://registry.npmjs.org/stream-browserify/-/stream-browserify-2.0.1.tgz#66266ee5f9bdb9940a4e4514cafb43bb71e5c9db"
   dependencies:
     inherits "~2.0.1"
     readable-stream "^2.0.2"
@@ -9444,7 +9437,7 @@ unique-string@^1.0.0:
 
 universal-env@0.x.x, universal-env@^0.6.6:
   version "0.6.6"
-  resolved "http://192.168.200.235:8282/repository/findnpmgroup/universal-env/-/universal-env-0.6.6.tgz#dd5adf816a8ec3e908d4848e1714dfe30dd8a970"
+  resolved "https://registry.npmjs.org/universal-env/-/universal-env-0.6.6.tgz#dd5adf816a8ec3e908d4848e1714dfe30dd8a970"
 
 universalify@^0.1.0:
   version "0.1.2"
@@ -9924,7 +9917,7 @@ weex-bindingx@^0.0.24:
 
 weex-bindingx@^0.0.49:
   version "0.0.49"
-  resolved "http://192.168.200.235:8282/repository/findnpmgroup/weex-bindingx/-/weex-bindingx-0.0.49.tgz#878fcb717fb6a227c0f8d4098ba1e13d3e046094"
+  resolved "https://registry.npmjs.org/weex-bindingx/-/weex-bindingx-0.0.49.tgz#878fcb717fb6a227c0f8d4098ba1e13d3e046094"
   dependencies:
     bindingx-parser "0.x.x"
     bindingx-web-polyfill "0.x.x"
@@ -10201,10 +10194,6 @@ y18n@^3.2.1:
 y18n@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-
-yallist@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
 yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.3"
