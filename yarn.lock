@@ -1769,7 +1769,7 @@ caller-path@^0.1.0:
 
 callsites@^0.2.0:
   version "0.2.0"
-  resolved "https://registry.npmjs.org/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
+  resolved "http://registry.npmjs.org/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
 
 camel-case@3.0.x, camel-case@^3.0.0:
   version "3.0.0"
@@ -1811,8 +1811,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000907"
-  resolved "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000907.tgz#2b4b8dff95e0b284dae24ef76ac2d96aa42f42d6"
+  version "1.0.30000910"
+  resolved "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000910.tgz#58cca84780223291c28e92d97a9b1512260a9a8e"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000844:
   version "1.0.30000907"
@@ -3176,6 +3176,40 @@ easywebpack@^3.5.0:
     webpack-node-externals "^1.6.0"
     webpack-tool "^3.0.0"
 
+"easywebpack@https://github.com/snice/easywebpack.git#3.10.5":
+  version "3.10.5"
+  resolved "https://github.com/snice/easywebpack.git#e5fb40f141bbe0e99cfb8f9b32c6ee3bfde739fd"
+  dependencies:
+    babel-core "^6.26.0"
+    babel-eslint "^8.0.3"
+    babel-loader "^7.1.2"
+    cache-loader "^1.2.2"
+    chalk "^2.0.1"
+    cross-spawn "^5.1.0"
+    css-loader "^0.28.4"
+    directory-named-webpack-plugin "^2.2.3"
+    eslint "^4.3.0"
+    eslint-loader "^1.9.0"
+    extract-text-webpack-plugin "^3.0.0"
+    file-loader "https://github.com/snice/file-loader.git#0.11.3"
+    lodash.clonedeep "^4.5.0"
+    lodash.clonedeepwith "^4.5.0"
+    lodash.get "^4.4.2"
+    lodash.uniq "^4.5.0"
+    node-noop "^1.0.0"
+    opn "^5.1.0"
+    ora "^1.3.0"
+    postcss-loader "^2.1.0"
+    progress-bar-webpack-plugin "^1.10.0"
+    service-worker-precache-webpack-plugin "^1.0.0"
+    shelljs "^0.7.4"
+    style-loader "^0.18.2"
+    url-loader "^0.5.8"
+    webpack-hot-middleware "^2.13.2"
+    webpack-manifest-resource-plugin "^2.0.2"
+    webpack-node-externals "^1.6.0"
+    webpack-tool "^3.0.0"
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -3403,6 +3437,16 @@ eslint-config-eslint@^5.0.1:
 eslint-loader@^1.9.0:
   version "1.9.0"
   resolved "https://registry.npmjs.org/eslint-loader/-/eslint-loader-1.9.0.tgz#7e1be9feddca328d3dcfaef1ad49d5beffe83a13"
+  dependencies:
+    loader-fs-cache "^1.0.0"
+    loader-utils "^1.0.2"
+    object-assign "^4.0.1"
+    object-hash "^1.1.4"
+    rimraf "^2.6.1"
+
+eslint-loader@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/eslint-loader/-/eslint-loader-2.1.1.tgz#2a9251523652430bfdd643efdb0afc1a2a89546a"
   dependencies:
     loader-fs-cache "^1.0.0"
     loader-utils "^1.0.2"
@@ -3861,6 +3905,12 @@ file-entry-cache@^2.0.0:
 file-loader@^0.11.2:
   version "0.11.2"
   resolved "https://registry.npmjs.org/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
+  dependencies:
+    loader-utils "^1.0.2"
+
+"file-loader@https://github.com/snice/file-loader.git#0.11.3":
+  version "0.11.3"
+  resolved "https://github.com/snice/file-loader.git#a3b4063b158793cb61189ca537795ceb2c6034f7"
   dependencies:
     loader-utils "^1.0.2"
 
@@ -6120,7 +6170,14 @@ lpad-align@^1.0.1:
     longest "^1.0.0"
     meow "^3.3.0"
 
-lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.2, lru-cache@^4.1.3:
+lru-cache@^4.0.1:
+  version "4.1.4"
+  resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.4.tgz#51cc46e8e6d9530771c857e24ccc720ecdbcc031"
+  dependencies:
+    pseudomap "^1.0.2"
+    yallist "^3.0.2"
+
+lru-cache@^4.1.1, lru-cache@^4.1.2, lru-cache@^4.1.3:
   version "4.1.3"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
   dependencies:
@@ -7598,7 +7655,7 @@ prettier@^1.7.0:
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
-  resolved "https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
+  resolved "http://registry.npmjs.org/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -9385,11 +9442,7 @@ unique-string@^1.0.0:
   dependencies:
     crypto-random-string "^1.0.0"
 
-universal-env@0.x.x:
-  version "0.6.6"
-  resolved "https://registry.npmjs.org/universal-env/-/universal-env-0.6.6.tgz#dd5adf816a8ec3e908d4848e1714dfe30dd8a970"
-
-universal-env@^0.6.6:
+universal-env@0.x.x, universal-env@^0.6.6:
   version "0.6.6"
   resolved "http://192.168.200.235:8282/repository/findnpmgroup/universal-env/-/universal-env-0.6.6.tgz#dd5adf816a8ec3e908d4848e1714dfe30dd8a970"
 
@@ -9892,9 +9945,9 @@ weex-droplet-ui@^1.0.0-alpha.100:
     gh-pages "^1.1.0"
     url-parse "^1.1.9"
 
-"weex-flymeui@https://github.com/snice/weex-flymeui.git":
-  version "0.1.24"
-  resolved "https://github.com/snice/weex-flymeui.git#d1994067e2a31700c5d53069ce4f3fc10b2b194e"
+"weex-flymeui@https://github.com/snice/weex-flymeui.git#0.1.25":
+  version "0.1.25"
+  resolved "https://github.com/snice/weex-flymeui.git#3f92e41e36178b4f98c1bcb0bae7a58b35ee8e92"
   dependencies:
     weex-bindingx "^0.0.24"
 
@@ -10154,8 +10207,8 @@ yallist@^2.1.2:
   resolved "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
 yallist@^3.0.0, yallist@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.npmjs.org/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
 
 yargs-parser@^5.0.0:
   version "5.0.0"
