@@ -71,22 +71,22 @@
 </style>
 
 <script>
-import { AmNavBar, AmTabs, AmWhiteSpace, AmWingBlank } from 'weex-amui'
-const modal = weex.requireModule('modal')
+  import { AmNavBar, AmTabs, AmWhiteSpace, AmWingBlank } from 'weex-amui'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { AmNavBar, AmTabs, AmWhiteSpace, AmWingBlank },
-  data () {
-    return {
-      selected: 0
-    }
-  },
-  methods: {
-    change (index, value) {
-      modal.toast({
-        message: `index:${index},value:${value}`
-      })
+  export default {
+    components: { AmNavBar, AmTabs, AmWhiteSpace, AmWingBlank },
+    data () {
+      return {
+        selected: 0
+      }
+    },
+    methods: {
+      change (index, value) {
+        modal.toast({
+          message: `index:${index},value:${value}`
+        })
+      }
     }
   }
-}
 </script>

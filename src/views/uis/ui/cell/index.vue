@@ -169,20 +169,20 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import { WxcCell } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcCell } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { WxcCell, Title, Category },
     created () {
-      setTitle('Cell');
+      setTitle('Cell')
       // 兼容weex playground的显示 正常业务不要用
-      const { appName } = weex.config.env;
+      const { appName } = weex.config.env
       if (/(WeexDemo)/i.test(appName)) {
-        this.link = 'https://h5.m.taobao.com/trip/weex-ui/demo/index.native-min.js';
+        this.link = 'https://h5.m.taobao.com/trip/weex-ui/demo/index.native-min.js'
       }
     },
     data: () => ({
@@ -200,5 +200,5 @@
         })
       }
     }
-  };
+  }
 </script>

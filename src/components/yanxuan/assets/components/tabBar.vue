@@ -93,31 +93,31 @@
 </style>
 <script>
 
-    var modal = weex.requireModule('modal');
-    export default {
-        computed:{
-        },
-        data () {
-            return {
-                pIndexKey:'home'
-            }
-        },
-        mounted(){
-        },
-        methods: {
-            isActive:function (_c) {
-                return this.pIndexKey === _c ?'bar-active':''
-            },
-            tabTo(_key){
-                if(this.pIndexKey === _key) return;
-                this.pIndexKey = _key;
-                this.$emit('tabTo',{
-                    status : 'tabTo',
-                    data : {
-                        key : _key
-                    }
-                })
-            }
-        }
+//   var modal = weex.requireModule('modal')
+  export default {
+    computed: {
+    },
+    data () {
+      return {
+        pIndexKey: 'home'
+      }
+    },
+    mounted () {
+    },
+    methods: {
+      isActive: function (_c) {
+        return this.pIndexKey === _c ? 'bar-active' : ''
+      },
+      tabTo (_key) {
+        if (this.pIndexKey === _key) return
+        this.pIndexKey = _key
+        this.$emit('tabTo', {
+          status: 'tabTo',
+          data: {
+            key: _key
+          }
+        })
+      }
     }
+  }
 </script>

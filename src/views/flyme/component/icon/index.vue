@@ -364,11 +364,11 @@
 </style>
 
 <script>
-import { FmIcon } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmIcon } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmIcon }
-};
+  export default {
+    components: { Title, Category, FmIcon }
+  }
 </script>

@@ -49,13 +49,13 @@
     }
 </style>
 <script>
-    export default {
-        props:["topics"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-        }
+  export default {
+    props: ['topics'],
+    data () {
+      return {
+      }
+    },
+    methods: {
     }
+  }
 </script>

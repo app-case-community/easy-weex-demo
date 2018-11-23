@@ -1,8 +1,8 @@
 <template>
     <div class="wx-demo">
-        <wx-popup 
-            :visible="visible" 
-            position="bottom" 
+        <wx-popup
+            :visible="visible"
+            position="bottom"
             :hasOverley="true"
             :closeOnClickMask="false"
             height="488px"
@@ -54,113 +54,113 @@
     }
 </style>
 <script>
-    import { WxPicker, WxButton, WxPopup } from 'weex-droplet-ui';
-    import { provins, citys, areas } from './address';
+  import { WxPicker, WxButton, WxPopup } from 'weex-droplet-ui'
+  import { provins, citys, areas } from './address'
 
-    export default {
-        data () {
-            return {
-                visible: false,
-                provins: {},
-                citys: {},
-                areas: {},
-                address: [],
-            }
-        },
+  export default {
+    data () {
+      return {
+        visible: false,
+        provins: {},
+        citys: {},
+        areas: {},
+        address: []
+      }
+    },
 
-        props: ['defaultValue', 'visible'],
+    props: ['defaultValue'],
 
-        created () {
-            this.address = this.defaultValue;
-            this.initDefaultData();
-        },
+    created () {
+      this.address = this.defaultValue
+      this.initDefaultData()
+    },
 
-        methods: {
-            initDefaultData () {
-                this.provins = {
-                    list: provins,
-                    defaultValue: this.defaultValue[0],
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.citys = {
-                    list: citys[this.defaultValue[0]],
-                    defaultValue: this.defaultValue[1],
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.areas = {
-                    list: areas[this.defaultValue[1]],
-                    defaultValue: this.defaultValue[2],
-                    displayValue (name) {
-                      return name;
-                    }
-                }
-            },
+    methods: {
+      initDefaultData () {
+        this.provins = {
+          list: provins,
+          defaultValue: this.defaultValue[0],
+          displayValue (name) {
+            return name
+          }
+        }
+        this.citys = {
+          list: citys[this.defaultValue[0]],
+          defaultValue: this.defaultValue[1],
+          displayValue (name) {
+            return name
+          }
+        }
+        this.areas = {
+          list: areas[this.defaultValue[1]],
+          defaultValue: this.defaultValue[2],
+          displayValue (name) {
+            return name
+          }
+        }
+      },
 
-            handleChangeProvin (provin) {
-                this.provins = {
-                    list: provins,
-                    defaultValue: provin,
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.citys = {
-                    list: citys[provin],
-                    defaultValue: citys[provin][0],
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.areas = {
-                    list: areas[citys[provin][0]],
-                    defaultValue: areas[citys[provin][0]][0],
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.address = [];
-                this.address.push(provin);
-                this.address.push(citys[provin][0]);
-                this.address.push(areas[citys[provin][0]][0]);
-                this.$emit('wxChange', this.address);
-            },
+      handleChangeProvin (provin) {
+        this.provins = {
+          list: provins,
+          defaultValue: provin,
+          displayValue (name) {
+            return name
+          }
+        }
+        this.citys = {
+          list: citys[provin],
+          defaultValue: citys[provin][0],
+          displayValue (name) {
+            return name
+          }
+        }
+        this.areas = {
+          list: areas[citys[provin][0]],
+          defaultValue: areas[citys[provin][0]][0],
+          displayValue (name) {
+            return name
+          }
+        }
+        this.address = []
+        this.address.push(provin)
+        this.address.push(citys[provin][0])
+        this.address.push(areas[citys[provin][0]][0])
+        this.$emit('wxChange', this.address)
+      },
 
-            handleChangeCity(city) {
-                this.address[1] = city;
-                this.address[2] = areas[city][0];
-                this.areas = {
-                    list: areas[city],
-                    defaultValue: areas[city][0],
-                    displayValue (name) {
-                        return name;
-                    }
-                };
-                this.$emit('wxChange', this.address);
-            },
+      handleChangeCity (city) {
+        this.address[1] = city
+        this.address[2] = areas[city][0]
+        this.areas = {
+          list: areas[city],
+          defaultValue: areas[city][0],
+          displayValue (name) {
+            return name
+          }
+        }
+        this.$emit('wxChange', this.address)
+      },
 
-            handleChangeArea(area) {
-                this.address[2] = area;
-                this.$emit('wxChange', this.address);
-            },
+      handleChangeArea (area) {
+        this.address[2] = area
+        this.$emit('wxChange', this.address)
+      },
 
-            handleBottom () {
-                this.$emit('wxCancel');
-            },
-            handleFinish () {
-                this.$refs.wxPopup.hide(() => {
-                    this.$emit('wxConfirm', this.address);
-                });
-            },
-            handleCancel () {
-                this.$refs.wxPopup.hide(() => {
-                    this.$emit('wxCancel');
-                });
-            }
-        },
-        components: { WxPicker, WxButton, WxPopup }
-    }
+      handleBottom () {
+        this.$emit('wxCancel')
+      },
+      handleFinish () {
+        this.$refs.wxPopup.hide(() => {
+          this.$emit('wxConfirm', this.address)
+        })
+      },
+      handleCancel () {
+        this.$refs.wxPopup.hide(() => {
+          this.$emit('wxCancel')
+        })
+      }
+    },
+    components: { WxPicker, WxButton, WxPopup }
+  }
 </script>

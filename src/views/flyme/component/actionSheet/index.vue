@@ -50,25 +50,25 @@
 </style>
 
 <script>
-import { FmButton, FmActionSheet } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-
-export default {
-  components: { Title, Category, FmButton, FmActionSheet },
-  data: () => ({
-    actionSheetShow: false
-  }),
-  methods: {
-    click () {
-      this.actionSheetShow = true;
-    },
-    fmActionSheetBtnClicked (msg) {
-      modal.toast({ message: msg });
-    },
-    fmActionSheetOverlayClick () {
-      this.actionSheetShow = false;
+  import { FmButton, FmActionSheet } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
+  export default {
+    components: { Title, Category, FmButton, FmActionSheet },
+    data: () => ({
+      actionSheetShow: false
+    }),
+    methods: {
+      click () {
+        this.actionSheetShow = true
+      },
+      fmActionSheetBtnClicked (msg) {
+        modal.toast({ message: msg })
+      },
+      fmActionSheetOverlayClick () {
+        this.actionSheetShow = false
+      }
     }
   }
-};
 </script>

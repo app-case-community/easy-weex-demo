@@ -32,47 +32,47 @@
 }
 </style>
 <script>
-import { BuiHeader, BuiTabbar } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiTabbar
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      currentTab: 1,
-      tabItems: [
-        {
-          title: "首页",
-          icon: "ion-home"
-        },
-        {
-          icon: "ion-planet",
-          title: "探索"
-        },
-        {
-          icon: "ion-ios-cart",
-          title: "商城"
-        },
-        {
-          icon: "ion-ribbon-a",
-          title: "奖励"
-        }
-      ]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiTabbar } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiTabbar
     },
-    onItemChange(index) {},
-    onSliderChange(e) {
-      var index = e.index;
-      this.currentTab = index;
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        currentTab: 1,
+        tabItems: [
+          {
+            title: '首页',
+            icon: 'ion-home'
+          },
+          {
+            icon: 'ion-planet',
+            title: '探索'
+          },
+          {
+            icon: 'ion-ios-cart',
+            title: '商城'
+          },
+          {
+            icon: 'ion-ribbon-a',
+            title: '奖励'
+          }
+        ]
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      },
+      onItemChange (index) {},
+      onSliderChange (e) {
+        var index = e.index
+        this.currentTab = index
+      }
     }
   }
-};
 </script>

@@ -105,10 +105,10 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
   import { WxcProgress } from 'weex-ui'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcProgress },
@@ -119,25 +119,25 @@
       timer: null
     }),
     created () {
-      setTitle('Progress');
+      setTitle('Progress')
     },
     methods: {
       uploadFile () {
         if (!this.uploading) {
-          this.value = 0;
-          this.uploading = true;
-          this.progressVisible = true;
+          this.value = 0
+          this.uploading = true
+          this.progressVisible = true
           this.timer = setInterval(() => {
             if (this.value < 100) {
               this.value++
             } else {
-              this.uploading = false;
+              this.uploading = false
               setTimeout(() => {
-                this.progressVisible = false;
+                this.progressVisible = false
               }, 500)
-              clearTimeout(this.timer);
+              clearTimeout(this.timer)
             }
-          }, 10);
+          }, 10)
         }
       }
     }

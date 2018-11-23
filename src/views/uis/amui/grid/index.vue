@@ -29,26 +29,26 @@
 </template>
 
 <script>
-import { AmGrid, AmWhiteSpace, AmWingBlank, AmNavBar } from 'weex-amui'
-import Placeholder from '@components/amui/_mods/placeholder.vue'
-const modal = weex.requireModule('modal')
+  import { AmGrid, AmWhiteSpace, AmWingBlank, AmNavBar } from 'weex-amui'
+  import Placeholder from '@components/amui/_mods/placeholder.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Placeholder, AmGrid, AmWhiteSpace, AmWingBlank, AmNavBar },
-  data () {
-    return {
-      list: Array.from(new Array(9)).map((v, k) => ({
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
-        text: `name ${k}`
-      }))
-    }
-  },
-  methods: {
-    handleClick (item, index) {
-      modal.toast({
-        message: index
-      })
+  export default {
+    components: { Placeholder, AmGrid, AmWhiteSpace, AmWingBlank, AmNavBar },
+    data () {
+      return {
+        list: Array.from(new Array(9)).map((v, k) => ({
+          icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
+          text: `name ${k}`
+        }))
+      }
+    },
+    methods: {
+      handleClick (item, index) {
+        modal.toast({
+          message: index
+        })
+      }
     }
   }
-}
 </script>

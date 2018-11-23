@@ -33,32 +33,32 @@
 </style>
 
 <script>
-import { BuiHeader, BuiButton, BuiIcon } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiButton,
-    BuiIcon
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      btnStyle: {
-        width: 300,
-        backgroundColor: "#f3f2f23",
-        "backgroundColor:active": "#f6f2f23"
-      }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiButton, BuiIcon } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiButton,
+      BuiIcon
     },
-    btnEvent(e) {
-      this.$toast("button click");
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        btnStyle: {
+          width: 300,
+          backgroundColor: '#f3f2f23',
+          'backgroundColor:active': '#f6f2f23'
+        }
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      },
+      btnEvent (e) {
+        this.$toast('button click')
+      }
     }
   }
-};
 </script>

@@ -18,32 +18,32 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiButton, BuiDialog } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiButton,
-    BuiDialog
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiButton, BuiDialog } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiButton,
+      BuiDialog
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        showDialog: false
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
       },
-      showDialog: false
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
-    },
-    open() {
-      this.showDialog = true;
-    },
-    onDialogCallback(text) {
-      this.showDialog = false;
-      this.$toast(text);
+      open () {
+        this.showDialog = true
+      },
+      onDialogCallback (text) {
+        this.showDialog = false
+        this.$toast(text)
+      }
     }
   }
-};
 </script>

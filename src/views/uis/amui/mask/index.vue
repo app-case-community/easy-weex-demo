@@ -24,31 +24,31 @@
 
 <script>
 
-import { AmNavBar, AmMask, AmButton, AmFlex } from 'weex-amui'
+  import { AmNavBar, AmMask, AmButton, AmFlex } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmMask, AmButton, AmFlex },
-  data () {
-    return {
-      show: false,
-      animation: false
-    }
-  },
-  methods: {
-    show1 () {
-      this.animation = true
-      this.show = true
+  export default {
+    components: { AmNavBar, AmMask, AmButton, AmFlex },
+    data () {
+      return {
+        show: false,
+        animation: false
+      }
     },
-    show2 () {
-      this.animation = false
-      this.show = true
-    },
-    show3 () {
-      this.show = true
-      setTimeout(() => {
-        this.show = false
-      }, 3000)
+    methods: {
+      show1 () {
+        this.animation = true
+        this.show = true
+      },
+      show2 () {
+        this.animation = false
+        this.show = true
+      },
+      show3 () {
+        this.show = true
+        setTimeout(() => {
+          this.show = false
+        }, 3000)
+      }
     }
   }
-}
 </script>

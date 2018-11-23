@@ -188,34 +188,34 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListItem, Utils } from "weex-amui";
-const navigator = weex.requireModule("navigator");
+  import { AmNavBar, AmList, AmListItem, Utils } from 'weex-amui'
+  const navigator = weex.requireModule('navigator')
 
-export default {
-  components: { AmNavBar, AmList, AmListItem },
-  data() {
-    return {
-      isWeb: Utils.isWeb()
-    };
-  },
-  methods: {
-    handleClick(name) {
-      name = name.replace("am-", "");
-      const suffix = Utils.isWeb() ? "html" : "js";
-      let url = `${name}/index.${suffix}`;
-      if (/\/$/.test(weex.config.bundleUrl)) {
-        url = weex.config.bundleUrl = url;
-      } else {
-        url = weex.config.bundleUrl.replace(`index.${suffix}`, url);
+  export default {
+    components: { AmNavBar, AmList, AmListItem },
+    data () {
+      return {
+        isWeb: Utils.isWeb()
       }
-      if (!url.endsWith('.' + suffix)) {
-        url += '/index.' + suffix
+    },
+    methods: {
+      handleClick (name) {
+        name = name.replace('am-', '')
+        const suffix = Utils.isWeb() ? 'html' : 'js'
+        let url = `${name}/index.${suffix}`
+        if (/\/$/.test(weex.config.bundleUrl)) {
+          url = weex.config.bundleUrl = url
+        } else {
+          url = weex.config.bundleUrl.replace(`index.${suffix}`, url)
+        }
+        if (!url.endsWith('.' + suffix)) {
+          url += '/index.' + suffix
+        }
+        navigator.push({
+          url: `${url}?_wx_tpl=${url}`,
+          animated: 'true'
+        })
       }
-      navigator.push({
-        url: `${url}?_wx_tpl=${url}`,
-        animated: "true"
-      });
     }
   }
-};
 </script>

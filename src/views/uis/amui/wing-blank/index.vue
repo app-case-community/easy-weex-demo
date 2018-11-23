@@ -25,11 +25,11 @@
 </style>
 
 <script>
-import { AmWingBlank, AmWhiteSpace, AmNavBar } from 'weex-amui'
-import Placeholder from '@components/amui/_mods/placeholder.vue'
+  import { AmWingBlank, AmWhiteSpace, AmNavBar } from 'weex-amui'
+  import Placeholder from '@components/amui/_mods/placeholder.vue'
 
-export default {
-  components: { AmWingBlank, AmWhiteSpace, AmNavBar, Placeholder }
+  export default {
+    components: { AmWingBlank, AmWhiteSpace, AmNavBar, Placeholder }
 
-}
+  }
 </script>

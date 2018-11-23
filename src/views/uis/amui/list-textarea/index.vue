@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListTextarea } from 'weex-amui'
+  import { AmNavBar, AmList, AmListTextarea } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmList, AmListTextarea },
-  data () {
-    return {
-      value: ''
+  export default {
+    components: { AmNavBar, AmList, AmListTextarea },
+    data () {
+      return {
+        value: ''
+      }
     }
   }
-}
 </script>

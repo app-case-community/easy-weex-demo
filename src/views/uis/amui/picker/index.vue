@@ -72,34 +72,34 @@
 </style>
 
 <script>
-import { AmButton, AmList, AmListItem, AmPicker, AmWingBlank, AmNavBar } from 'weex-amui'
+  import { AmButton, AmList, AmListItem, AmPicker, AmWingBlank, AmNavBar } from 'weex-amui'
 
-import { seasons, district } from '../picker-view/data.js'
+  import { seasons, district } from '../picker-view/data.js'
 
-export default {
-  components: { AmButton, AmList, AmListItem, AmPicker, AmWingBlank, AmNavBar },
+  export default {
+    components: { AmButton, AmList, AmListItem, AmPicker, AmWingBlank, AmNavBar },
 
-  computed: {},
-  data () {
-    return {
-      seasons,
-      district,
-      value1: [],
-      value2: [],
-      value3: [],
-      pickerShow: false
-    }
-  },
-  methods: {
-    onHide (type) {
-      console.log('hide', type)
+    computed: {},
+    data () {
+      return {
+        seasons,
+        district,
+        value1: [],
+        value2: [],
+        value3: [],
+        pickerShow: false
+      }
     },
-    onOK (value, label) {
-      console.log('ok', value, label)
-    },
-    onChange (value, label) {
-      console.log('change', value, label)
+    methods: {
+      onHide (type) {
+        console.log('hide', type)
+      },
+      onOK (value, label) {
+        console.log('ok', value, label)
+      },
+      onChange (value, label) {
+        console.log('change', value, label)
+      }
     }
   }
-}
 </script>

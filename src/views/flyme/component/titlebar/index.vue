@@ -72,9 +72,9 @@
   }
 
   .title {
-		flex: 1;
-		text-overflow: ellipsis;
-		lines: 1;
+    flex: 1;
+    text-overflow: ellipsis;
+    lines: 1;
     font-family: sans-serif-medium;
     font-weight: 500;
     font-size: 48px;
@@ -84,28 +84,28 @@
 </style>
 
 <script>
-import { FmTitlebar, FmTag } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-const modal = weex.requireModule('modal');
+  import { FmTitlebar, FmTag } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmTitlebar, FmTag },
-  data: () => ({
-    btns1: [{
-      type: 'icon',
-      value: 'paizhao',
-      color: '#3BC06B'
-    }, {
-      type: 'text',
-      value: '更多',
-      color: '#FC5B23'
-    }]
-  }),
-  methods: {
-    rightBtnClick (e) {
-      modal.toast({ message: e });
+  export default {
+    components: { Title, Category, FmTitlebar, FmTag },
+    data: () => ({
+      btns1: [{
+        type: 'icon',
+        value: 'paizhao',
+        color: '#3BC06B'
+      }, {
+        type: 'text',
+        value: '更多',
+        color: '#FC5B23'
+      }]
+    }),
+    methods: {
+      rightBtnClick (e) {
+        modal.toast({ message: e })
+      }
     }
   }
-};
 </script>

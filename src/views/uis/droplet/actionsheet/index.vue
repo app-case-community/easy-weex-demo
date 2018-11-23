@@ -28,66 +28,66 @@
 </template>
 
 <script>
-    import { WxActionsheet, WxButton } from 'weex-droplet-ui';
-    const modal = weex.requireModule('modal');
+  import { WxActionsheet, WxButton } from 'weex-droplet-ui'
+  const modal = weex.requireModule('modal')
 
-    export default {
-        components: {
-            WxActionsheet,
-            WxButton
+  export default {
+    components: {
+      WxActionsheet,
+      WxButton
+    },
+
+    data () {
+      return {
+        showSheet1: false,
+        showSheet2: false,
+        actions1: [],
+        actions2: []
+      }
+    },
+
+    methods: {
+      takePhoto () {
+        modal.toast({ message: 'taking photo' })
+      },
+
+      openAlbum () {
+        modal.toast({ message: 'opening album' })
+      },
+
+      callPhone (action) {
+        modal.toast({ message: action.name })
+      },
+
+      takeMobile (action) {
+        modal.toast({ message: action.name })
+      }
+    },
+
+    mounted () {
+      this.actions1 = [
+        {
+          name: '拍照',
+          method: this.takePhoto
         },
-
-        data () {
-            return {
-                showSheet1: false,
-                showSheet2: false,
-                actions1: [],
-                actions2: []
-            }
-        },
-
-        methods: {
-            takePhoto () {
-                modal.toast({ message: 'taking photo' });
-            },
-
-            openAlbum () {
-                modal.toast({ message: 'opening album' });
-            },
-
-            callPhone (action) {
-                modal.toast({ message: action.name });
-            },
-
-            takeMobile (action) {
-                modal.toast({ message: action.name });
-            }
-        },
-
-        mounted () {
-            this.actions1 = [
-                {
-                    name: '拍照',
-                    method: this.takePhoto
-                },
-                {
-                    name: '从相册中选择',
-                    method: this.openAlbum
-                },
-            ];
-
-            this.actions2 = [
-                {
-                    name: '咨询服务热线:400-888-8888',
-                    method: this.callPhone
-                },
-                {
-                    name: '152-2926-7590',
-                    method: this.takeMobile
-                }
-            ];
+        {
+          name: '从相册中选择',
+          method: this.openAlbum
         }
-    };
+      ]
+
+      this.actions2 = [
+        {
+          name: '咨询服务热线:400-888-8888',
+          method: this.callPhone
+        },
+        {
+          name: '152-2926-7590',
+          method: this.takeMobile
+        }
+      ]
+    }
+  }
 </script>
 <style type="text/css">
     .button {

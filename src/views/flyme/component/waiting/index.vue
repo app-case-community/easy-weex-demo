@@ -37,26 +37,26 @@
 </style>
 
 <script>
-import { FmWaiting, FmButton } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
+  import { FmWaiting, FmButton } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
 
-export default {
-  components: { Title, FmWaiting, FmButton },
-  data: () => ({
-    canAutoClose: true
-  }),
-  methods: {
-    openCanClose () {
-      this.canAutoClose = true;
-      this.$refs['fm-waiting'].active();
-    },
-    openCantClose () {
-      this.canAutoClose = false;
-      this.$refs['fm-waiting'].active();
-      setTimeout(() => {
-        this.$refs['fm-waiting'].hide();
-      }, 6000);
+  export default {
+    components: { Title, FmWaiting, FmButton },
+    data: () => ({
+      canAutoClose: true
+    }),
+    methods: {
+      openCanClose () {
+        this.canAutoClose = true
+        this.$refs['fm-waiting'].active()
+      },
+      openCantClose () {
+        this.canAutoClose = false
+        this.$refs['fm-waiting'].active()
+        setTimeout(() => {
+          this.$refs['fm-waiting'].hide()
+        }, 6000)
+      }
     }
   }
-};
 </script>

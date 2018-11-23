@@ -85,31 +85,31 @@
 </style>
 
 <script>
-import { AmButton, AmList, AmListItem, AmDatePicker, AmWingBlank, AmNavBar } from 'weex-amui'
+  import { AmButton, AmList, AmListItem, AmDatePicker, AmWingBlank, AmNavBar } from 'weex-amui'
 
-export default {
-  components: { AmButton, AmList, AmListItem, AmDatePicker, AmWingBlank, AmNavBar },
+  export default {
+    components: { AmButton, AmList, AmListItem, AmDatePicker, AmWingBlank, AmNavBar },
 
-  computed: {},
-  data () {
-    return {
-      value1: '2009-01-03 22:22',
-      value2: '',
-      value3: '',
-      value4: '',
-      pickerShow: false
-    }
-  },
-  methods: {
-    onHide (type) {
-      console.log('hide', type)
+    computed: {},
+    data () {
+      return {
+        value1: '2009-01-03 22:22',
+        value2: '',
+        value3: '',
+        value4: '',
+        pickerShow: false
+      }
     },
-    onOK (value) {
-      console.log('ok', value)
-    },
-    onChange (value) {
-      console.log('change', value)
+    methods: {
+      onHide (type) {
+        console.log('hide', type)
+      },
+      onOK (value) {
+        console.log('ok', value)
+      },
+      onChange (value) {
+        console.log('change', value)
+      }
     }
   }
-}
 </script>

@@ -48,17 +48,17 @@
 </style>
 
 <script>
-import { AmButton, AmFlex, AmFlexItem, AmWhiteSpace, AmNavBar } from 'weex-amui'
-import Placeholder from '@components/amui/_mods/placeholder.vue'
+  import { AmButton, AmFlex, AmFlexItem, AmWhiteSpace, AmNavBar } from 'weex-amui'
+  import Placeholder from '@components/amui/_mods/placeholder.vue'
 
-export default {
-  components: { Placeholder, AmButton, AmFlex, AmFlexItem, AmWhiteSpace, AmNavBar },
+  export default {
+    components: { Placeholder, AmButton, AmFlex, AmFlexItem, AmWhiteSpace, AmNavBar },
 
-  computed: {},
-  data () {
-    return {
-      count: 1
+    computed: {},
+    data () {
+      return {
+        count: 1
+      }
     }
   }
-}
 </script>

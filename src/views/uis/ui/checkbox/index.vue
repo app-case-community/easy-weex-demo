@@ -52,10 +52,10 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
   import { WxcCheckbox, WxcCheckboxList } from 'weex-ui'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcCheckbox, WxcCheckboxList },
@@ -69,11 +69,11 @@
       checkedList: [2]
     }),
     created () {
-      setTitle('Checkbox');
+      setTitle('Checkbox')
     },
     methods: {
       wxcCheckBoxListChecked (e) {
-        this.checkedList = e.checkedList;
+        this.checkedList = e.checkedList
       }
     }
   }

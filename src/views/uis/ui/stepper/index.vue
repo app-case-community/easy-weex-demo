@@ -65,12 +65,12 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcStepper } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcStepper } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  const modal = weex.requireModule('modal');
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcStepper },
@@ -80,16 +80,16 @@
       isOnlyRead: true
     }),
     created () {
-      setTitle('Stepper');
+      setTitle('Stepper')
     },
-    mounted(){
-      setTimeout(()=>{
-        this.value=10;
-      },2000)
+    mounted () {
+      setTimeout(() => {
+        this.value = 10
+      }, 2000)
     },
     methods: {
       wxcStepperValueChanged (e) {
-        console.log(e.value);
+        console.log(e.value)
       },
       wxcStepperValueIsMaxOver () {
         modal.toast({
@@ -102,5 +102,5 @@
         })
       }
     }
-  };
+  }
 </script>

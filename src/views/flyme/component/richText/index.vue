@@ -42,82 +42,82 @@
 </style>
 
 <script>
-import { FmRichText, FmSpecialRichText } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmRichText, FmSpecialRichText } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmRichText, FmSpecialRichText },
-  data () {
-    return {
-      configList: [{
-        type: 'text',
-        text: '新品上市'
-      }, {
-        type: 'icon',
-        value: 'dianzan',
-        color: 'red',
-        style: {
-          size: 36,
-          lineHeight: 63
-        }
-      }, {
-        type: 'link',
-        text: ' =>点击查看',
-        href: '//www.baidu.com',
-        style: {
-          color: '#546E7A'
-        }
-      }, {
-        type: 'tag',
-        tagType: 'hollow',
-        size: 'small',
-        value: '满100减20',
-        color: '#FF5000',
-        fontColor: '#FF5000'
-      }],
-      configString: '不小心传入了字符串不小心传入了字符串不小心传入了字符串不小心传入了字符串不小心传入了字符串',
-      specialConfigList: [
-        {
+  export default {
+    components: { Title, Category, FmRichText, FmSpecialRichText },
+    data () {
+      return {
+        configList: [{
+          type: 'text',
+          text: '新品上市'
+        }, {
+          type: 'icon',
+          value: 'dianzan',
+          color: 'red',
+          style: {
+            size: 36,
+            lineHeight: 63
+          }
+        }, {
+          type: 'link',
+          text: ' =>点击查看',
+          href: '//www.baidu.com',
+          style: {
+            color: '#546E7A'
+          }
+        }, {
           type: 'tag',
           tagType: 'hollow',
-          value: '作者',
-          color: '#7e97ac',
-          fontColor: '#7e97ac',
-          style: {
-            width: 81
+          size: 'small',
+          value: '满100减20',
+          color: '#FF5000',
+          fontColor: '#FF5000'
+        }],
+        configString: '不小心传入了字符串不小心传入了字符串不小心传入了字符串不小心传入了字符串不小心传入了字符串',
+        specialConfigList: [
+          {
+            type: 'tag',
+            tagType: 'hollow',
+            value: '作者',
+            color: '#7e97ac',
+            fontColor: '#7e97ac',
+            style: {
+              width: 81
+            }
+          },
+          {
+            type: 'text',
+            value: '蓝小胖：Weex-FlymeUI 是基于 Weex 和 Flyme 6 控件标准开发而成的跨平台组件…',
+            style: {
+              fontSize: 48
+            }
           }
-        },
-        {
-          type: 'text',
-          value: '蓝小胖：Weex-FlymeUI 是基于 Weex 和 Flyme 6 控件标准开发而成的跨平台组件…',
-          style: {
-            fontSize: 48
+        ],
+        specialConfigList1: [
+          {
+            type: 'icon',
+            value: 'xinxi2',
+            style: {
+              size: 42
+            }
+          },
+          {
+            type: 'text',
+            value: '蓝小胖：Weex-FlymeUI 是基于 Weex 和 Flyme 6 控件标准开发而成的跨平台组件…',
+            style: {
+              fontSize: 42
+            }
           }
-        }
-      ],
-      specialConfigList1: [
-        {
-          type: 'icon',
-          value: 'xinxi2',
-          style: {
-            size: 42
-          }
-        },
-        {
-          type: 'text',
-          value: '蓝小胖：Weex-FlymeUI 是基于 Weex 和 Flyme 6 控件标准开发而成的跨平台组件…',
-          style: {
-            fontSize: 42
-          }
-        }
-      ]
-    };
-  },
-  methods: {
-    linkBeClick (obj) {
-      console.log(obj);
+        ]
+      }
+    },
+    methods: {
+      linkBeClick (obj) {
+        console.log(obj)
+      }
     }
   }
-};
 </script>

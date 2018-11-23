@@ -40,7 +40,7 @@
         </div>
         <div  class="head">
             <div class="welcome">
-                <text style="font-size:20px;" >欢迎来到闲鱼</text>  
+                <text style="font-size:20px;" >欢迎来到闲鱼</text>
             </div>
 
             <button class="login" >马上登录</button>
@@ -74,20 +74,19 @@
     </div>
 </template>
 <script>
-export default {
+  export default {
     data () {
-        return {
-            url: ''
-        }
+      return {
+        url: ''
+      }
     },
     mounted () {
-       
-        
+
     },
     methods: {
-       
+
     }
-}
+  }
 </script>
 <style lang="css" scoped>
 body{
@@ -193,7 +192,7 @@ text-align: center;
 .flexprimary .name p{
     font-size: 20px;
     font-weight: 900;
-} 
+}
 .flexprimary .somedesc{
     font-size: 20px;
     color: #888;
@@ -233,7 +232,7 @@ text-align: center;
     font-size: 10px;
 }
 .block {
-    height: 55px;   
+    height: 55px;
 }
 .head .animate {
     position: absolute;
@@ -263,10 +262,10 @@ text-align: center;
 }
 .list {
     margin-top: 10px;
-    width: 100%;    
+    width: 100%;
     height: auto;
     background-color: #fff;
-    font-size: 40px;  
+    font-size: 40px;
 }
 .item {
     padding: 12px 35px;

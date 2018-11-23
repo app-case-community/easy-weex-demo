@@ -1,14 +1,14 @@
 <template>
     <div class="wrapper">
-        
+
         <div class="box" >
             <div  class="i-goods"  v-for="(i,idx) in goods" :key="idx">
                  <text class="gd-tlt">{{i.tlt}}</text>
                 <text class="gd-info">{{i.info}}</text>
                 <image class="gd-img" resize="recover" :src="i.img" />
-               
+
             </div>
-            
+
         </div>
     </div>
 </template>
@@ -21,11 +21,11 @@
         background-color: #fff;
         padding-bottom: 6px;
     }
-   
+
   .i-goods{
     align-items:center;
   }
- 
+
     .box{
 
         justify-content:space-between;
@@ -36,7 +36,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-   
+
     .gd-img{
         height: 60px;
         width: 60px;
@@ -65,27 +65,26 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-  
-   
+
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@xianyu/assets/util';
-    export default {
-        props:["newGoods","hotGoods","head","hasMore","goods"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) return;
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/web.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            }
-        }
+  import util from '@xianyu/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    props: ['newGoods', 'hotGoods', 'head', 'hasMore', 'goods'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) return
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/web.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

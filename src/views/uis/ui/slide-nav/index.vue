@@ -102,11 +102,10 @@
 </style>
 
 <script>
-  import { WxcSlideNav } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcSlideNav } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  let isWeb = typeof window === 'object' && weex.config.env.platform.toLowerCase() === 'web';
-
+  let isWeb = typeof window === 'object' && weex.config.env.platform.toLowerCase() === 'web'
 
   export default {
     data () {
@@ -119,18 +118,18 @@
     },
     components: { WxcSlideNav },
     created () {
-      setTitle('SlideNav');
+      setTitle('SlideNav')
     },
 
     methods: {
       onTouchStart: WxcSlideNav.handleTouchStart,
       onTouchEnd: WxcSlideNav.handleTouchEnd,
       onTouchMove (e) {
-        WxcSlideNav.handleTouchMove.call(this, e, this.$refs.bottomNav);
+        WxcSlideNav.handleTouchMove.call(this, e, this.$refs.bottomNav)
       },
       onScroll (e) {
         // console.log(e);
-        WxcSlideNav.handleScroll.call(this, e, this.$refs.scroller, this.$refs.topNav, this.$refs.bottomNav);
+        WxcSlideNav.handleScroll.call(this, e, this.$refs.scroller, this.$refs.topNav, this.$refs.bottomNav)
       }
     }
   }

@@ -62,76 +62,76 @@
   }
 
   .demo-content {
-		height: 840px;
+    height: 840px;
   }
 </style>
 
 <script>
-import { FmButton, FmSnackBar, showSnackBar } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmButton, FmSnackBar, showSnackBar } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmButton, FmSnackBar },
-  data: () => ({
-    show: false,
-    staryTimeShow: false,
-    stayShow: false
-  }),
-  mounted () {
-  },
-  methods: {
-    click1 () {
-      this.show = true;
+  export default {
+    components: { Title, Category, FmButton, FmSnackBar },
+    data: () => ({
+      show: false,
+      staryTimeShow: false,
+      stayShow: false
+    }),
+    mounted () {
     },
-    fmSnackBarDismissed () {
-      this.show = false;
-    },
-    click2 () {
-      this.staryTimeShow = true;
-    },
-    fmSnackBarStayTimeDismissed () {
-      this.staryTimeShow = false;
-    },
-    click3 () {
-      this.stayShow = true;
-    },
-    fmSnackBarStayDismissed () {
-      this.stayShow = false;
-    },
-    click4 () {
-      showSnackBar({
-        title: 'js 调用弹出的 SnackBar'
-      }).then(() => {
+    methods: {
+      click1 () {
+        this.show = true
+      },
+      fmSnackBarDismissed () {
+        this.show = false
+      },
+      click2 () {
+        this.staryTimeShow = true
+      },
+      fmSnackBarStayTimeDismissed () {
+        this.staryTimeShow = false
+      },
+      click3 () {
+        this.stayShow = true
+      },
+      fmSnackBarStayDismissed () {
+        this.stayShow = false
+      },
+      click4 () {
+        showSnackBar({
+          title: 'js 调用弹出的 SnackBar'
+        }).then(() => {
 
-      }, () => {
-        modal.toast({ message: '消失了' });
-      });
-    },
-    click5 () {
-      showSnackBar({
-        title: '已自动开启夜间模式',
-        closeText: '撤销',
-        autoClose: false
-      }).then(() => {
-        modal.toast({ message: '点击了撤销' });
-      }, () => {
-        modal.toast({ message: '消失了' });
-      });
-    },
-    click6 () {
-      showSnackBar({
-        title: '无网络连接，请点击设置',
-        autoClose: false,
-        type: 'jump'
-      }).then(() => {
-        modal.toast({ message: '点击跳转' });
-      }, () => {
-        modal.toast({ message: '消失了' });
-      });
+        }, () => {
+          modal.toast({ message: '消失了' })
+        })
+      },
+      click5 () {
+        showSnackBar({
+          title: '已自动开启夜间模式',
+          closeText: '撤销',
+          autoClose: false
+        }).then(() => {
+          modal.toast({ message: '点击了撤销' })
+        }, () => {
+          modal.toast({ message: '消失了' })
+        })
+      },
+      click6 () {
+        showSnackBar({
+          title: '无网络连接，请点击设置',
+          autoClose: false,
+          type: 'jump'
+        }).then(() => {
+          modal.toast({ message: '点击跳转' })
+        }, () => {
+          modal.toast({ message: '消失了' })
+        })
+      }
     }
   }
-};
 </script>

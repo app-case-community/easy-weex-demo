@@ -27,26 +27,26 @@
 </style>
 
 <script>
-    var modal = weex.requireModule('modal');
-    import util from './assets/util';
-    import BottomBar from '@components/xianyu/assets/components/BottomBar.vue';
+  import util from './assets/util'
+  import BottomBar from '@components/xianyu/assets/components/BottomBar.vue'
+  // var modal = weex.requireModule('modal')
 
-    export default {
-        data () {
-            return {
-            }
-        },
-        components: {
-            'bottom-bar': BottomBar
-        },
-        created () {
-            util.initIconFont();
-        },
-        methods: {
-            onTabTo(_result){
-                let _key = _result.data.key || '';
-                this.$router && this.$router.push('/'+_key)
-            }
-        }
+  export default {
+    data () {
+      return {
+      }
+    },
+    components: {
+      'bottom-bar': BottomBar
+    },
+    created () {
+      util.initIconFont()
+    },
+    methods: {
+      onTabTo (_result) {
+        let _key = _result.data.key || ''
+        this.$router && this.$router.push('/' + _key)
+      }
     }
+  }
 </script>

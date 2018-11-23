@@ -148,24 +148,24 @@
 </style>
 
 <script>
-import { BuiHeader, BuiTip } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiTip
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      list: [["A", "B", "C"], ["D", "E", "F"], ["G", "H", "I"]]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiTip } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiTip
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        list: [['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      }
     }
   }
-};
 </script>

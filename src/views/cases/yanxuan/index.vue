@@ -27,25 +27,25 @@
 </style>
 
 <script>
-    var modal = weex.requireModule('modal');
-    import util from './assets/util';
-    import tabBar from '@components/yanxuan/assets/components/tabBar.vue';
-    export default {
-        data () {
-            return {
-            }
-        },
-        components: {
-            'tab-bar': tabBar
-        },
-        created () {
-            util.initIconFont();
-        },
-        methods: {
-            onTabTo(_result){
-                let _key = _result.data.key || '';
-                this.$router && this.$router.push('/'+_key)
-            }
-        }
+  import util from './assets/util'
+  import tabBar from '@components/yanxuan/assets/components/tabBar.vue'
+  // var modal = weex.requireModule('modal')
+  export default {
+    data () {
+      return {
+      }
+    },
+    components: {
+      'tab-bar': tabBar
+    },
+    created () {
+      util.initIconFont()
+    },
+    methods: {
+      onTabTo (_result) {
+        let _key = _result.data.key || ''
+        this.$router && this.$router.push('/' + _key)
+      }
     }
+  }
 </script>

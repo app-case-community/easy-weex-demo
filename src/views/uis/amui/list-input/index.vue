@@ -55,21 +55,21 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListItem, AmListInput, AmListRadio, AmButton, AmSwitch } from 'weex-amui'
+  import { AmNavBar, AmList, AmListItem, AmListInput, AmListRadio, AmButton, AmSwitch } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmList, AmListItem, AmListRadio, AmListInput, AmButton, AmSwitch },
-  data () {
-    return {
-      inputValue: '',
-      inputValue2: '',
-      inputDisbled: false
-    }
-  },
-  methods: {
-    test (event) {
-      console.log(event)
+  export default {
+    components: { AmNavBar, AmList, AmListItem, AmListRadio, AmListInput, AmButton, AmSwitch },
+    data () {
+      return {
+        inputValue: '',
+        inputValue2: '',
+        inputDisbled: false
+      }
+    },
+    methods: {
+      test (event) {
+        console.log(event)
+      }
     }
   }
-}
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="wx-demo">
         <text class="title">checkbox</text>
-        <wx-cell 
+        <wx-cell
             text="爱看电影"
             icon=""
             height="100px"
@@ -10,9 +10,9 @@
             textFontSize="32px"
             :hasArrow="false"
             @wxClick="handleClick">
-                <wx-checkbox 
+                <wx-checkbox
                     slot="right"
-                    text="" 
+                    text=""
                     v-model="checked"
                     checkedColor="#027FF3"
                     align="left"
@@ -20,7 +20,7 @@
                     @wxChange="handleChange">
                 </wx-checkbox>
             </wx-cell>
-            <wx-cell 
+            <wx-cell
                 text=""
                 icon=""
                 height="100px"
@@ -28,9 +28,9 @@
                 textColor="#333"
                 textFontSize="32px"
                 :hasArrow="false">
-                    <wx-checkbox 
+                    <wx-checkbox
                         slot="right"
-                        text="爱看小说" 
+                        text="爱看小说"
                         v-model="checked2"
                         checkedColor="#027FF3"
                         align="left"
@@ -38,7 +38,7 @@
                         @wxChange="handleChange">
                     </wx-checkbox>
             </wx-cell>
-            <wx-cell 
+            <wx-cell
                 text=""
                 icon=""
                 height="100px"
@@ -46,9 +46,9 @@
                 textColor="#333"
                 textFontSize="32px"
                 :hasArrow="false">
-                    <wx-checkbox 
+                    <wx-checkbox
                         slot="right"
-                        text="爱看小说" 
+                        text="爱看小说"
                         v-model="checked3"
                         checkedColor="#027FF3"
                         align="right"
@@ -56,7 +56,7 @@
                         @wxChange="handleChange">
                     </wx-checkbox>
             </wx-cell>
-            <wx-cell 
+            <wx-cell
                 text=""
                 icon=""
                 height="100px"
@@ -64,9 +64,9 @@
                 textColor="#333"
                 textFontSize="32px"
                 :hasArrow="false">
-                    <wx-checkbox 
+                    <wx-checkbox
                         slot="right"
-                        text="disabled checked" 
+                        text="disabled checked"
                         v-model="checked4"
                         checkedColor="#027FF3"
                         align="left"
@@ -74,7 +74,7 @@
                         @wxChange="handleChange">
                     </wx-checkbox>
             </wx-cell>
-            <wx-cell 
+            <wx-cell
                 text=""
                 icon=""
                 height="100px"
@@ -82,9 +82,9 @@
                 textColor="#333"
                 textFontSize="32px"
                 :hasArrow="false">
-                    <wx-checkbox 
+                    <wx-checkbox
                         slot="right"
-                        text="disabled" 
+                        text="disabled"
                         v-model="checked5"
                         checkedColor="#027FF3"
                         align="left"
@@ -93,7 +93,7 @@
                     </wx-checkbox>
             </wx-cell>
         <text class="title">checkbox-list</text>
-        <wx-checkbox-list 
+        <wx-checkbox-list
             v-model="list"
             :options="options"
             width="750px"
@@ -132,41 +132,41 @@
     }
 </style>
 <script>
-    import { WxCheckbox, WxCell, WxCheckboxList } from 'weex-droplet-ui';
-    const modal = weex.requireModule('modal');
-    export default {
-        components: {
-            WxCheckbox,
-            WxCell,
-            WxCheckboxList,
-        },
-        data () {
-            return {
-                 checked: false,
-                 checked2: true,
-                 checked3: false,
-                 checked4: true,
-                 checked5: false,
-                 options: [
-                    { title: '爱看电影', value: 1, checked: false, disabled: true },
-                    { title: '爱看小说', value: 2, checked: true },
-                    { title: '爱看抖音', value: 3, checked: false },
-                    { title: '爱刷微博', value: 4, checked: true }
-                 ],
-                 list: [],
-            }
-        },
-        created () {
+  import { WxCheckbox, WxCell, WxCheckboxList } from 'weex-droplet-ui'
+  //   const modal = weex.requireModule('modal')
+  export default {
+    components: {
+      WxCheckbox,
+      WxCell,
+      WxCheckboxList
+    },
+    data () {
+      return {
+        checked: false,
+        checked2: true,
+        checked3: false,
+        checked4: true,
+        checked5: false,
+        options: [
+          { title: '爱看电影', value: 1, checked: false, disabled: true },
+          { title: '爱看小说', value: 2, checked: true },
+          { title: '爱看抖音', value: 3, checked: false },
+          { title: '爱刷微博', value: 4, checked: true }
+        ],
+        list: []
+      }
+    },
+    created () {
 
-        },
-        methods: {
-            handleClick () {
-                // 第一个例子使用
-                this.checked = !this.checked;
-            },
-            handleChange (checkedListValue) {
-                console.log(checkedListValue)
-            },
-        }
+    },
+    methods: {
+      handleClick () {
+        // 第一个例子使用
+        this.checked = !this.checked
+      },
+      handleChange (checkedListValue) {
+        console.log(checkedListValue)
+      }
     }
+  }
 </script>

@@ -59,25 +59,25 @@
 </style>
 
 <script>
-import { AmNavBar, AmIcon, AmFlex } from 'weex-amui'
-import Icons from 'weex-amui/packages/am-icon/icon.js'
+  import { AmNavBar, AmIcon, AmFlex } from 'weex-amui'
+  import Icons from 'weex-amui/packages/am-icon/icon.js'
 
-const dom = weex.requireModule('dom')
+  const dom = weex.requireModule('dom')
 
-export default {
-  components: { AmNavBar, AmIcon, AmFlex },
-  data () {
-    return {
-      Icons
-    }
-  },
-  beforeCreate () {
-    // 添加自己的图标文件
-    dom.addRule('fontFace', {
-      'fontFamily': 'myIcon', // 与 <am-icon/> 组件的 fontFamily 属性对应
-      'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
-    })
-  },
-  methods: {}
-}
+  export default {
+    components: { AmNavBar, AmIcon, AmFlex },
+    data () {
+      return {
+        Icons
+      }
+    },
+    beforeCreate () {
+      // 添加自己的图标文件
+      dom.addRule('fontFace', {
+        'fontFamily': 'myIcon', // 与 <am-icon/> 组件的 fontFamily 属性对应
+        'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
+      })
+    },
+    methods: {}
+  }
 </script>

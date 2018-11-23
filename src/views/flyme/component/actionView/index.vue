@@ -44,17 +44,17 @@
 </style>
 
 <script>
-import { FmActionView } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmActionView } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmActionView },
-  data: () => ({
+  export default {
+    components: { Title, Category, FmActionView },
+    data: () => ({
 
-  }),
-  methods: {
+    }),
+    methods: {
 
+    }
   }
-};
 </script>

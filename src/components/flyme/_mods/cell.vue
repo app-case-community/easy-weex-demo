@@ -39,21 +39,19 @@
 </style>
 
 <script>
-import { FmText, FmIcon } from 'weex-flymeui';
+  import { FmText, FmIcon } from 'weex-flymeui'
 
-export default {
-  props: {
-    title: String,
-    subTitle: String
-  },
-  components: { FmText, FmIcon },
-  methods: {
-    click (e) {
-      this.$emit('click', e);
-      e.stopPropagation();
+  export default {
+    props: {
+      title: String,
+      subTitle: String
+    },
+    components: { FmText, FmIcon },
+    methods: {
+      click (e) {
+        this.$emit('click', e)
+        e.stopPropagation()
+      }
     }
   }
-};
 </script>
-
-

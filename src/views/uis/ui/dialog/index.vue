@@ -125,12 +125,12 @@
 
 <script>
 
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcDialog, WxcCell } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcDialog, WxcCell } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  const modal = weex.requireModule('modal');
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcDialog, WxcCell },
@@ -145,28 +145,28 @@
         single: false,
         showNoPrompt: false,
         isChecked: false
-      };
+      }
     },
     created () {
-      setTitle('Dialog');
+      setTitle('Dialog')
     },
     methods: {
       openDialog () {
-        const self = this;
-        self.show = true;
+        const self = this
+        self.show = true
       },
       dialogCancelBtnClick () {
-        this.show = false;
-        modal.toast({ 'message': '取消回调', 'duration': 1 });
+        this.show = false
+        modal.toast({ 'message': '取消回调', 'duration': 1 })
       },
       dialogConfirmBtnClick () {
-        this.show = false;
-        modal.toast({ 'message': '确认回调', 'duration': 1 });
+        this.show = false
+        modal.toast({ 'message': '确认回调', 'duration': 1 })
       },
       dialogNoPromptClick (e) {
-        this.isChecked = e.isChecked;
-        modal.toast({ 'message': `noPrompt isChecked: ${e.isChecked}`, 'duration': 1 });
+        this.isChecked = e.isChecked
+        modal.toast({ 'message': `noPrompt isChecked: ${e.isChecked}`, 'duration': 1 })
       }
     }
-  };
+  }
 </script>

@@ -24,25 +24,25 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiIcon } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiIcon
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiIcon } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiIcon
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        }
       }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+    },
+    methods: {
+      back () {
+        this.$pop()
+      }
     }
   }
-};
 </script>
 
 <style>

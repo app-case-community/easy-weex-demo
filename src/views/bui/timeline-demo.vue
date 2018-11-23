@@ -41,25 +41,25 @@
 }
 </style>
 <script>
-import { BuiHeader, BuiTimeline, BuiTimelineItem } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiTimeline,
-    BuiTimelineItem
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiTimeline, BuiTimelineItem } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiTimeline,
+      BuiTimelineItem
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        }
       }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
-    }
-  },
-  created() {}
-};
+    },
+    methods: {
+      back () {
+        this.$pop()
+      }
+    },
+    created () {}
+  }
 </script>

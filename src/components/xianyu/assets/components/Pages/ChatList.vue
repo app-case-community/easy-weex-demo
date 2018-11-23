@@ -4,14 +4,14 @@
     <ul>
         <div v-for="(item,i) in talks" :key="i">
             <li class="user" v-if="item.type==1">
-                <div class="chat-user">   
+                <div class="chat-user">
                     <image style="width: 45px;height: 45px;" src="https://sukura7.github.io/vue-xianyu-demo/static/avatar.jpg" class="avatar" /> </div>
 
                  <text class="time"><i>{{item.time}}</i>{{name}}</text>
                 <div class="text" v-html="replaceEmoj(item.content)"></div>
             </li>
             <li v-if="item.type==2" class="saler">
-                <div class="chat-user">  
+                <div class="chat-user">
                   <image style="width: 45px;height: 45px;" src="https://sukura7.github.io/vue-xianyu-demo/static/avatar.jpg" class="avatar" /></div>
                 <text class="time">马化云<i>{{item.time}}</i></text>
                 <div class="text" v-html="replaceEmoj(item.content)"></div>
@@ -33,141 +33,141 @@
 </div>
 </template>
 <script>
-export default {
-  props: {
-    news: {
-      type: Object
-    }
-  },
-  data() {
-    return {
-      showBox: 0, //0隐藏emoji 1显示emoji
-      content: "",
-      name: "马化云",
-      url: "",
-      //聊天对话
-      talks: [
-        {
-          type: 1,
-          time: "2017.9.28",
-          content: "Hello~"
-        },
-        {
-          type: 2,
-          time: "2017.9.28",
-          content: "亲按回车就能一键回复哟~"
+  export default {
+    props: {
+      news: {
+        type: Object
+      }
+    },
+    data () {
+      return {
+        showBox: 0, // 0隐藏emoji 1显示emoji
+        content: '',
+        name: '马化云',
+        url: '',
+        // 聊天对话
+        talks: [
+          {
+            type: 1,
+            time: '2017.9.28',
+            content: 'Hello~'
+          },
+          {
+            type: 2,
+            time: '2017.9.28',
+            content: '亲按回车就能一键回复哟~'
+          }
+        ],
+        // 表情
+        EXPS: [
+          { file: '100.gif', code: '/::)', title: '微笑', reg: /\/::\)/g },
+          { file: '101.gif', code: '/::~', title: '伤心', reg: /\/::~/g },
+          { file: '102.gif', code: '/::B', title: '美女', reg: /\/::B/g },
+          { file: '103.gif', code: '/::|', title: '发呆', reg: /\/::\|/g },
+          { file: '104.gif', code: '/:8-)', title: '墨镜', reg: /\/:8-\)/g },
+          { file: '105.gif', code: '/::<', title: '哭', reg: /\/::</g },
+          { file: '106.gif', code: '/::$', title: '羞', reg: /\/::\$/g },
+          { file: '107.gif', code: '/::X', title: '哑', reg: /\/::X/g },
+          { file: '108.gif', code: '/::Z', title: '睡', reg: /\/::Z/g },
+          { file: '109.gif', code: "/::'(", title: '哭', reg: /\/::'\(/g },
+          { file: '110.gif', code: '/::-|', title: '囧', reg: /\/::-\|/g },
+          { file: '111.gif', code: '/::@', title: '怒', reg: /\/::@/g },
+          { file: '112.gif', code: '/::P', title: '调皮', reg: /\/::P/g },
+          { file: '113.gif', code: '/::D', title: '笑', reg: /\/::D/g },
+          { file: '114.gif', code: '/::O', title: '惊讶', reg: /\/::O/g },
+          { file: '115.gif', code: '/::(', title: '难过', reg: /\/::\(/g },
+          { file: '116.gif', code: '/::+', title: '酷', reg: /\/::\+/g },
+          { file: '117.gif', code: '/:--b', title: '汗', reg: /\/:--b/g },
+          { file: '118.gif', code: '/::Q', title: '抓狂', reg: /\/::Q/g },
+          { file: '119.gif', code: '/::T', title: '吐', reg: /\/::T/g },
+          { file: '120.gif', code: '/:,@P', title: '笑', reg: /\/:,@P/g },
+          { file: '121.gif', code: '/:,@-D', title: '快乐', reg: /\/:,@-D/g },
+          { file: '122.gif', code: '/::d', title: '奇', reg: /\/::d/g },
+          { file: '123.gif', code: '/:,@o', title: '傲', reg: /\/:,@o/g },
+          { file: '124.gif', code: '/::g', title: '饿', reg: /\/::g/g },
+          { file: '125.gif', code: '/:|-)', title: '累', reg: /\/:\|-\)/g },
+          { file: '126.gif', code: '/::!', title: '吓', reg: /\/::!/g }
+        ]
+      }
+    },
+    mounted () {
+      // let username = window.localStorage.getItem('username')
+      // console.log(window.localStorage.getItem('useravatar'))
+      // this.url = window.localStorage.getItem('useravatar')
+      // console.log(this.url)
+      // this.$store.dispatch('setUsername', username)
+      // this.talks[0].name = this.$store.state.mutation.username
+      // this.talks[1].name=this.news.name
+      // this.name = username
+      // console.log(this.name)
+      // this.scrollToBottom();
+      // this.inputFocus();
+    },
+    methods: {
+      getEXP (pageCurrent, pageSize) {
+        return this.EXPS.slice(
+          (pageCurrent - 1) * pageSize,
+          pageSize * pageCurrent
+        )
+      },
+      // 发送消息
+      sendMsg () {
+        var vm = this
+        if (this.content === '') {
+          return
         }
-      ],
-      // 表情
-      EXPS: [
-        { file: "100.gif", code: "/::)", title: "微笑", reg: /\/::\)/g },
-        { file: "101.gif", code: "/::~", title: "伤心", reg: /\/::~/g },
-        { file: "102.gif", code: "/::B", title: "美女", reg: /\/::B/g },
-        { file: "103.gif", code: "/::|", title: "发呆", reg: /\/::\|/g },
-        { file: "104.gif", code: "/:8-)", title: "墨镜", reg: /\/:8-\)/g },
-        { file: "105.gif", code: "/::<", title: "哭", reg: /\/::</g },
-        { file: "106.gif", code: "/::$", title: "羞", reg: /\/::\$/g },
-        { file: "107.gif", code: "/::X", title: "哑", reg: /\/::X/g },
-        { file: "108.gif", code: "/::Z", title: "睡", reg: /\/::Z/g },
-        { file: "109.gif", code: "/::'(", title: "哭", reg: /\/::'\(/g },
-        { file: "110.gif", code: "/::-|", title: "囧", reg: /\/::-\|/g },
-        { file: "111.gif", code: "/::@", title: "怒", reg: /\/::@/g },
-        { file: "112.gif", code: "/::P", title: "调皮", reg: /\/::P/g },
-        { file: "113.gif", code: "/::D", title: "笑", reg: /\/::D/g },
-        { file: "114.gif", code: "/::O", title: "惊讶", reg: /\/::O/g },
-        { file: "115.gif", code: "/::(", title: "难过", reg: /\/::\(/g },
-        { file: "116.gif", code: "/::+", title: "酷", reg: /\/::\+/g },
-        { file: "117.gif", code: "/:--b", title: "汗", reg: /\/:--b/g },
-        { file: "118.gif", code: "/::Q", title: "抓狂", reg: /\/::Q/g },
-        { file: "119.gif", code: "/::T", title: "吐", reg: /\/::T/g },
-        { file: "120.gif", code: "/:,@P", title: "笑", reg: /\/:,@P/g },
-        { file: "121.gif", code: "/:,@-D", title: "快乐", reg: /\/:,@-D/g },
-        { file: "122.gif", code: "/::d", title: "奇", reg: /\/::d/g },
-        { file: "123.gif", code: "/:,@o", title: "傲", reg: /\/:,@o/g },
-        { file: "124.gif", code: "/::g", title: "饿", reg: /\/::g/g },
-        { file: "125.gif", code: "/:|-)", title: "累", reg: /\/:\|-\)/g },
-        { file: "126.gif", code: "/::!", title: "吓", reg: /\/::!/g }
-      ]
-    };
-  },
-  mounted() {
-    // let username = window.localStorage.getItem('username')
-    // console.log(window.localStorage.getItem('useravatar'))
-    // this.url = window.localStorage.getItem('useravatar')
-    // console.log(this.url)
-    // this.$store.dispatch('setUsername', username)
-    // this.talks[0].name = this.$store.state.mutation.username
-    // this.talks[1].name=this.news.name
-    // this.name = username
-    // console.log(this.name)
-    // this.scrollToBottom();
-    // this.inputFocus();
-  },
-  methods: {
-    getEXP(pageCurrent, pageSize) {
-      return this.EXPS.slice(
-        (pageCurrent - 1) * pageSize,
-        pageSize * pageCurrent
-      );
-    },
-    //发送消息
-    sendMsg() {
-      var vm = this;
-      if (this.content == "") {
-        return;
-      }
-      vm.talks.push({
-        type: 1,
-        time: "2017.9.28",
-        content: this.content
-      });
-      setTimeout(function() {
         vm.talks.push({
-          type: 2,
-          time: "2017.9.28",
-          content: "你好！"
-        });
-      }, 100);
-      // 清空文本框
-      this.content = "";
-      // 当消息列表达到一定的高度
-      this.scrollToBottom();
+          type: 1,
+          time: '2017.9.28',
+          content: this.content
+        })
+        setTimeout(function () {
+          vm.talks.push({
+            type: 2,
+            time: '2017.9.28',
+            content: '你好！'
+          })
+        }, 100)
+        // 清空文本框
+        this.content = ''
+        // 当消息列表达到一定的高度
+        this.scrollToBottom()
       // this.changeBtn()
-    },
-    //聚焦输入框
-    inputFocus() {
-      document.querySelector(".input").focus();
-    },
-    //监听输入框是否有值
-    // changeBtn () {
-    //     let content = this.replaceEmoj(this.content)
-    //     if(content){
-    //         this.show = false
-    //     }else{
-    //         this.show = true
-    //     }
-    // },
-    //滚动条滚动到底部
-    scrollToBottom() {
-      setTimeout(function() {
-        var chatlists = document.querySelectorAll(".chatlist");
-        var chatlist = chatlists[0];
-        chatlist.scrollTop = chatlist.scrollHeight;
-      }, 100);
-    },
-    //替换表情代码
-    replaceEmoj(content) {
-      var exps = this.EXPS;
-      for (var i = 0; i < exps.length; i++) {
-        content = content.replace(
-          exps[i].reg,
-          '<img src="static/emotion/' + exps[i].file + '"  alt="" />'
-        );
+      },
+      // 聚焦输入框
+      inputFocus () {
+        document.querySelector('.input').focus()
+      },
+      // 监听输入框是否有值
+      // changeBtn () {
+      //     let content = this.replaceEmoj(this.content)
+      //     if(content){
+      //         this.show = false
+      //     }else{
+      //         this.show = true
+      //     }
+      // },
+      // 滚动条滚动到底部
+      scrollToBottom () {
+        setTimeout(function () {
+          var chatlists = document.querySelectorAll('.chatlist')
+          var chatlist = chatlists[0]
+          chatlist.scrollTop = chatlist.scrollHeight
+        }, 100)
+      },
+      // 替换表情代码
+      replaceEmoj (content) {
+        var exps = this.EXPS
+        for (var i = 0; i < exps.length; i++) {
+          content = content.replace(
+            exps[i].reg,
+            '<img src="static/emotion/' + exps[i].file + '"  alt="" />'
+          )
+        }
+        return content
       }
-      return content;
     }
   }
-};
 </script>
 <style lang="css" scoped>
 * {

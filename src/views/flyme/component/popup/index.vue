@@ -17,8 +17,7 @@
                  pos="top"
                  height="400">
       </fm-popup>
-      <fm-popup :have-overlay="isTrue"
-								 ref="popup"
+      <fm-popup :have-overlay="isTrue" ref="popup"
                  popup-color="#FFFFFF"
                  :show="isBottomShow"
                  @fmPopupOverlayClicked="popupOverlayBottomClick"
@@ -78,54 +77,54 @@
   }
 
   .demo-content {
-		height: 840px;
+    height: 840px;
   }
 </style>
 
 <script>
-import { FmButton, FmPopup } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmButton, FmPopup } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmButton, FmPopup },
-  data: () => ({
-    isTrue: true,
-    isTopShow: false,
-    isBottomShow: false,
-    isLeftShow: false,
-    isRightShow: false
-  }),
-  mounted () {
-  },
-  methods: {
-    click1 () {
-      this.isBottomShow = true;
+  export default {
+    components: { Title, Category, FmButton, FmPopup },
+    data: () => ({
+      isTrue: true,
+      isTopShow: false,
+      isBottomShow: false,
+      isLeftShow: false,
+      isRightShow: false
+    }),
+    mounted () {
     },
-    click2 () {
-      this.isTopShow = true;
-    },
-    click3 () {
-      this.isLeftShow = true;
-    },
-    click4 () {
-      this.isRightShow = true;
-    },
-    popupOverlayBottomClick () {
-      this.isBottomShow = false;
-    },
-    popupOverlayTopClick () {
-      this.isTopShow = false;
-    },
-    popupOverlayLeftClick () {
-      this.isLeftShow = false;
-    },
-    popupOverlayRightClick () {
-      this.isRightShow = false;
-    },
-    clickHide () {
-      this.$refs.popup.hide();
+    methods: {
+      click1 () {
+        this.isBottomShow = true
+      },
+      click2 () {
+        this.isTopShow = true
+      },
+      click3 () {
+        this.isLeftShow = true
+      },
+      click4 () {
+        this.isRightShow = true
+      },
+      popupOverlayBottomClick () {
+        this.isBottomShow = false
+      },
+      popupOverlayTopClick () {
+        this.isTopShow = false
+      },
+      popupOverlayLeftClick () {
+        this.isLeftShow = false
+      },
+      popupOverlayRightClick () {
+        this.isRightShow = false
+      },
+      clickHide () {
+        this.$refs.popup.hide()
+      }
     }
   }
-};
 </script>

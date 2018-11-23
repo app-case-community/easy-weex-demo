@@ -23,28 +23,28 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiPanel, BuiLazyRender, BuiImage } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiPanel,
-    BuiLazyRender,
-    BuiImage
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      }
-    };
-  },
-  methods: {
-    onLoad () {
-
+  import { BuiHeader, BuiPanel, BuiLazyRender, BuiImage } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiPanel,
+      BuiLazyRender,
+      BuiImage
     },
-    back() {
-      this.$pop();
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        }
+      }
+    },
+    methods: {
+      onLoad () {
+
+      },
+      back () {
+        this.$pop()
+      }
     }
   }
-};
 </script>

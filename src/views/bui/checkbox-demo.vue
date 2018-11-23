@@ -42,87 +42,87 @@
 </style>
 
 <script>
-import { BuiHeader, BuiCheckbox, BuiPopup } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiCheckbox,
-    BuiPopup
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      showPopup1: false,
-      itemsss: "",
-      changevalue: "",
-      selectedValue: ["1", "2"],
-      selectedValue1: ["2"],
-      items: [
-        { value: "1", title: "全部" },
-        { value: "2", title: "选项一afdf sdfd" },
-        { value: "3", title: "选项二sfdsf" },
-        { value: "4", title: "选项三 fdsf" }
-      ],
-      items1: [
-        { value: "1", title: "全部" },
-        {
-          value: "2",
-          title:
-            "选项一afdf sdfd dfsdfksjf dsfsdfksjdfksdfjsjdfskdfksdkfsdfj sdjfsdjfjsdkj "
+  import { BuiHeader, BuiCheckbox, BuiPopup } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiCheckbox,
+      BuiPopup
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        { value: "3", title: "选项二sfdsf" },
-        { value: "4", title: "选项三 fdsf" }
-      ],
-      disabled: false
-    };
-  },
-  computed: {
-    textStyles() {
-      return {
-        marginLeft: "30px"
-      };
+        showPopup1: false,
+        itemsss: '',
+        changevalue: '',
+        selectedValue: ['1', '2'],
+        selectedValue1: ['2'],
+        items: [
+          { value: '1', title: '全部' },
+          { value: '2', title: '选项一afdf sdfd' },
+          { value: '3', title: '选项二sfdsf' },
+          { value: '4', title: '选项三 fdsf' }
+        ],
+        items1: [
+          { value: '1', title: '全部' },
+          {
+            value: '2',
+            title:
+              '选项一afdf sdfd dfsdfksjf dsfsdfksjdfksdfjsjdfskdfksdkfsdfj sdjfsdjfjsdkj '
+          },
+          { value: '3', title: '选项二sfdsf' },
+          { value: '4', title: '选项三 fdsf' }
+        ],
+        disabled: false
+      }
     },
-    containerStyle() {
-      return {
-        paddingLeft: "20px",
-        paddingRight: "20px",
-        paddingTop: "30px",
-        paddingBottom: "30px",
-        borderBottomColor: "#f2f2f2",
-        borderBottomWidth: "1px",
-        borderBottomStyle: "solid"
-      };
-    }
-  },
-  methods: {
-    fn() {
-      this.disabled = !this.disabled;
+    computed: {
+      textStyles () {
+        return {
+          marginLeft: '30px'
+        }
+      },
+      containerStyle () {
+        return {
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingTop: '30px',
+          paddingBottom: '30px',
+          borderBottomColor: '#f2f2f2',
+          borderBottomWidth: '1px',
+          borderBottomStyle: 'solid'
+        }
+      }
     },
-    back() {
-      this.$pop();
-    },
-    open1() {
-      this.showPopup1 = true;
-      this.changevalue = this.selectedValue;
-    },
-    changeValue(value, item) {
-      this.changevalue = value;
-      this.$toast(JSON.stringify(item));
-      setTimeout(() => {
-        this.$toast(JSON.stringify(value));
-      }, 1000);
-    },
-    confirm() {
-      this.$toast(JSON.stringify(this.changevalue));
-      this.showPopup1 = false;
-    },
-    selected(value, index) {
-      // this.itemsss = value;
-      // this.$toast(JSON.stringify(value));
-      // this.$toast(JSON.stringify(index));
+    methods: {
+      fn () {
+        this.disabled = !this.disabled
+      },
+      back () {
+        this.$pop()
+      },
+      open1 () {
+        this.showPopup1 = true
+        this.changevalue = this.selectedValue
+      },
+      changeValue (value, item) {
+        this.changevalue = value
+        this.$toast(JSON.stringify(item))
+        setTimeout(() => {
+          this.$toast(JSON.stringify(value))
+        }, 1000)
+      },
+      confirm () {
+        this.$toast(JSON.stringify(this.changevalue))
+        this.showPopup1 = false
+      },
+      selected (value, index) {
+        // this.itemsss = value;
+        // this.$toast(JSON.stringify(value));
+        // this.$toast(JSON.stringify(index));
+      }
     }
   }
-};
 </script>

@@ -16,7 +16,7 @@
 
 <script>
   import { WxcLotteryRain } from 'weex-ui'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { WxcLotteryRain },
@@ -42,7 +42,7 @@
       }
     }),
     created () {
-      setTitle('LotteryRain');
+      setTitle('LotteryRain')
     },
     methods: {
       wxcLotteryRainCaught (e) {

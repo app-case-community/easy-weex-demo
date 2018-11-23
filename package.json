@@ -6,8 +6,8 @@
     "build": "cross-env NODE_ENV=production easy build prod",
     "start": "cross-env NODE_ENV=develop easy start",
     "lint": "eslint .",
-    "fix": "eslint --fix .",
-    "precommit": "lint-staged",
+    "fix": "eslint --fix . --ext .js,.vue",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{json,scss,css,md}": [

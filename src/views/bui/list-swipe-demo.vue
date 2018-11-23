@@ -30,108 +30,106 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader } from "weex-bui";
-var animation = weex.requireModule("animation");
-export default {
-  components: {
-    BuiHeader
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      items: [
-        {
-          title: "行无止尽",
-          desc: "他们终究因为生活现实而走到终点,没有回头...",
-          date: "昨天",
-          dom: false
+  import { BuiHeader } from 'weex-bui'
+  var animation = weex.requireModule('animation')
+  export default {
+    components: {
+      BuiHeader
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        {
-          title: "柠檬",
-          desc: "每天的这个时间都是美好时光,小天使永远都是最快乐的~~",
-          date: "上午",
-          dom: false
-        }
-      ]
-    };
-  },
-  components: {},
-
-  methods: {
-    cancleFn() {
-      this.itemMap("translate(0px, 0px)", false);
-    },
-    deleteFn(index) {
-      var $sel = this;
-      this.reAnimateion("translate(0px, 0px)", index, false, function() {
-        $sel.items.splice(index, 1);
-      });
-    },
-    swipe($event, index) {
-      var direction = $event.direction;
-      switch (direction) {
-        case "left":
-          var a = 0;
-          this.items.map((item, i) => {
-            if (item.swipeover) {
-              this.reAnimateion("translate(0px, 0px)", i, false);
-              return (a += 1);
-            }
-          });
-          if (a >= 1) return;
-          this.reAnimateion("translate(-240px, 0px)", index, true);
-          break;
-        case "right":
-          this.itemMap("translate(0px, 0px)", false);
-          this.reAnimateion("translate(0px, 0px)", index, false);
-          break;
+        items: [
+          {
+            title: '行无止尽',
+            desc: '他们终究因为生活现实而走到终点,没有回头...',
+            date: '昨天',
+            dom: false
+          },
+          {
+            title: '柠檬',
+            desc: '每天的这个时间都是美好时光,小天使永远都是最快乐的~~',
+            date: '上午',
+            dom: false
+          }
+        ]
       }
     },
-
-    //遍历数据
-    itemMap(translate, boolean, fn) {
-      this.items.map((item, i) => {
-        if (item.swipeover) {
-          this.reAnimateion(translate, i, boolean, fn);
+    methods: {
+      cancleFn () {
+        this.itemMap('translate(0px, 0px)', false)
+      },
+      deleteFn (index) {
+        var $sel = this
+        this.reAnimateion('translate(0px, 0px)', index, false, function () {
+          $sel.items.splice(index, 1)
+        })
+      },
+      swipe ($event, index) {
+        var direction = $event.direction
+        switch (direction) {
+          case 'left':
+            var a = 0
+            this.items.map((item, i) => {
+              if (item.swipeover) {
+                this.reAnimateion('translate(0px, 0px)', i, false)
+                return (a += 1)
+              }
+            })
+            if (a >= 1) return
+            this.reAnimateion('translate(-240px, 0px)', index, true)
+            break
+          case 'right':
+            this.itemMap('translate(0px, 0px)', false)
+            this.reAnimateion('translate(0px, 0px)', index, false)
+            break
         }
-      });
-    },
-    //动画操作交互
-    reAnimateion(translate, index, boolean, fn) {
-      this.$nextTick(() => {
-        var el = this.$refs.swipedom[index];
-        var $sel = this;
-        this._animationFn(el, 1, translate, "ease-in", function() {
-          $sel.items[index].swipeover = boolean;
-          fn && fn();
-        });
-      });
-    },
+      },
 
-    //动画
-    _animationFn(el, opacity, translate, timing, fn) {
-      animation.transition(
-        el,
-        {
-          styles: {
-            opacity: opacity,
-            transform: translate,
-            transformOrigin: "center center"
+      // 遍历数据
+      itemMap (translate, boolean, fn) {
+        this.items.map((item, i) => {
+          if (item.swipeover) {
+            this.reAnimateion(translate, i, boolean, fn)
+          }
+        })
+      },
+      // 动画操作交互
+      reAnimateion (translate, index, boolean, fn) {
+        this.$nextTick(() => {
+          var el = this.$refs.swipedom[index]
+          var $sel = this
+          this._animationFn(el, 1, translate, 'ease-in', function () {
+            $sel.items[index].swipeover = boolean
+            fn && fn()
+          })
+        })
+      },
+
+      // 动画
+      _animationFn (el, opacity, translate, timing, fn) {
+        animation.transition(
+          el,
+          {
+            styles: {
+              opacity: opacity,
+              transform: translate,
+              transformOrigin: 'center center'
+            },
+            duration: 200,
+            timingFunction: timing,
+            delay: 0
           },
-          duration: 200,
-          timingFunction: timing,
-          delay: 0
-        },
-        () => {
-          fn && fn();
-        }
-      );
-    },
-    back() {
-      this.$pop();
+          () => {
+            fn && fn()
+          }
+        )
+      },
+      back () {
+        this.$pop()
+      }
     }
   }
-};
 </script>

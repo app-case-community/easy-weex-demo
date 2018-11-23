@@ -19,51 +19,51 @@
     }
 </style>
 <script>
-    import { WxNavbar } from 'weex-droplet-ui';
-    export default {
-        components: {
-            WxNavbar,
-        },
-        data () {
-            return {
-                tabItems:[
-                    {
-                        index:0,
-                        title:"产品名称",  
-                        titleColor:'', 
-                        selectedColor: '',
-                        titleSize: '',
-                    },  
-                    {
-                        index:1,  
-                        title:"产品介绍",  
-                        titleColor:'', 
-                        selectedColor: '',
-                        titleSize: '', 
-                    },  
-                    {
-                        index:2,  
-                        title:"申请流程",  
-                        titleColor:'',  
-                        selectedColor: '',
-                        titleSize: '',
-                    }  
-                ],
-                selectedTab: {
-                    index: 0
-                },
-            }
-        },
-        created () {
-
-        },
-        methods: {
-            handleChange1 (item) {
-                console.log(item.title);
-            },
-            handleChange2 (item) {
-                this.selectedTab = item;
-            },
+  import { WxNavbar } from 'weex-droplet-ui'
+  export default {
+    components: {
+      WxNavbar
+    },
+    data () {
+      return {
+        tabItems: [
+          {
+            index: 0,
+            title: '产品名称',
+            titleColor: '',
+            selectedColor: '',
+            titleSize: ''
+          },
+          {
+            index: 1,
+            title: '产品介绍',
+            titleColor: '',
+            selectedColor: '',
+            titleSize: ''
+          },
+          {
+            index: 2,
+            title: '申请流程',
+            titleColor: '',
+            selectedColor: '',
+            titleSize: ''
+          }
+        ],
+        selectedTab: {
+          index: 0
         }
+      }
+    },
+    created () {
+
+    },
+    methods: {
+      handleChange1 (item) {
+        console.log(item.title)
+      },
+      handleChange2 (item) {
+        this.selectedTab = item
+      }
     }
+  }
 </script>

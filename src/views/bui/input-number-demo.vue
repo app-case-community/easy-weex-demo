@@ -15,28 +15,28 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiCell, BuiNumberInput } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiCell,
-    BuiNumberInput
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      value: 4
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiCell, BuiNumberInput } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiCell,
+      BuiNumberInput
     },
-    numberChange(value) {
-      this.$toast(value);
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        value: 4
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      },
+      numberChange (value) {
+        this.$toast(value)
+      }
     }
   }
-};
 </script>

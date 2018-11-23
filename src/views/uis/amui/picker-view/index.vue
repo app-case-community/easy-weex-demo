@@ -31,28 +31,28 @@
 </style>
 
 <script>
-import { AmButton, AmNavBar, AmPickerView } from 'weex-amui'
+  import { AmButton, AmNavBar, AmPickerView } from 'weex-amui'
 
-import { seasons, district } from './data'
-console.log(seasons, district)
+  import { seasons, district } from './data'
+  console.log(seasons, district)
 
-export default {
-  components: { AmButton, AmNavBar, AmPickerView },
+  export default {
+    components: { AmButton, AmNavBar, AmPickerView },
 
-  computed: {},
-  data () {
-    return {
-      seasons,
-      district,
-      value1: [],
-      value2: [],
-      changeReturnData: null
-    }
-  },
-  methods: {
-    onChange (items) {
-      this.changeReturnData = items
+    computed: {},
+    data () {
+      return {
+        seasons,
+        district,
+        value1: [],
+        value2: [],
+        changeReturnData: null
+      }
+    },
+    methods: {
+      onChange (items) {
+        this.changeReturnData = items
+      }
     }
   }
-}
 </script>

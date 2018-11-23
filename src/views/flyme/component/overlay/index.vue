@@ -52,37 +52,37 @@
 </style>
 
 <script>
-import { FmButton, FmOverlay } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmButton, FmOverlay } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmButton, FmOverlay },
+  export default {
+    components: { Title, Category, FmButton, FmOverlay },
 
-  data: () => ({
-    show: false,
-    hasAnimation: true,
-    timingFunction: ['ease-in', 'ease-out']
-  }),
+    data: () => ({
+      show: false,
+      hasAnimation: true,
+      timingFunction: ['ease-in', 'ease-out']
+    }),
 
-  methods: {
-    openOverlay () {
-      this.hasAnimation = true;
-      this.show = true;
-    },
-    openNoAniOverlay () {
-      this.hasAnimation = false;
-      this.show = true;
-    },
-    fmOverlayBodyClicked (e) {
-      modal.toast({
-        'message': '蒙版关闭回调',
-        'duration': 1
-      });
-      this.show = false;
+    methods: {
+      openOverlay () {
+        this.hasAnimation = true
+        this.show = true
+      },
+      openNoAniOverlay () {
+        this.hasAnimation = false
+        this.show = true
+      },
+      fmOverlayBodyClicked (e) {
+        modal.toast({
+          'message': '蒙版关闭回调',
+          'duration': 1
+        })
+        this.show = false
+      }
     }
   }
-};
 </script>

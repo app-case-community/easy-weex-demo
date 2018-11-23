@@ -101,11 +101,11 @@
 
 </style>
 <script>
-  import { WxcMask } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import { WxcMask } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcMask },
@@ -114,20 +114,20 @@
       hasAnimation: true
     }),
     created () {
-      setTitle('Mask');
+      setTitle('Mask')
     },
     methods: {
       openMask (e) {
-        this.show = true;
-        this.hasAnimation = true;
+        this.show = true
+        this.hasAnimation = true
       },
       wxcMaskSetHidden () {
-        this.show = false;
+        this.show = false
       },
       openNoAnimationMask (e) {
-        this.show = true;
-        this.hasAnimation = false;
+        this.show = true
+        this.hasAnimation = false
       }
     }
-  };
+  }
 </script>

@@ -19,7 +19,6 @@
                     </a>
                 </div>
 
-
                  <div class="title-link">
                     <a href="">
                        <text class="titlename">淘宝一键转卖</text>
@@ -37,7 +36,7 @@
 
                       </div>
                     <div  class="recomlist-type">
-                        
+
                       <text class="bar-ic iconfont">&#xe673;</text>
 
                       <text class="explain">出租房屋</text>
@@ -50,12 +49,10 @@
                 </div>
                   <div class="footer">
                       <text class="bar-ic iconfont" @click="change3">&#xe91e;</text>
-             
+
                      </div>
         </div>
 
-      
-    
       </div>
     <div class="wrapper">
         <!--<div v-for="i in items">-->
@@ -76,11 +73,10 @@
         <div class="bar-item act" @click="change1" >
           <div style="margin-top:-30px;margin-bottom:8px;">
             <text class="bar-ic iconfont" style="font-size:40px;color:#ffda44;">&#xe62b;</text>
-            
+
           </div>
             <text class="bar-txt">添加</text>
         </div>
-        
 
         <div class="bar-item" @click="tabTo('shop')">
             <text class="bar-ic iconfont" >&#xe69d;</text>
@@ -152,9 +148,6 @@
   bottom: 0;
   background-color: white;
 }
-
-
-
 
  .login .head {
   width: 100%;
@@ -235,65 +228,65 @@
 </style>
 <script>
 
-    var modal = weex.requireModule('modal');
-    export default {
-//        props: {
-//            indexKey: {
-//                type: String,
-//                default: 'home'
-//            },
-//            reClick: {
-//                type: Boolean,
-//                default: false
-//            },
-//            items: {
-//                type: Array,
-//                default: function(){
-//                    return [
-//                        {
-//                            icon:'&#xe660;',
-//                            name:"首页",
-//                            key:'home'
-//                        }
-//                    ]
-//                }
-//            }
-//        },
-        computed:{
-            testCS:function () {
-                return this.pIndexKey == 'home'?'color:#b4282d;':''
-            }
-        },
-        data () {
-            return {
-                pIndexKey:'home',
-                active: false,
-                login:false,
-            }
-        },
-        mounted(){
-        },
-        methods: {
-            tabTo(_key){
-                if(this.pIndexKey == _key) return;
-                this.pIndexKey = _key;
-                this.$emit('tabTo',{
-                    status : 'tabTo',
-                    data : {
-                        key : _key
-                    }
-                })
-            },
-             change1 () {
-            const login = document.querySelector('.login');
-            login.style.display = 'block';
-            this.active = false
-              },
-               change3 () {
-                    const login = document.querySelector('.login');
-                    this.active = true
-                      login.style.display = 'none';
-                  },
-        }
+  // var modal = weex.requireModule('modal')
+  export default {
+    //        props: {
+    //            indexKey: {
+    //                type: String,
+    //                default: 'home'
+    //            },
+    //            reClick: {
+    //                type: Boolean,
+    //                default: false
+    //            },
+    //            items: {
+    //                type: Array,
+    //                default: function(){
+    //                    return [
+    //                        {
+    //                            icon:'&#xe660;',
+    //                            name:"首页",
+    //                            key:'home'
+    //                        }
+    //                    ]
+    //                }
+    //            }
+    //        },
+    computed: {
+      testCS: function () {
+        return this.pIndexKey === 'home' ? 'color:#b4282d;' : ''
+      }
+    },
+    data () {
+      return {
+        pIndexKey: 'home',
+        active: false,
+        login: false
+      }
+    },
+    mounted () {
+    },
+    methods: {
+      tabTo (_key) {
+        if (this.pIndexKey === _key) return
+        this.pIndexKey = _key
+        this.$emit('tabTo', {
+          status: 'tabTo',
+          data: {
+            key: _key
+          }
+        })
+      },
+      change1 () {
+        const login = document.querySelector('.login')
+        login.style.display = 'block'
+        this.active = false
+      },
+      change3 () {
+        const login = document.querySelector('.login')
+        this.active = true
+        login.style.display = 'none'
+      }
     }
+  }
 </script>

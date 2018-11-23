@@ -58,13 +58,13 @@
   }
 </style>
 <script>
-  const dom = weex.requireModule('dom');
-
-  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
-  import WxcItem from './wxc-item.vue';
+  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui'
+  import WxcItem from './wxc-item.vue'
 
   import Config from './config'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
+
+  // const dom = weex.requireModule('dom')
 
   export default {
     components: { WxcTabPage, WxcPanItem, WxcItem },
@@ -89,27 +89,27 @@
       }]
     }),
     created () {
-      setTitle('TabPage');
-      this.tabPageHeight = Utils.env.getPageHeight();
-      this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
-      Vue.set(this.tabList, 0, this.demoList);
+      setTitle('TabPage')
+      this.tabPageHeight = Utils.env.getPageHeight()
+      this.tabList = [...Array(this.tabTitles.length).keys()].map(i => [])
+      Vue.set(this.tabList, 0, this.demoList)
     },
     methods: {
       wxcTabPageCurrentTabSelected (e) {
-        const self = this;
-        const index = e.page;
+        const self = this
+        const index = e.page
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self.tabList[index])) {
           setTimeout(() => {
-            Vue.set(self.tabList, index, self.demoList);
-          }, 100);
+            Vue.set(self.tabList, index, self.demoList)
+          }, 100)
         }
       },
       wxcPanItemPan (e) {
         if (BindEnv.supportsEBForAndroid()) {
-          this.$refs['wxc-tab-page'].bindExp(e.element);
+          this.$refs['wxc-tab-page'].bindExp(e.element)
         }
       }
     }
-  };
+  }
 </script>

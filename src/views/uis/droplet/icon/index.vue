@@ -28,29 +28,29 @@
     }
 </style>
 <script>
-    import { WxIcon } from 'weex-droplet-ui';
+  import { WxIcon } from 'weex-droplet-ui'
 
-    export default {
-        components: { WxIcon },
+  export default {
+    components: { WxIcon },
 
-        data () {
-            return {
-                icons: [
-                    'success',
-                    'search',
-                    'roundclose',
-                    'enter',
-                    'back',
-                ]
-            }
-        },
+    data () {
+      return {
+        icons: [
+          'success',
+          'search',
+          'roundclose',
+          'enter',
+          'back'
+        ]
+      }
+    },
 
-        created () {
+    created () {
 
-        },
+    },
 
-        methods: {
+    methods: {
 
-        }
     }
+  }
 </script>

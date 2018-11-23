@@ -129,12 +129,12 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
+  import { WxcEpSlider, WxcPanItem, BindEnv } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import { WxcEpSlider, WxcPanItem, BindEnv } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcEpSlider, WxcPanItem },
@@ -150,16 +150,16 @@
       }
     }),
     created () {
-      setTitle('EpSlider');
+      setTitle('EpSlider')
     },
     methods: {
       wxcEpSliderCurrentIndexSelected (e) {
-//        const index = e.currentIndex;
-//        console.log(index);
+        //        const index = e.currentIndex;
+        //        console.log(index);
       },
       onClick () {
         // 手动切换到第2张
-        this.$refs['wxc-ep-slider'].manualSetPage(1);
+        this.$refs['wxc-ep-slider'].manualSetPage(1)
       },
       pullMore () {
         modal.toast({
@@ -169,7 +169,7 @@
       },
       wxcPanItemPan (e) {
         if (BindEnv.supportsEBForAndroid()) {
-          this.$refs['wxc-ep-slider'].clearAutoPlay();
+          this.$refs['wxc-ep-slider'].clearAutoPlay()
           this.$refs['wxc-ep-slider'].bindExp(e.element)
         }
       },

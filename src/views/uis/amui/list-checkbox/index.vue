@@ -48,20 +48,20 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListCheckbox } from 'weex-amui'
+  import { AmNavBar, AmList, AmListCheckbox } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmList, AmListCheckbox },
-  data () {
-    return {
-      value: [1],
-      value2: [1],
-      disabled: true,
-      list: Array.from(new Array(3)).map((v, k) => ({
-        value: k,
-        name: `Checkbox ${k}`
-      }))
+  export default {
+    components: { AmNavBar, AmList, AmListCheckbox },
+    data () {
+      return {
+        value: [1],
+        value2: [1],
+        disabled: true,
+        list: Array.from(new Array(3)).map((v, k) => ({
+          value: k,
+          name: `Checkbox ${k}`
+        }))
+      }
     }
   }
-}
 </script>

@@ -80,11 +80,11 @@
   }
 </style>
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcLightbox } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcLightbox } from 'weex-ui'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcLightbox },
@@ -96,18 +96,18 @@
           { src: 'https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg' }
         ],
         show: false
-      };
+      }
     },
     created () {
       setTitle('Lightbox')
     },
     methods: {
       openLightBox () {
-        this.show = true;
+        this.show = true
       },
       lightboxOverlayClick () {
-        this.show = false;
+        this.show = false
       }
     }
-  };
+  }
 </script>

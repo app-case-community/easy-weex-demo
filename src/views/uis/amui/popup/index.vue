@@ -41,27 +41,27 @@
 
 <script>
 
-import { AmNavBar, AmPopup, AmButton, AmFlex, AmWingBlank } from 'weex-amui'
+  import { AmNavBar, AmPopup, AmButton, AmFlex, AmWingBlank } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmPopup, AmButton, AmFlex, AmWingBlank },
-  data () {
-    return {
-      show: false,
-      position: 'bottom',
-      offset: {},
-      autoClose: true,
-      style: {}
-    }
-  },
-  methods: {
-    showPopup (position, offset = {}, autoClose = true, style = {}) {
-      this.position = position
-      this.offset = offset
-      this.autoClose = autoClose
-      this.show = true
-      this.style = style
+  export default {
+    components: { AmNavBar, AmPopup, AmButton, AmFlex, AmWingBlank },
+    data () {
+      return {
+        show: false,
+        position: 'bottom',
+        offset: {},
+        autoClose: true,
+        style: {}
+      }
+    },
+    methods: {
+      showPopup (position, offset = {}, autoClose = true, style = {}) {
+        this.position = position
+        this.offset = offset
+        this.autoClose = autoClose
+        this.show = true
+        this.style = style
+      }
     }
   }
-}
 </script>

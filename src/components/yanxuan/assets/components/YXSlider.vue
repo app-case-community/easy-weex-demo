@@ -35,15 +35,15 @@
     }
 </style>
 <script>
-    export default {
-        props:["imageList"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            onchange (event) {
-            }
-        }
+  export default {
+    props: ['imageList'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      onchange (event) {
+      }
     }
+  }
 </script>

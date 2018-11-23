@@ -52,76 +52,76 @@
 }
 </style>
 <script>
-import { BuiHeader, BuiTabbarScroller } from "weex-bui";
-const animation = weex.requireModule("animation");
-export default {
-  components: {
-    BuiHeader,
-    BuiTabbarScroller
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      currentTab: 1,
-      tabStyle: {
-        // backgroundColor: "#000"
-      },
-      tabItems: [
-        {
-          title: "首页1",
-          icon: "ion-home"
-        },
-        {
-          icon: "ion-planet",
-          title: "探索"
-        },
-        {
-          icon: "ion-ios-cart",
-          title: "商城"
-        },
-        {
-          icon: "ion-ribbon-a",
-          title: "奖励"
-        },
-        {
-          icon: "ion-ribbon-a",
-          title: "奖励"
-        },
-        {
-          icon: "ion-ribbon-a",
-          title: "奖励"
-        }
-      ]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiTabbarScroller } from 'weex-bui'
+  // const animation = weex.requireModule('animation')
+  export default {
+    components: {
+      BuiHeader,
+      BuiTabbarScroller
     },
-    onItemChange(index) {},
-    onSliderChange(e) {
-      var index = e.index;
-      this.currentTab = index;
-    }
-  },
-  mounted: function() {
-    animation.transition(
-      el,
-      {
-        styles: {
-          transform: translate,
-          transformOrigin: "center center"
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        duration: 200,
-        timingFunction: "ease-in",
-        delay: 0
-      },
-      () => {
-        fn && fn();
+        currentTab: 1,
+        tabStyle: {
+          // backgroundColor: "#000"
+        },
+        tabItems: [
+          {
+            title: '首页1',
+            icon: 'ion-home'
+          },
+          {
+            icon: 'ion-planet',
+            title: '探索'
+          },
+          {
+            icon: 'ion-ios-cart',
+            title: '商城'
+          },
+          {
+            icon: 'ion-ribbon-a',
+            title: '奖励'
+          },
+          {
+            icon: 'ion-ribbon-a',
+            title: '奖励'
+          },
+          {
+            icon: 'ion-ribbon-a',
+            title: '奖励'
+          }
+        ]
       }
-    );
+    },
+    methods: {
+      back () {
+        this.$pop()
+      },
+      onItemChange (index) {},
+      onSliderChange (e) {
+        var index = e.index
+        this.currentTab = index
+      }
+    },
+    mounted: function () {
+      // animation.transition(
+      //   el,
+      //   {
+      //     styles: {
+      //       transform: translate,
+      //       transformOrigin: 'center center'
+      //     },
+      //     duration: 200,
+      //     timingFunction: 'ease-in',
+      //     delay: 0
+      //   },
+      //   () => {
+      //     fn && fn()
+      //   }
+      // )
+    }
   }
-};
 </script>

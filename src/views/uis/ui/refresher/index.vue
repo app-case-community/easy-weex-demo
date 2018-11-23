@@ -25,39 +25,39 @@
 </template>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import { WxcRefresher } from 'weex-ui';
+  import { WxcRefresher } from 'weex-ui'
 
-  const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcRefresher },
     data: () => ({
       lists: ['下拉刷新', 'Drop Down', '↓', '↓', '↓', '↓', '↓', '↓'],
-      refreshTime: 3000 
+      refreshTime: 3000
     }),
     created () {
-      setTitle('Refresher');
+      setTitle('Refresher')
     },
     methods: {
       onTimeout () {
-        this.sto && clearTimeout(this.sto);
-        modal.toast({ message: '刷新超时，可定义超时时间', duration: 1 });
+        this.sto && clearTimeout(this.sto)
+        modal.toast({ message: '刷新超时，可定义超时时间', duration: 1 })
       },
       onRefresh (e) {
-        this.sto = setTimeout(()=>{ this.refreshSucc() }, this.refreshTime)
-        modal.toast({ message: '刷新中...', duration: .5 });
-        this.refreshTime = this.refreshTime === 3000 ? 10000 : 3000;
+        this.sto = setTimeout(() => { this.refreshSucc() }, this.refreshTime)
+        modal.toast({ message: '刷新中...', duration: 0.5 })
+        this.refreshTime = this.refreshTime === 3000 ? 10000 : 3000
       },
       refreshSucc () {
-        this.$refs['wxc-refresher'].wxcCancel();
-        modal.toast({ message: '刷新成功', duration: .5 });
-      },
+        this.$refs['wxc-refresher'].wxcCancel()
+        modal.toast({ message: '刷新成功', duration: 0.5 })
+      }
     }
-  };
+  }
 </script>
 
 <style scoped>

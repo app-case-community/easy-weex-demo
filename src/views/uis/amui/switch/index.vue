@@ -38,16 +38,16 @@
 </style>
 
 <script>
-import { AmNavBar, AmSwitch, AmList, AmListItem } from 'weex-amui'
+  import { AmNavBar, AmSwitch, AmList, AmListItem } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmSwitch, AmList, AmListItem },
-  data () {
-    return {
-      checked: false,
-      color: 'red',
-      switchChecked: true
+  export default {
+    components: { AmNavBar, AmSwitch, AmList, AmListItem },
+    data () {
+      return {
+        checked: false,
+        color: 'red',
+        switchChecked: true
+      }
     }
   }
-}
 </script>

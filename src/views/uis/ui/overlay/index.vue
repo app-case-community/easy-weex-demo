@@ -65,11 +65,11 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcOverlay } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcOverlay } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcOverlay },
@@ -79,24 +79,24 @@
       timingFunction: ['ease-in', 'ease-out']
     }),
     created () {
-      setTitle('Overlay');
+      setTitle('Overlay')
     },
     methods: {
       openOverlay () {
-        this.hasAnimation = true;
-        this.show = true;
+        this.hasAnimation = true
+        this.show = true
       },
       openNoAniOverlay () {
-        this.hasAnimation = false;
-        this.show = true;
+        this.hasAnimation = false
+        this.show = true
       },
       wxcOverlayBodyClicked (e) {
         modal.toast({
           'message': 'click overlay!',
           'duration': 1
-        });
-        this.show = false;
+        })
+        this.show = false
       }
     }
-  };
+  }
 </script>

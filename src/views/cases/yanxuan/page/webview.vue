@@ -17,44 +17,44 @@
     </div>
 </template>
 <script>
-    const navigator = weex.requireModule('navigator');
-    const webview = weex.requireModule('webview');
-    import util from '../assets/util';
-    export default {
-        components: {
-        },
-        data () {
-            return {
-                url0 : 'http://m.you.163.com',
-            }
-        },
-        created (_e) {
-            util.initIconFont();
-            this.url =  util.getUrlSearch(weex.config.bundleUrl,'weburl') || this.url0;
-//            console.log('webPageURL', this.url )
-        },
-        computed:{
-            isipx : function() {
-                return weex && (weex.config.env.deviceModel === 'iPhone10,3' || weex.config.env.deviceModel === 'iPhone10,6');
-            }
-        },
-        methods: {
-            back (event) {
-                webview.goBack(this.$refs.wv);
-            },
-            close (event) {
-                navigator.pop({
-                    animated:"true"
-                });
-            },
-            reload (event) {
-                webview.reload(this.$refs.wv)
-            },
-            error (event) {
-//                console.log('error', event)
-            }
-        }
+  import util from '../assets/util'
+  const navigator = weex.requireModule('navigator')
+  const webview = weex.requireModule('webview')
+  export default {
+    components: {
+    },
+    data () {
+      return {
+        url0: 'http://m.you.163.com'
+      }
+    },
+    created (_e) {
+      util.initIconFont()
+      this.url = util.getUrlSearch(weex.config.bundleUrl, 'weburl') || this.url0
+      //            console.log('webPageURL', this.url )
+    },
+    computed: {
+      isipx: function () {
+        return weex && (weex.config.env.deviceModel === 'iPhone10,3' || weex.config.env.deviceModel === 'iPhone10,6')
+      }
+    },
+    methods: {
+      back (event) {
+        webview.goBack(this.$refs.wv)
+      },
+      close (event) {
+        navigator.pop({
+          animated: 'true'
+        })
+      },
+      reload (event) {
+        webview.reload(this.$refs.wv)
+      },
+      error (event) {
+        //                console.log('error', event)
+      }
     }
+  }
 </script>
 <style scoped>
     .wrapper{

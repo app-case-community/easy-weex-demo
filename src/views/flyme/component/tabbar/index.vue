@@ -97,74 +97,74 @@
 </style>
 
 <script>
-import { FmTabbar, FmTabbarItem, FmButton } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
+  import { FmTabbar, FmTabbarItem, FmButton } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
 
-export default {
-  components: { FmTabbar, FmTabbarItem, FmButton, Title },
-  data () {
-    return {
-      type: 'demo1',
-      items1: [{
-        title: '信息',
-        icon: 'xinxi1'
-      }, {
-        title: '下载',
-        icon: 'xiazai'
-      }, {
-        title: '删除',
-        icon: 'shanchu'
-      }],
-      items2: [{
-        title: '编辑',
-        icon: 'bianji',
-        normalIcon: 'https://cn.vuejs.org/images/logo.png',
-        activeIcon: 'https://gw.alicdn.com/tfs/TB1_V1wbbSYBuNjSspiXXXNzpXa-349-288.png'
-      }, {
-        title: '收藏',
-        icon: 'xingxing'
-      }, {
-        title: '分享',
-        icon: 'fenxiang'
-      }, {
-        title: '删除',
-        icon: 'shanchu'
-      }, {
-        title: '更多',
-        icon: 'gengduo'
-      }],
-      items4: [{
-        title: '信息',
-        icon: 'xinxi1',
-        badge: 99
-      }, {
-        title: '下载',
-        icon: 'xiazai',
-        dot: true
-      }, {
-        title: '删除',
-        icon: 'shanchu',
-        badge: 999
-      }],
-      activeIndex: 0,
-      customStyles: {
-        titleColor: '#999999',
-        iconColor: '#999999',
-        activeColor: '#FFFFFF'
-      },
-      icon: {
-        normal: 'https://cn.vuejs.org/images/logo.png',
-        active: 'https://gw.alicdn.com/tfs/TB1_V1wbbSYBuNjSspiXXXNzpXa-349-288.png'
+  export default {
+    components: { FmTabbar, FmTabbarItem, FmButton, Title },
+    data () {
+      return {
+        type: 'demo1',
+        items1: [{
+          title: '信息',
+          icon: 'xinxi1'
+        }, {
+          title: '下载',
+          icon: 'xiazai'
+        }, {
+          title: '删除',
+          icon: 'shanchu'
+        }],
+        items2: [{
+          title: '编辑',
+          icon: 'bianji',
+          normalIcon: 'https://cn.vuejs.org/images/logo.png',
+          activeIcon: 'https://gw.alicdn.com/tfs/TB1_V1wbbSYBuNjSspiXXXNzpXa-349-288.png'
+        }, {
+          title: '收藏',
+          icon: 'xingxing'
+        }, {
+          title: '分享',
+          icon: 'fenxiang'
+        }, {
+          title: '删除',
+          icon: 'shanchu'
+        }, {
+          title: '更多',
+          icon: 'gengduo'
+        }],
+        items4: [{
+          title: '信息',
+          icon: 'xinxi1',
+          badge: 99
+        }, {
+          title: '下载',
+          icon: 'xiazai',
+          dot: true
+        }, {
+          title: '删除',
+          icon: 'shanchu',
+          badge: 999
+        }],
+        activeIndex: 0,
+        customStyles: {
+          titleColor: '#999999',
+          iconColor: '#999999',
+          activeColor: '#FFFFFF'
+        },
+        icon: {
+          normal: 'https://cn.vuejs.org/images/logo.png',
+          active: 'https://gw.alicdn.com/tfs/TB1_V1wbbSYBuNjSspiXXXNzpXa-349-288.png'
+        }
       }
-    };
-  },
-  methods: {
-    fmTabbarSelected ({ index }) {
-      this.activeIndex = index;
     },
-    onChange (type) {
-      this.type = type;
+    methods: {
+      fmTabbarSelected ({ index }) {
+        this.activeIndex = index
+      },
+      onChange (type) {
+        this.type = type
+      }
     }
   }
-};
 </script>

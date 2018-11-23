@@ -35,49 +35,49 @@
 </style>
 
 <script>
-    import util from '@yanxuan/assets/util';
-    import Header2 from '../components/Header2.vue';
-    import refresher from '../components/refresh.vue';
-    import Block4 from '../components/Block4.vue';
-    import Block5 from '../components/Block5.vue';
-    var navigator = weex.requireModule('navigator')
-    export default {
-        data () {
-            return {
-                topics:[],
-                articles:[]
-            }
-        },
-        components: {
-            'header2': Header2,
-            'refresher': refresher,
-            'block-4': Block4,
-            'block-5': Block5,
-        },
-        created () {
-            this.GET('api/topic/index', res => {
-                let result = res.data.result;
-                this.topics = result['topics'];
-            });
-            this.GET('api/topic/articles', res => {
-                let result = res.data.result;
-                this.articles = result['articles'];
-            })
-        },
-        methods: {
+  import util from '@yanxuan/assets/util'
+  import Header2 from '../components/Header2.vue'
+  import refresher from '../components/refresh.vue'
+  import Block4 from '../components/Block4.vue'
+  import Block5 from '../components/Block5.vue'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    data () {
+      return {
+        topics: [],
+        articles: []
+      }
+    },
+    components: {
+      'header2': Header2,
+      'refresher': refresher,
+      'block-4': Block4,
+      'block-5': Block5
+    },
+    created () {
+      this.GET('api/topic/index', res => {
+        let result = res.data.result
+        this.topics = result['topics']
+      })
+      this.GET('api/topic/articles', res => {
+        let result = res.data.result
+        this.articles = result['articles']
+      })
+    },
+    methods: {
 
-            jumpWeb (_url) {
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            },
-            onloadmore () {
-                setTimeout(() => {
-                    this.articles.push(...this.articles);
-                }, 100)
-            },
-        }
+      jumpWeb (_url) {
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'true'
+        })
+      },
+      onloadmore () {
+        setTimeout(() => {
+          this.articles.push(...this.articles)
+        }, 100)
+      }
     }
+  }
 </script>

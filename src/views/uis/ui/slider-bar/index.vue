@@ -69,10 +69,10 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcSliderBar } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcSliderBar } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcSliderBar },
@@ -117,19 +117,19 @@
         disabled: true
       }
     }),
-    created() {
-      setTitle('SliderBar');
-      this.barValue = this.sliderBarCfg1.value || this.sliderBarCfg1.defaultValue;
-      this.minValue = this.sliderBarCfg2.value[0] || this.sliderBarCfg1.defaultValue[0];
-      this.maxValue = this.sliderBarCfg2.value[1] || this.sliderBarCfg1.defaultValue[1];
+    created () {
+      setTitle('SliderBar')
+      this.barValue = this.sliderBarCfg1.value || this.sliderBarCfg1.defaultValue
+      this.minValue = this.sliderBarCfg2.value[0] || this.sliderBarCfg1.defaultValue[0]
+      this.maxValue = this.sliderBarCfg2.value[1] || this.sliderBarCfg1.defaultValue[1]
     },
     methods: {
-      updateValue(value) {
+      updateValue (value) {
         if (typeof value === 'number') {
-          this.barValue = value;
+          this.barValue = value
         } else if (value.length && value.length === 2) {
-          this.minValue = value[0];
-          this.maxValue = value[1];
+          this.minValue = value[0]
+          this.maxValue = value[1]
         }
       }
     }

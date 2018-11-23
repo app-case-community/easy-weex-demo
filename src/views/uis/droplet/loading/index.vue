@@ -13,22 +13,22 @@
 </style>
 
 <script>
-    import { WxLoading, WxButton } from 'weex-droplet-ui'
+  import { WxLoading, WxButton } from 'weex-droplet-ui'
 
-    export default {
-        data () {
-            return {
-                visible: false
-            }
-        },
-        components: {WxLoading, WxButton},
-        methods: {
-            openLoading () {
-                this.visible = true
-                setTimeout(() => {
-                    this.visible = false
-                }, 2000)
-            }
-        }
+  export default {
+    data () {
+      return {
+        visible: false
+      }
+    },
+    components: { WxLoading, WxButton },
+    methods: {
+      openLoading () {
+        this.visible = true
+        setTimeout(() => {
+          this.visible = false
+        }, 2000)
+      }
     }
+  }
 </script>

@@ -22,8 +22,8 @@
             </div>
         </wx-dialog>
 
-        <wx-dialog 
-            :visible="dialog2Visible" 
+        <wx-dialog
+            :visible="dialog2Visible"
             @confirm="dialog2Visible = false"
             @cancel="dialog2Visible = false">
             <div slot="dialog-body" class="dialog-body">
@@ -33,10 +33,10 @@
             </div>
         </wx-dialog>
 
-        <wx-dialog 
+        <wx-dialog
             :clickConfirmHide="true"
             title="您确认删除吗？"
-            :visible="dialog3Visible" 
+            :visible="dialog3Visible"
             @confirm="dialog3Visible = false"
             @cancel="dialog3Visible = false">
             <div slot="dialog-outer">
@@ -122,34 +122,34 @@
         color: #fff;
     }
     /*dialog*/
-    
+
 </style>
 <script>
-    import { WxDialog, WxButton } from 'weex-droplet-ui';
-    const modal = weex.requireModule('modal');
-    export default {
-      components: {
-          WxDialog,
-          WxButton
-      },
-      data () {
-          return {
-              dialogVisible: false,
-              dialog2Visible: false,
-              dialog3Visible: false,
-          }
-      },
-      created () {
+  import { WxDialog, WxButton } from 'weex-droplet-ui'
+  const modal = weex.requireModule('modal')
+  export default {
+    components: {
+      WxDialog,
+      WxButton
+    },
+    data () {
+      return {
+        dialogVisible: false,
+        dialog2Visible: false,
+        dialog3Visible: false
+      }
+    },
+    created () {
 
+    },
+    methods: {
+      handleConfirmConsult () {
+        this.dialogVisible = false
       },
-      methods: {
-          handleConfirmConsult () {
-              this.dialogVisible = false;
-          },
 
-          test () {
-                modal.alert({message: 'test'})
-          }
-        }
+      test () {
+        modal.alert({ message: 'test' })
+      }
     }
+  }
 </script>

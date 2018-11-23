@@ -38,33 +38,33 @@
 </style>
 
 <script>
-import { FmTextbar, FmButton } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-const modal = weex.requireModule('modal');
+  import { FmTextbar, FmButton } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { FmTextbar, FmButton, Title },
-  data: () => ({
-    btns: [{
-      title: '下一步'
-    }]
-  }),
-  methods: {
-    handle (e) {
-      modal.toast({ message: '按钮被点击了' });
-    },
-    onClick1 (e) {
-      this.btns = [{
+  export default {
+    components: { FmTextbar, FmButton, Title },
+    data: () => ({
+      btns: [{
         title: '下一步'
-      }];
-    },
-    onClick2 (e) {
-      this.btns = [{
-        title: '取消'
-      }, {
-        title: '确定'
-      }];
+      }]
+    }),
+    methods: {
+      handle (e) {
+        modal.toast({ message: '按钮被点击了' })
+      },
+      onClick1 (e) {
+        this.btns = [{
+          title: '下一步'
+        }]
+      },
+      onClick2 (e) {
+        this.btns = [{
+          title: '取消'
+        }, {
+          title: '确定'
+        }]
+      }
     }
   }
-};
 </script>

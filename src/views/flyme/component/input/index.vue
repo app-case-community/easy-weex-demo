@@ -47,11 +47,11 @@
 </style>
 
 <script>
-import { FmInput } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmInput } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmInput }
-};
+  export default {
+    components: { Title, Category, FmInput }
+  }
 </script>

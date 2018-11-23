@@ -82,12 +82,12 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcNoticebar } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcNoticebar } from 'weex-ui'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcNoticebar },
@@ -95,17 +95,17 @@
       url: 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js'
     }),
     created () {
-      setTitle('Noticebar');
+      setTitle('Noticebar')
     },
     methods: {
       wxcNoticebarCloseClicked (e) {
-        console.log(e);
-        modal.toast({ 'message': 'wxcNoticebarCloseClicked', 'duration': 1 });
+        console.log(e)
+        modal.toast({ 'message': 'wxcNoticebarCloseClicked', 'duration': 1 })
       },
       wxcNoticebarLinkClicked (e) {
-        console.log(e);
-        modal.toast({ 'message': 'wxcNoticebarLinkClicked', 'duration': 1 });
+        console.log(e)
+        modal.toast({ 'message': 'wxcNoticebarLinkClicked', 'duration': 1 })
       }
     }
-  };
+  }
 </script>

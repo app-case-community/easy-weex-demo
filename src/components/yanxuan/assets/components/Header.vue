@@ -59,24 +59,24 @@
     }
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@yanxuan/assets/util';
-    export default {
-        data () {
-            return {
-            }
-        },
-        created () {
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) _url = 'http://m.you.163.com/search';
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "false"
-                });
-            }
-        }
+  import util from '@yanxuan/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    data () {
+      return {
+      }
+    },
+    created () {
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) _url = 'http://m.you.163.com/search'
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'false'
+        })
+      }
     }
+  }
 </script>

@@ -65,7 +65,6 @@
         </div>
       </wxc-popup>
 
-
       <wxc-popup :height="height"
                  :show="isAutoShow"
                  pos="bottom"
@@ -152,10 +151,10 @@
 </style>
 
 <script>
-  import { WxcPopup } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcPopup } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcPopup },
@@ -169,46 +168,46 @@
       height: 400
     }),
     created () {
-      setTitle('Popup');
+      setTitle('Popup')
     },
     methods: {
       openBottomPopup () {
-        this.isBottomShow = true;
+        this.isBottomShow = true
       },
       openTopPopup () {
-        this.isTopShow = true;
+        this.isTopShow = true
       },
       openLeftPopup () {
-        this.isLeftShow = true;
+        this.isLeftShow = true
       },
       openRightPopup () {
-        this.isRightShow = true;
+        this.isRightShow = true
       },
       popupOverlayTopClick () {
-        this.isTopShow = false;
+        this.isTopShow = false
       },
       popupOverlayBottomClick () {
-        this.isBottomShow = false;
+        this.isBottomShow = false
       },
       popupOverlayLeftClick () {
-        this.isLeftShow = false;
+        this.isLeftShow = false
       },
       popupOverlayRightClick () {
-        this.isRightShow = false;
+        this.isRightShow = false
       },
 
       popupOverlayAutoClick () {
-        this.isAutoShow = false;
+        this.isAutoShow = false
       },
 
       openAutoPopup () {
-        const height = this.height;
-        this.height = height === 400 ? 800 : 400;
-        this.isAutoShow = true;
+        const height = this.height
+        this.height = height === 400 ? 800 : 400
+        this.isAutoShow = true
       },
       onHideClick () {
-        this.$refs.wxcPopup.hide();
+        this.$refs.wxcPopup.hide()
       }
     }
-  };
+  }
 </script>

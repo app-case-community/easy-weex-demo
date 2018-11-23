@@ -29,17 +29,17 @@
 </style>
 
 <script>
-import { AmNavBar, AmWhiteSpace } from 'weex-amui'
-const modal = weex.requireModule('modal')
+  import { AmNavBar, AmWhiteSpace } from 'weex-amui'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { AmNavBar, AmWhiteSpace },
-  methods: {
-    handleClick (value) {
-      modal.toast({
-        message: value
-      })
+  export default {
+    components: { AmNavBar, AmWhiteSpace },
+    methods: {
+      handleClick (value) {
+        modal.toast({
+          message: value
+        })
+      }
     }
   }
-}
 </script>

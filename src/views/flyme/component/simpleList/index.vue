@@ -56,69 +56,69 @@
 </style>
 
 <script>
-import { FmSimpleList } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmSimpleList } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { FmSimpleList, Title, Category },
-  data: () => ({
-    listData: [{
-      title: '王者荣耀'
-    }, {
-      title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述'
-    }, {
-      title: '震惊！Flyme 竟然还有这个功能！'
-    }],
-    listData1: [{
-      title: '王者荣耀'
-    }, {
-      title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述'
-    }, {
-      title: '震惊！Flyme 竟然还有这个功能！'
-    }],
-    listData2: [{
-      title: '王者荣耀',
-      color: '#198DED'
-    }, {
-      title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述',
-      color: '#3BC06B'
-    }, {
-      title: '震惊！Flyme 竟然还有这个功能！',
-      color: '#DC2A2A'
-    }],
-    listData3: [{
-      title: '王者荣耀 -- 决战到底',
-      color: '#198DED',
-      leftIcon: 'biaoqing',
-      leftColor: '#DC2A2A'
-    }, {
-      title: '绝地求生 -- 刺激战场',
-      color: '#3BC06B',
-      leftIcon: 'gongjuxiang'
-    }, {
-      title: '逆水寒 -- 会呼吸的江湖',
-      color: '#DC2A2A',
-      leftIcon: 'hongxin'
-    }],
-    customStyles: {
-      borderWidth: 0,
-      originLeftIcon: ''
-    }
-  }),
-  methods: {
-    onSelect (e) {
-      modal.toast({ message: `选中了 ${e.model.title}，选中的是第 ${e.index} 个` });
-    },
-    rightClicked (e) {
-      modal.toast({ message: '点击了右边按钮' });
-      this.listData1 = [];
-    },
-    itemRightClicked (e) {
-      this.listData.splice(e.index, 1);
+  export default {
+    components: { FmSimpleList, Title, Category },
+    data: () => ({
+      listData: [{
+        title: '王者荣耀'
+      }, {
+        title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述'
+      }, {
+        title: '震惊！Flyme 竟然还有这个功能！'
+      }],
+      listData1: [{
+        title: '王者荣耀'
+      }, {
+        title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述'
+      }, {
+        title: '震惊！Flyme 竟然还有这个功能！'
+      }],
+      listData2: [{
+        title: '王者荣耀',
+        color: '#198DED'
+      }, {
+        title: '这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述这是一段文字超长的描述',
+        color: '#3BC06B'
+      }, {
+        title: '震惊！Flyme 竟然还有这个功能！',
+        color: '#DC2A2A'
+      }],
+      listData3: [{
+        title: '王者荣耀 -- 决战到底',
+        color: '#198DED',
+        leftIcon: 'biaoqing',
+        leftColor: '#DC2A2A'
+      }, {
+        title: '绝地求生 -- 刺激战场',
+        color: '#3BC06B',
+        leftIcon: 'gongjuxiang'
+      }, {
+        title: '逆水寒 -- 会呼吸的江湖',
+        color: '#DC2A2A',
+        leftIcon: 'hongxin'
+      }],
+      customStyles: {
+        borderWidth: 0,
+        originLeftIcon: ''
+      }
+    }),
+    methods: {
+      onSelect (e) {
+        modal.toast({ message: `选中了 ${e.model.title}，选中的是第 ${e.index} 个` })
+      },
+      rightClicked (e) {
+        modal.toast({ message: '点击了右边按钮' })
+        this.listData1 = []
+      },
+      itemRightClicked (e) {
+        this.listData.splice(e.index, 1)
+      }
     }
   }
-};
 </script>

@@ -37,30 +37,30 @@
 </style>
 
 <script>
-import { BuiHeader, BuiCell, BuiIcon } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiCell,
-    BuiIcon
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      cellStyle: {
-        "background-color:active": "#f2f2f2"
-      }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+  import { BuiHeader, BuiCell, BuiIcon } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiCell,
+      BuiIcon
     },
-    cellClick() {
-      this.$toast("click");
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        cellStyle: {
+          'background-color:active': '#f2f2f2'
+        }
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      },
+      cellClick () {
+        this.$toast('click')
+      }
     }
   }
-};
 </script>

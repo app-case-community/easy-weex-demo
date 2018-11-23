@@ -26,22 +26,22 @@
 </style>
 
 <script>
-import { AmButton, AmNavBar, AmDatePickerView } from 'weex-amui'
+  import { AmButton, AmNavBar, AmDatePickerView } from 'weex-amui'
 
-export default {
-  components: { AmButton, AmNavBar, AmDatePickerView },
+  export default {
+    components: { AmButton, AmNavBar, AmDatePickerView },
 
-  computed: {},
-  data () {
-    return {
-      start: '2015-11-11',
-      end: '2015-12-12'
-    }
-  },
-  methods: {
-    onChange (items) {
-      this.changeReturnData = items
+    computed: {},
+    data () {
+      return {
+        start: '2015-11-11',
+        end: '2015-12-12'
+      }
+    },
+    methods: {
+      onChange (items) {
+        this.changeReturnData = items
+      }
     }
   }
-}
 </script>

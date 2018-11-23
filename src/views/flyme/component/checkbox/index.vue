@@ -88,41 +88,41 @@
 </style>
 
 <script>
-import { FmCheckbox, FmCheckboxList } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmCheckbox, FmCheckboxList } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmCheckbox, FmCheckboxList },
-  data: () => ({
-    list: [{
-      title: '选项1',
-      value: 0
-    }, {
-      title: '选项2',
-      value: 1,
-      summary: '描述'
-    }, {
-      title: '选项3',
-      value: 2,
-      summary: '描述',
-      description: '段落描述'
-    }],
-    checkedList1: [],
-    checkedList2: []
-  }),
-  methods: {
-    onChecked1 (e) {
-      this.checkedList1 = e.checkedList;
-    },
-    onChecked2 (e) {
-      this.checkedList2 = e.checkedList;
-    },
-    overLimit (e) {
-      modal.toast({ message: '超过' + e + '个了' });
+  export default {
+    components: { Title, Category, FmCheckbox, FmCheckboxList },
+    data: () => ({
+      list: [{
+        title: '选项1',
+        value: 0
+      }, {
+        title: '选项2',
+        value: 1,
+        summary: '描述'
+      }, {
+        title: '选项3',
+        value: 2,
+        summary: '描述',
+        description: '段落描述'
+      }],
+      checkedList1: [],
+      checkedList2: []
+    }),
+    methods: {
+      onChecked1 (e) {
+        this.checkedList1 = e.checkedList
+      },
+      onChecked2 (e) {
+        this.checkedList2 = e.checkedList
+      },
+      overLimit (e) {
+        modal.toast({ message: '超过' + e + '个了' })
+      }
     }
   }
-};
 </script>

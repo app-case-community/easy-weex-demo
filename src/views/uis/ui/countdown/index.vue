@@ -73,7 +73,6 @@
         :time="TIME">
       </wxc-countdown>
 
-
       <wxc-countdown
         :interval="2000"
         tpl="{h}时{m}分{s}秒"
@@ -142,13 +141,13 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
 
   import { WxcCountdown } from 'weex-ui'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcCountdown },
@@ -160,18 +159,18 @@
       demoText: '距离开始'
     }),
     created () {
-      setTitle('Countdown');
+      setTitle('Countdown')
     },
     methods: {
       onCompleted () {
-        this.callbackText = '倒计时完成了';
+        this.callbackText = '倒计时完成了'
         modal.toast({
           message: '倒计时完成了'
         })
       },
       onCompletedTwo () {
-        this.demoTime = new Date().getTime() + 5000;
-        this.demoText = this.demoText === '距离开始' ? '距离结束' : '距离开始';
+        this.demoTime = new Date().getTime() + 5000
+        this.demoText = this.demoText === '距离开始' ? '距离结束' : '距离开始'
         modal.toast({
           message: '倒计时完成了'
         })
@@ -179,4 +178,3 @@
     }
   }
 </script>
-

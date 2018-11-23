@@ -43,13 +43,13 @@
     }
 </style>
 <script>
-    export default {
-        props:['title','leftBtn','rightBtn'],
-        data () {
-            return {
-            }
-        },
-        methods: {
-        }
+  export default {
+    props: ['title', 'leftBtn', 'rightBtn'],
+    data () {
+      return {
+      }
+    },
+    methods: {
     }
+  }
 </script>

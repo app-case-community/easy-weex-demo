@@ -31,22 +31,21 @@
     flex: 1;
   }
 
-
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import Regular from './regular.vue';
-  import Advance from './advance.vue';
-  import ImageAdvance from './image-advance.vue';
-  import SpecialAdvance from './special-advance.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import Regular from './regular.vue'
+  import Advance from './advance.vue'
+  import ImageAdvance from './image-advance.vue'
+  import SpecialAdvance from './special-advance.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, Regular, Advance, ImageAdvance, SpecialAdvance },
     created () {
-      setTitle('Tag');
+      setTitle('Tag')
     }
   }
 </script>

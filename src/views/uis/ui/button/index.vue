@@ -207,12 +207,12 @@
 </style>
 
 <script>
-  import { WxcButton, WxcCell } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav.js';
+  import { WxcButton, WxcCell } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav.js'
 
-  const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
   export default {
     components: { Title, Category, WxcButton, WxcCell },
     data: () => ({
@@ -229,41 +229,41 @@
     }),
     computed: {
       btnStyle () {
-        const { width, height, backgroundColor, borderColor, borderRadius } = this;
-        const customStyle = {};
+        const { width, height, backgroundColor, borderColor, borderRadius } = this
+        const customStyle = {}
 
         if (width) {
-          customStyle.width = width;
+          customStyle.width = width
         }
 
         if (height) {
-          customStyle.height = height;
-          customStyle.lineHeight = height;
+          customStyle.height = height
+          customStyle.lineHeight = height
         }
 
         if (backgroundColor) {
-          customStyle.backgroundColor = backgroundColor;
+          customStyle.backgroundColor = backgroundColor
         }
 
         if (borderColor) {
-          customStyle.borderColor = borderColor;
-          customStyle.borderWidth = '1px';
-          customStyle.borderStyle = 'solid';
+          customStyle.borderColor = borderColor
+          customStyle.borderWidth = '1px'
+          customStyle.borderStyle = 'solid'
         }
 
         if (borderRadius) {
-          customStyle.borderRadius = borderRadius;
+          customStyle.borderRadius = borderRadius
         }
-        return customStyle;
+        return customStyle
       },
       textStyle () {
-        const { fontSize, color } = this;
-        const customStyle = {};
+        const { fontSize, color } = this
+        const customStyle = {}
         if (fontSize) {
-          customStyle.fontSize = fontSize;
+          customStyle.fontSize = fontSize
         }
         if (color) {
-          customStyle.color = color;
+          customStyle.color = color
         }
         return {
           fontSize, color
@@ -271,11 +271,11 @@
       }
     },
     created () {
-      setTitle('Button');
+      setTitle('Button')
     },
     methods: {
       wxcButtonClicked (e) {
-        const { type, disabled } = e;
+        const { type, disabled } = e
         modal.toast({
           message: disabled ? `disabled=${disabled}` : `type=${type}`
         })

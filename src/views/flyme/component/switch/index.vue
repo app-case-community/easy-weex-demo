@@ -103,11 +103,11 @@
 </style>
 
 <script>
-import { FmSwitch, FmText } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmSwitch, FmText } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmSwitch, FmText }
-};
+  export default {
+    components: { Title, Category, FmSwitch, FmText }
+  }
 </script>

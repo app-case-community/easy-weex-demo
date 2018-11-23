@@ -75,83 +75,84 @@
 
 <script>
 
-    import Header4 from '../components/Header4.vue';
+  import Header4 from '../components/Header4.vue'
 
-    import util from '@yanxuan/assets/util';
-    const navigator = weex.requireModule('navigator');
-    const binding = weex.requireModule('bindingx');
-    export default {
-        data () {
-            return {
+  import util from '@yanxuan/assets/util'
+  const navigator = weex.requireModule('navigator')
+  const binding = weex.requireModule('bindingx')
+  export default {
+    data () {
+      return {
+      }
+    },
+    components: {
+      'header5': Header4
+    },
+    mounted () {
+      binding && this.headerBgBinding()
+    },
+    beforeDestroy () {
+      binding && this.headerBgBindingDestory()
+    },
+    methods: {
+
+      jumpWeb (_url) {
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'true'
+        })
+      },
+      jumpNative (_url) {
+        navigator.push({
+          url: _url,
+          animated: 'true'
+        })
+      },
+      headerBgBinding () {
+        var self = this
+
+        var scroller = self.$refs.contentScroller.ref
+
+        var headerBg = self.$refs.headerBg.ref
+
+        var bindingResult = binding.bind({
+          eventType: 'scroll',
+          anchor: scroller,
+          props: [
+            {
+              element: headerBg,
+              property: 'transform.scale',
+              expression: {
+                origin: 'y<0?(1-y/500):(1+y/500)'
+              }
+            },
+            {
+              element: headerBg,
+              property: 'transform.translateY',
+              expression: {
+                origin: '-y/2'
+              }
             }
-        },
-        components: {
-            'header5': Header4
-        },
-        mounted(){
-            binding && this.headerBgBinding();
-        },
-        beforeDestroy(){
-            binding && this.headerBgBindingDestory();
-        },
-        methods: {
 
-            jumpWeb (_url) {
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            },
-            jumpNative (_url) {
-                navigator.push({
-                    url: _url ,
-                    animated: "true"
-                });
-            },
-            headerBgBinding(){
+          ]
+        }, function (e) {
+        })
+        self.gesToken = bindingResult && bindingResult.token
+      },
 
-                var self = this,
-                    scroller = self.$refs.contentScroller.ref,
-                    headerBg = self.$refs.headerBg.ref;
-
-                var bindingResult = binding.bind({
-                    eventType:'scroll',
-                    anchor:scroller,
-                    props:[
-                        {
-                            element:headerBg,
-                            property:'transform.scale',
-                            expression:{
-                                origin:'y<0?(1-y/500):(1+y/500)'
-                            }
-                        },
-                        {
-                            element:headerBg,
-                            property:'transform.translateY',
-                            expression:{
-                                origin:'-y/2'
-                            }
-                        }
-
-                    ]
-                },function(e){
-                });
-                self.gesToken = bindingResult&&bindingResult.token;
-            },
-
-            headerBgBindingDestory(){
-                let self = this;
-                if(self.gesToken != 0) {
-                    binding.unbind({
-                        eventType:'scroll',
-                        token:self.gesToken
-                    })
-                    self.gesToken = 0;
-                }
-            }
+      headerBgBindingDestory () {
+        let self = this
+        if (self.gesToken !== 0) {
+          binding.unbind({
+            eventType: 'scroll',
+            token: self.gesToken
+          })
+          self.gesToken = 0
         }
+      }
     }
+  }
 </script>
 
 <style scoped>

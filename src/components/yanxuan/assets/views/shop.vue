@@ -74,32 +74,32 @@
 </style>
 
 <script>
-    import Header2 from '../components/Header2.vue';
-    import Block3 from '../components/Block3.vue';
-    import util from '@yanxuan/assets/util';
-    import refresher from '../components/refresh.vue';
-    export default {
-        components: {
-            'header4':Header2,
-            'refresher':refresher,
-            'block-3':Block3,
+  import Header2 from '../components/Header2.vue'
+  import Block3 from '../components/Block3.vue'
+  //   import util from '@yanxuan/assets/util'
+  import refresher from '../components/refresh.vue'
+  export default {
+    components: {
+      'header4': Header2,
+      'refresher': refresher,
+      'block-3': Block3
+    },
+    data () {
+      return {
+        rightBtn: {
+          name: '编辑'
         },
-        data () {
-            return {
-                rightBtn:{
-                    name:"编辑"
-                },
-                goods3:[],
-                goodList:[]
-            }
-        },
-        created () {
-            this.GET('api/home/pullGoods', res => {
-                let result = res.data.result;
-                this.goods3 = result['goods'];
-            })
-        },
-        methods: {
-        }
+        goods3: [],
+        goodList: []
+      }
+    },
+    created () {
+      this.GET('api/home/pullGoods', res => {
+        let result = res.data.result
+        this.goods3 = result['goods']
+      })
+    },
+    methods: {
     }
+  }
 </script>

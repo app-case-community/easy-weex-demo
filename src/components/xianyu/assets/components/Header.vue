@@ -55,17 +55,17 @@
     }
 </style>
 <script>
-    export default {
-        data () {
-            return {
-            }
-        },
-        created () {
-        },
-        methods: {
-            jumpto(_url) {
-                this.$router.push(_url);
-            }
-        }
+  export default {
+    data () {
+      return {
+      }
+    },
+    created () {
+    },
+    methods: {
+      jumpto (_url) {
+        this.$router.push(_url)
+      }
     }
+  }
 </script>

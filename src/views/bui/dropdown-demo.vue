@@ -47,48 +47,47 @@
             <bui-cell @click="cellClick" title="社交媒体"></bui-cell>
         </bui-dropdown>
 
-
     </div>
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiButton, BuiCell, BuiDropdown } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiButton,
-    BuiCell,
-    BuiDropdown
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiButton, BuiCell, BuiDropdown } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiButton,
+      BuiCell,
+      BuiDropdown
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        showUp: false
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
       },
-      showUp: false
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
-    },
-    open(event) {
-      this.$refs.dropdown.show(event);
-    },
-    open2(event) {
-      this.$refs.dropdown2.show(event);
-    },
-    open3(event) {
-      this.$refs.dropdown3.show(event);
-    },
-    openUp(event) {
-      this.$refs.upshows.show(event, 323);
-    },
-    cellClick() {
-      this.$refs.upshows.hide();
+      open (event) {
+        this.$refs.dropdown.show(event)
+      },
+      open2 (event) {
+        this.$refs.dropdown2.show(event)
+      },
+      open3 (event) {
+        this.$refs.dropdown3.show(event)
+      },
+      openUp (event) {
+        this.$refs.upshows.show(event, 323)
+      },
+      cellClick () {
+        this.$refs.upshows.hide()
+      }
     }
   }
-};
 </script>
 <style>
 </style>

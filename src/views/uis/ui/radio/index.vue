@@ -37,10 +37,10 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcRadio } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcRadio } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcRadio },
@@ -55,19 +55,19 @@
         { title: '未选不可修改', value: 5, disabled: true },
         { title: '已选不可修改', value: 6, disabled: true, checked: true }
       ],
-      config:{
-        checkedIcon:'https://gw.alicdn.com/tfs/TB1TARHdf6H8KJjSspmXXb2WXXa-31-30.png',
-        disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+      config: {
+        checkedIcon: 'https://gw.alicdn.com/tfs/TB1TARHdf6H8KJjSspmXXb2WXXa-31-30.png',
+        disabledIcon: 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
         checkedColor: '#000000'
       },
       checkedInfo: { title: '选项2', value: 2, oldIndex: -1, index: 1 }
     }),
     created () {
-      setTitle('Radio');
+      setTitle('Radio')
     },
     methods: {
       wxcRadioListChecked (e) {
-        this.checkedInfo = e;
+        this.checkedInfo = e
       }
     }
   }

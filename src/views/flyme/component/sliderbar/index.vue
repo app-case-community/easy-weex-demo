@@ -69,24 +69,24 @@
 </style>
 
 <script>
-import { FmSliderBar } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmSliderBar } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-export default {
-  components: { Title, Category, FmSliderBar },
-  data () {
-    return {
-      value1: 0,
-      value2: 20,
-      value3: 40,
-      value4: 60
-    };
-  },
-  methods: {
-    updateValue (value, idx) {
-      this[`value${idx}`] = value;
+  export default {
+    components: { Title, Category, FmSliderBar },
+    data () {
+      return {
+        value1: 0,
+        value2: 20,
+        value3: 40,
+        value4: 60
+      }
+    },
+    methods: {
+      updateValue (value, idx) {
+        this[`value${idx}`] = value
+      }
     }
   }
-};
 </script>

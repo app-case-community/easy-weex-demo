@@ -17,44 +17,44 @@
     </div>
 </template>
 <script>
-    const navigator = weex.requireModule('navigator')
-    const webview = weex.requireModule('webview')
-    const modal = weex.requireModule('modal')
-    import util from '../assets/util';
-    export default {
-        components: {
-        },
-        data () {
-            return {
-                url0 : 'http://m.you.163.com',
-            }
-        },
-        created (_e) {
-            util.initIconFont();
-            this.url =  util.getUrlSearch(weex.config.bundleUrl,'weburl') || this.url0;
-            console.log('webPageURL', this.url )
-//            modal.toast({ message: this.url });
-        },
-        methods: {
-            back (event) {
-                modal.toast({ message: 'back' })
-                webview.goBack(this.$refs.wv)
-            },
-            close (event) {
-                navigator.pop({
-                    animated:"false"
-                });
-            },
-            reload (event) {
-                modal.toast({ message: 'reload' })
-                webview.reload(this.$refs.wv)
-            },
-            error (event) {
-                console.log('error', event)
-//                modal.toast({ message: 'error' })
-            }
-        }
+  import util from '../assets/util'
+  const navigator = weex.requireModule('navigator')
+  const webview = weex.requireModule('webview')
+  const modal = weex.requireModule('modal')
+  export default {
+    components: {
+    },
+    data () {
+      return {
+        url0: 'http://m.you.163.com'
+      }
+    },
+    created (_e) {
+      util.initIconFont()
+      this.url = util.getUrlSearch(weex.config.bundleUrl, 'weburl') || this.url0
+      console.log('webPageURL', this.url)
+      //            modal.toast({ message: this.url });
+    },
+    methods: {
+      back (event) {
+        modal.toast({ message: 'back' })
+        webview.goBack(this.$refs.wv)
+      },
+      close (event) {
+        navigator.pop({
+          animated: 'false'
+        })
+      },
+      reload (event) {
+        modal.toast({ message: 'reload' })
+        webview.reload(this.$refs.wv)
+      },
+      error (event) {
+        console.log('error', event)
+        //                modal.toast({ message: 'error' })
+      }
     }
+  }
 </script>
 <style scoped>
     .wrapper{

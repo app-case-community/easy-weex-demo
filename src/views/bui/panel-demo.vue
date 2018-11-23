@@ -34,56 +34,56 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiPanel } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiPanel
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      testData1: [
-        {
-          title: "云应用平台"
+  import { BuiHeader, BuiPanel } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiPanel
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        {
-          title: "云应用产品",
-          selected: true
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "最多展示两行内容"
-        },
-        {
-          title: "超过两行文本将被截断展示"
-        },
-        {
-          title: "超过两行文本将被截断展示"
-        },
-        {
-          title: "轨道交通"
-        }
-      ]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+        testData1: [
+          {
+            title: '云应用平台'
+          },
+          {
+            title: '云应用产品',
+            selected: true
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '最多展示两行内容'
+          },
+          {
+            title: '超过两行文本将被截断展示'
+          },
+          {
+            title: '超过两行文本将被截断展示'
+          },
+          {
+            title: '轨道交通'
+          }
+        ]
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
+      }
     }
   }
-};
 </script>

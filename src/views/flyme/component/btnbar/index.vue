@@ -38,38 +38,38 @@
 </style>
 
 <script>
-import { FmBtnbar, FmButton, FmIcon } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-const modal = weex.requireModule('modal');
+  import { FmBtnbar, FmButton, FmIcon } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { FmBtnbar, FmButton, Title, Category, FmIcon },
-  data: () => ({
-    btns: [{
-      title: '开始',
-      color: '#3bc06b'
-    }]
-  }),
-  methods: {
-    handle (e) {
-      modal.toast({ message: '按钮被点击了' });
-    },
-    onClick1 (e) {
-      this.btns = [{
+  export default {
+    components: { FmBtnbar, FmButton, Title, Category, FmIcon },
+    data: () => ({
+      btns: [{
         title: '开始',
         color: '#3bc06b'
-      }];
-    },
-    onClick2 (e) {
-      this.btns = [{
-        title: '取消订单',
-        disabled: true
-      }, {
-        title: '提交订单',
-        color: '#dc2a2a'
-      }];
+      }]
+    }),
+    methods: {
+      handle (e) {
+        modal.toast({ message: '按钮被点击了' })
+      },
+      onClick1 (e) {
+        this.btns = [{
+          title: '开始',
+          color: '#3bc06b'
+        }]
+      },
+      onClick2 (e) {
+        this.btns = [{
+          title: '取消订单',
+          disabled: true
+        }, {
+          title: '提交订单',
+          color: '#dc2a2a'
+        }]
+      }
     }
   }
-};
 </script>

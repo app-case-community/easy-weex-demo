@@ -56,91 +56,89 @@
 </style>
 
 <script>
-import { FmMultiCheckGroup, FmMultiCheckCell } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmMultiCheckGroup, FmMultiCheckCell } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmMultiCheckGroup, FmMultiCheckCell },
-  methods: {
-    click () {
-      modal.toast({ message: '点击了安装' });
-    }
-  },
-  data: () => ({
-    dataSource: [
-      {
-        name: '第一条数据',
-        disabled: true
+  export default {
+    components: { Title, Category, FmMultiCheckGroup, FmMultiCheckCell },
+    data: () => ({
+      dataSource: [
+        {
+          name: '第一条数据',
+          disabled: true
+        },
+        {
+          name: '第二条数据',
+          disabled: false
+        },
+        {
+          name: '第三条数据',
+          disabled: false
+        },
+        {
+          name: '第四条数据',
+          disabled: true
+        },
+        {
+          name: '第五条数据',
+          disabled: false
+        },
+        {
+          name: '第六条数据',
+          disabled: false
+        },
+        {
+          name: '第七条数据',
+          disabled: false
+        },
+        {
+          name: '第八条数据',
+          disabled: false
+        },
+        {
+          name: '第九条数据',
+          disabled: false
+        }
+      ],
+      checkData: ['第一条数据', '第三条数据']
+    }),
+    methods: {
+      click () {
+        modal.toast({ message: '点击了安装' })
       },
-      {
-        name: '第二条数据',
-        disabled: false
+      cancel () {
+        this.$refs.multiSelect.finish()
       },
-      {
-        name: '第三条数据',
-        disabled: false
+      selecting (value) {
+        this.checkData = value
       },
-      {
-        name: '第四条数据',
-        disabled: true
+      toggalAll () {
+        if (this.checkData.length < 9) {
+          this.checkData = [
+            '第一条数据',
+            '第二条数据',
+            '第三条数据',
+            '第四条数据',
+            '第五条数据',
+            '第六条数据',
+            '第七条数据',
+            '第八条数据',
+            '第九条数据'
+          ]
+        } else {
+          this.checkData = []
+        }
       },
-      {
-        name: '第五条数据',
-        disabled: false
+      beClick (e) {
+        modal.toast({ message: 'childClick' })
       },
-      {
-        name: '第六条数据',
-        disabled: false
-      },
-      {
-        name: '第七条数据',
-        disabled: false
-      },
-      {
-        name: '第八条数据',
-        disabled: false
-      },
-      {
-        name: '第九条数据',
-        disabled: false
+      longpress (e) {
+        this.$refs.multiSelect.active()
+        modal.toast({ message: 'longpress' })
       }
-    ],
-    checkData: ['第一条数据', '第三条数据']
-  }),
-  methods: {
-    cancel () {
-      this.$refs.multiSelect.finish();
-    },
-    selecting (value) {
-      this.checkData = value;
-    },
-    toggalAll () {
-      if (this.checkData.length < 9) {
-        this.checkData = [
-          '第一条数据',
-          '第二条数据',
-          '第三条数据',
-          '第四条数据',
-          '第五条数据',
-          '第六条数据',
-          '第七条数据',
-          '第八条数据',
-          '第九条数据'
-        ];
-      } else {
-        this.checkData = [];
-      }
-    },
-    beClick (e) {
-      modal.toast({ message: 'childClick' });
-    },
-    longpress (e) {
-      this.$refs.multiSelect.active();
-      modal.toast({ message: 'longpress' });
     }
   }
-};
 </script>

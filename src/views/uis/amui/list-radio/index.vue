@@ -47,29 +47,29 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListRadio } from 'weex-amui'
+  import { AmNavBar, AmList, AmListRadio } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmList, AmListRadio },
-  data () {
-    return {
-      value: 0,
-      value2: [1],
-      list: Array.from(new Array(3)).map((v, k) => ({
-        value: k,
-        name: `Radio ${k}`
-      }))
-    }
-  },
-  methods: {
-    handleChange (item) {
-      let index = this.value2.indexOf(item.value)
-      if (index > -1) {
-        this.value2.splice(index, 1)
-      } else {
-        this.value2.push(item.value)
+  export default {
+    components: { AmNavBar, AmList, AmListRadio },
+    data () {
+      return {
+        value: 0,
+        value2: [1],
+        list: Array.from(new Array(3)).map((v, k) => ({
+          value: k,
+          name: `Radio ${k}`
+        }))
+      }
+    },
+    methods: {
+      handleChange (item) {
+        let index = this.value2.indexOf(item.value)
+        if (index > -1) {
+          this.value2.splice(index, 1)
+        } else {
+          this.value2.push(item.value)
+        }
       }
     }
   }
-}
 </script>

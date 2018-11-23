@@ -90,11 +90,11 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
   import { WxcSearchbar } from 'weex-ui'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcSearchbar },
@@ -104,34 +104,34 @@
       isDisabled: true
     }),
     created () {
-      setTitle('Searchbar');
+      setTitle('Searchbar')
     },
     methods: {
       setValue () {
-        this.$refs['wxc-searchbar'].setValue('点击了手动设置输入框内容的开关');
+        this.$refs['wxc-searchbar'].setValue('点击了手动设置输入框内容的开关')
       },
 
       wxcSearchbarInputOnFocus () {
-        modal.toast({ 'message': 'onfocus', 'duration': 1 });
+        modal.toast({ 'message': 'onfocus', 'duration': 1 })
       },
       wxcSearchbarInputOnBlur () {
-        modal.toast({ 'message': 'onbulr', 'duration': 1 });
+        modal.toast({ 'message': 'onbulr', 'duration': 1 })
       },
       wxcSearchbarCloseClicked () {
-        modal.toast({ 'message': 'close.click', 'duration': 1 });
+        modal.toast({ 'message': 'close.click', 'duration': 1 })
       },
       wxcSearchbarInputOnInput (e) {
-        this.value = e.value;
+        this.value = e.value
       },
       wxcSearchbarCancelClicked () {
-        modal.toast({ 'message': 'cancel.click', 'duration': 1 });
+        modal.toast({ 'message': 'cancel.click', 'duration': 1 })
       },
       wxcSearchbarInputDisabledClicked () {
-        modal.toast({ 'message': 'input.onclick', 'duration': 1 });
+        modal.toast({ 'message': 'input.onclick', 'duration': 1 })
       },
       wxcSearchbarDepChooseClicked () {
-        modal.toast({ 'message': 'dep.choose.click', 'duration': 1 });
+        modal.toast({ 'message': 'dep.choose.click', 'duration': 1 })
       }
     }
-  };
+  }
 </script>

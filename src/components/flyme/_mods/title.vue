@@ -28,26 +28,26 @@
 </style>
 
 <script>
-import { FmText, FmImage } from 'weex-flymeui';
-const intent = weex.requireModule('intent');
-const modal = weex.requireModule('modal');
-export default {
-  props: {
-    link: String
-  },
-  components: { FmText, FmImage },
-  methods: {
-    click () {
-      if (!this.link) {
-        modal.toast({ message: '暂无文档' });
-        return;
-      }
-      if (weex.config.env.platform === 'Web') {
-        window.location.href = this.link;
-      } else {
-        intent.openViewIntent(this.link);
+  import { FmText, FmImage } from 'weex-flymeui'
+  const intent = weex.requireModule('intent')
+  const modal = weex.requireModule('modal')
+  export default {
+    props: {
+      link: String
+    },
+    components: { FmText, FmImage },
+    methods: {
+      click () {
+        if (!this.link) {
+          modal.toast({ message: '暂无文档' })
+          return
+        }
+        if (weex.config.env.platform === 'Web') {
+          window.location.href = this.link
+        } else {
+          intent.openViewIntent(this.link)
+        }
       }
     }
   }
-};
 </script>

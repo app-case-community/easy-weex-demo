@@ -1,8 +1,8 @@
 <template>
     <div class="wx-demo">
-        <wx-popup 
-            :visible="visible" 
-            position="bottom" 
+        <wx-popup
+            :visible="visible"
+            position="bottom"
             :hasOverley="true"
             height="488px"
             ref="wxPopup"
@@ -63,10 +63,9 @@
         </div>
         <PickerDate></PickerDate>
 
-
-        <wx-popup 
-            :visible="visibleYears" 
-            position="bottom" 
+        <wx-popup
+            :visible="visibleYears"
+            position="bottom"
             :hasOverley="true"
             height="488px"
             ref="popupYears"
@@ -79,7 +78,6 @@
                 <wx-picker :data="years" :visible="visibleYears" @wxChange="changeYear"></wx-picker>
             </div>
         </wx-popup>
-
 
     </div>
 </template>
@@ -115,77 +113,76 @@
     }
 </style>
 <script>
-    import { WxPicker, WxButton, WxPopup, WxField } from 'weex-droplet-ui';
-    import { PICKER_DATA, YEARS } from './data';
-    import { provins, citys, areas } from './address';
-    import Picker3 from './picker-3.vue';
-    import PickerDate from './picker-date.vue';
-    export default {
-        data () {
-            return {
-                data: PICKER_DATA,
-                years: YEARS,
-                visible: false,
-                visible3: false,
-                visibleYears: false,
-                selectedData: PICKER_DATA.defaultValue,
-                selectedYear: YEARS.defaultValue,
-                address: '',
-                defaultAddress: ['湖南省','长沙市','开福区'],
-            }
-        },
+  import { WxPicker, WxButton, WxPopup, WxField } from 'weex-droplet-ui'
+  import { PICKER_DATA, YEARS } from './data'
+  //   import { provins, citys, areas } from './address'
+  import Picker3 from './picker-3.vue'
+  import PickerDate from './picker-date.vue'
+  export default {
+    data () {
+      return {
+        data: PICKER_DATA,
+        years: YEARS,
+        visible: false,
+        visible3: false,
+        visibleYears: false,
+        selectedData: PICKER_DATA.defaultValue,
+        selectedYear: YEARS.defaultValue,
+        address: '',
+        defaultAddress: ['湖南省', '长沙市', '开福区']
+      }
+    },
 
-        created () {
-            this.address = this.defaultAddress.join('/')
-        },
+    created () {
+      this.address = this.defaultAddress.join('/')
+    },
 
-        methods: {
-            handleBottom (visible) {
-                this.visible = visible;
-            },
+    methods: {
+      handleBottom (visible) {
+        this.visible = visible
+      },
 
-            handleChange (data) {
-                this.selectedData = data;
-            },
+      handleChange (data) {
+        this.selectedData = data
+      },
 
-            handleCancel (ref) {
-                this.$refs[ref].hide();
-            },
+      handleCancel (ref) {
+        this.$refs[ref].hide()
+      },
 
-            handleFinish (ref) {
-                this.$refs[ref].hide();
-            },
+      handleFinish (ref) {
+        this.$refs[ref].hide()
+      },
 
-            handleChangeAddress (address) {
-                this.address = address.join('/');
-            },
+      handleChangeAddress (address) {
+        this.address = address.join('/')
+      },
 
-            confirmAddressPicker (address) {
-                this.visible3= false;
-                this.address = address.join('/');
-            },
+      confirmAddressPicker (address) {
+        this.visible3 = false
+        this.address = address.join('/')
+      },
 
-            cancelAddressPicker () {
-                this.visible3 = false;
-            },
+      cancelAddressPicker () {
+        this.visible3 = false
+      },
 
+      showYears (visible) {
+        this.visibleYears = visible
+      },
 
-            showYears (visible) {
-                this.visibleYears = visible;
-            },
+      changeYear (data) {
+        this.selectedYear = data
+      }
 
-            changeYear (data) {
-                this.selectedYear = data;
-            },
-
-        },
-        components: { 
-            WxPicker, 
-            WxButton, 
-            WxPopup, 
-            Picker3, 
-            WxField, 
-            PickerDate 
-        }
+    },
+    components: {
+      WxPicker,
+      WxButton,
+      WxPopup,
+      Picker3,
+      WxField,
+      PickerDate
     }
+  }
 </script>

@@ -46,32 +46,32 @@
     }
 </style>
 <script>
-    import { WxField, WxButton } from 'weex-droplet-ui'
+  import { WxField, WxButton } from 'weex-droplet-ui'
 
-    const modal = weex.requireModule('modal')
-    // import WxField from 'weex-droplet-ui/packages/wx-field';
-    export default {
-        components: {WxField, WxButton},
-        data () {
-            return {
-                amount: '',
-                password: '',
-                mobile: '',
-                inputStyles: {
-                    'text-indent': '140px'
-                },
-                noBorder: {
-                    'border-bottom-width': 0
-                }
-            }
+  const modal = weex.requireModule('modal')
+  // import WxField from 'weex-droplet-ui/packages/wx-field';
+  export default {
+    components: { WxField, WxButton },
+    data () {
+      return {
+        amount: '',
+        password: '',
+        mobile: '',
+        inputStyles: {
+          'text-indent': '140px'
         },
-        methods: {
-            wxClickHandle () {
-                const value = this.amount + this.password + this.mobile
-                modal.toast({
-                    message: value
-                })
-            }
+        noBorder: {
+          'border-bottom-width': 0
         }
+      }
+    },
+    methods: {
+      wxClickHandle () {
+        const value = this.amount + this.password + this.mobile
+        modal.toast({
+          message: value
+        })
+      }
     }
+  }
 </script>

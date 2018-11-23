@@ -100,18 +100,18 @@
 </style>
 
 <script>
-import { FmFooter, FmButton, FmTabbar, FmTabbarItem } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
+  import { FmFooter, FmButton, FmTabbar, FmTabbarItem } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
 
-export default {
-  components: { Title, FmFooter, FmButton, FmTabbar, FmTabbarItem },
-  data: () => ({
-    type: 'none'
-  }),
-  methods: {
-    onChange (type) {
-      this.type = type;
+  export default {
+    components: { Title, FmFooter, FmButton, FmTabbar, FmTabbarItem },
+    data: () => ({
+      type: 'none'
+    }),
+    methods: {
+      onChange (type) {
+        this.type = type
+      }
     }
   }
-};
 </script>

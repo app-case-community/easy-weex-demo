@@ -13,9 +13,9 @@
             height="200px">
         </wx-field>
 
-        <wx-popup 
-            :visible="visibleDate" 
-            position="bottom" 
+        <wx-popup
+            :visible="visibleDate"
+            position="bottom"
             :hasOverley="true"
             height="488px"
             ref="popupDate"
@@ -69,72 +69,72 @@
     }
 </style>
 <script>
-    import { WxPicker, WxButton, WxPopup, WxField } from 'weex-droplet-ui';
-    import { YEARS, MONTHS, getDays, getMaxDay } from './data';
-    export default {
-        data () {
-            return {
-                years: YEARS,
-                months: MONTHS,
-                days: getDays(),
-                visibleDate: false,
-                selectedDate: [],
-                selectedDateStr: [],
+  import { WxPicker, WxButton, WxPopup, WxField } from 'weex-droplet-ui'
+  import { YEARS, MONTHS, getDays, getMaxDay } from './data'
+  export default {
+    data () {
+      return {
+        years: YEARS,
+        months: MONTHS,
+        days: getDays(),
+        visibleDate: false,
+        selectedDate: [],
+        selectedDateStr: []
 
-            }
-        },
+      }
+    },
 
-        created () {
-            this.selectedDate = [YEARS.defaultValue, MONTHS.defaultValue, this.days.defaultValue];
-            this.formate();
-        },
+    created () {
+      this.selectedDate = [YEARS.defaultValue, MONTHS.defaultValue, this.days.defaultValue]
+      this.formate()
+    },
 
-        methods: {
-            handleCancel (ref) {
-                this.$refs[ref].hide();
-            },
+    methods: {
+      handleCancel (ref) {
+        this.$refs[ref].hide()
+      },
 
-            handleFinish (ref) {
-                this.$refs[ref].hide();
-            },
+      handleFinish (ref) {
+        this.$refs[ref].hide()
+      },
 
-            showYears (visible) {
-                this.visibleDate = visible;
-            },
+      showYears (visible) {
+        this.visibleDate = visible
+      },
 
-            changeYear (y) {
-                this.selectedDate[0] = y;
-                this.formate();
-            },
+      changeYear (y) {
+        this.selectedDate[0] = y
+        this.formate()
+      },
 
-            changeMonth (m) {
-                this.selectedDate[1] = m;
-                let currentMonth = new Date().getMonth() + 1;
-                let selectedDay = this.selectedDate[2];
-                let maxDay = getMaxDay(this.selectedDate[0], m);
-                let d = selectedDay;
-                if (selectedDay > maxDay) {
-                    d = maxDay;
-                    this.selectedDate[2] = d;
-                }
-                this.days = getDays(this.selectedDate[0], m, d);
-                this.formate();
-            },
-
-            changeDay (d) {
-                this.selectedDate[2] = d;
-                this.formate();
-            },
-
-            formate () {
-                this.selectedDateStr = this.selectedDate.join('-');
-            },
-        },
-        components: { 
-            WxPicker, 
-            WxButton, 
-            WxPopup, 
-            WxField 
+      changeMonth (m) {
+        this.selectedDate[1] = m
+        // let currentMonth = new Date().getMonth() + 1
+        let selectedDay = this.selectedDate[2]
+        let maxDay = getMaxDay(this.selectedDate[0], m)
+        let d = selectedDay
+        if (selectedDay > maxDay) {
+          d = maxDay
+          this.selectedDate[2] = d
         }
+        this.days = getDays(this.selectedDate[0], m, d)
+        this.formate()
+      },
+
+      changeDay (d) {
+        this.selectedDate[2] = d
+        this.formate()
+      },
+
+      formate () {
+        this.selectedDateStr = this.selectedDate.join('-')
+      }
+    },
+    components: {
+      WxPicker,
+      WxButton,
+      WxPopup,
+      WxField
     }
+  }
 </script>

@@ -53,13 +53,13 @@
 </style>
 
 <script>
-  import { WxcIcon, Utils } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcIcon, Utils } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  const clipboard = weex.requireModule('clipboard');
-  const modal = weex.requireModule('modal');
+  const clipboard = weex.requireModule('clipboard')
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { WxcIcon, Title, Category },
@@ -67,12 +67,12 @@
       iconList: ['less', 'more_unfold', 'back', 'more', 'add', 'subtract', 'close', 'cry', 'search', 'delete', 'help', 'refresh', 'success', 'warning', 'wrong', 'clock', 'scanning', 'filter', 'map', 'play']
     }),
     created () {
-      this.chunkArr = Utils.arrayChunk(this.iconList);
-      setTitle('Icon');
+      this.chunkArr = Utils.arrayChunk(this.iconList)
+      setTitle('Icon')
     },
     methods: {
       clicked (e) {
-        clipboard && clipboard.setString(e.name);
+        clipboard && clipboard.setString(e.name)
         modal.toast({
           message: `${e.name} copied!`
         })

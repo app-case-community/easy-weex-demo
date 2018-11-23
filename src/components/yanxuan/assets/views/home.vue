@@ -71,91 +71,91 @@
 </style>
 
 <script>
-    var modal = weex.requireModule('modal')
-    var navigator = weex.requireModule('navigator')
-    import util from '@yanxuan/assets/util';
-    import Header from '../components/Header.vue';
-    import refresher from '../components/refresh.vue';
-    import topChannel from '../components/topChannel.vue';
-    import YXSlider from '../components/YXSlider.vue';
-    import Block1 from '../components/Block1.vue';
-    import Block2 from '../components/Block2.vue';
-    import Block3 from '../components/Block3.vue';
-    export default {
-        components: {
-            'home-header': Header,
-            'refresher': refresher,
-            'top-channel': topChannel,
-            'yx-slider': YXSlider,
-            'block-1': Block1,
-            'block-2': Block2,
-            'block-3': Block3
+  import util from '@yanxuan/assets/util'
+  import Header from '../components/Header.vue'
+  import refresher from '../components/refresh.vue'
+  import topChannel from '../components/topChannel.vue'
+  import YXSlider from '../components/YXSlider.vue'
+  import Block1 from '../components/Block1.vue'
+  import Block2 from '../components/Block2.vue'
+  import Block3 from '../components/Block3.vue'
+  var modal = weex.requireModule('modal')
+  var navigator = weex.requireModule('navigator')
+  export default {
+    components: {
+      'home-header': Header,
+      'refresher': refresher,
+      'top-channel': topChannel,
+      'yx-slider': YXSlider,
+      'block-1': Block1,
+      'block-2': Block2,
+      'block-3': Block3
+    },
+    data () {
+      return {
+        YXBanners: [
+        ],
+        makers: {
+          title: '品牌SS制造商直供',
+          items: []
         },
-        data () {
-            return {
-                YXBanners: [
-                ],
-                makers: {
-                    title:'品牌SS制造商直供',
-                    items: []
-                },
-                recommend: {
-                    head1: {
-                        tlt: '周一周四 · 新品发布',
-                        tltBg: 'http://doc.zwwill.com/yanxuan/imgs/bg-new.png',
-                        url: 'http://m.you.163.com/item/newItem'
-                    },
-                    goods1: [],
-                    head2: {
-                        tlt: '人气推荐 · 好物精选',
-                        tltBg: 'http://doc.zwwill.com/yanxuan/imgs/bg-hot.png',
-                        url: 'http://m.you.163.com/item/recommend'
-                    },
-                    goods2: []
-                },
-                goodsList:[],
-                showLoading: 'hide'
-            }
+        recommend: {
+          head1: {
+            tlt: '周一周四 · 新品发布',
+            tltBg: 'http://doc.zwwill.com/yanxuan/imgs/bg-new.png',
+            url: 'http://m.you.163.com/item/newItem'
+          },
+          goods1: [],
+          head2: {
+            tlt: '人气推荐 · 好物精选',
+            tltBg: 'http://doc.zwwill.com/yanxuan/imgs/bg-hot.png',
+            url: 'http://m.you.163.com/item/recommend'
+          },
+          goods2: []
         },
-        created () {
-            this.GET('api/home/index', res => {
-                let result = res.data.result;
-                this.YXBanners = result['banners'];
-                this.makers = result['makers'];
-                this.recommend = result['recommend'];
-            });
-            this.GET('api/home/pullGoods', res => {
-                let result = res.data.result;
-                this.goodsList = result['goods'];
-            })
-        },
-        methods: {
-            jumpWeb (_url) {
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            },
-            onloading () {
-                modal.toast({ message: 'loading', duration: 0.3 })
-                this.showLoading = 'show';
-                setTimeout(() => {
-                    this.goodsList.push(...this.recommend.goods1);
-                    this.showLoading = 'hide'
-                }, 300)
-            },
-            onloadmore () {
-                modal.toast({ message: 'loading', duration: 0.3 })
-                setTimeout(() => {
-                    this.goodsList.push(...this.recommend.goods1);
-                }, 100)
-            },
-            loadingDown(){
-                this.goodsList =[];
-                this.goodsList.push(...this.recommend.goods2);
-                this.goodsList.push(...this.recommend.goods1);
-            }
-        }
+        goodsList: [],
+        showLoading: 'hide'
+      }
+    },
+    created () {
+      this.GET('api/home/index', res => {
+        let result = res.data.result
+        this.YXBanners = result['banners']
+        this.makers = result['makers']
+        this.recommend = result['recommend']
+      })
+      this.GET('api/home/pullGoods', res => {
+        let result = res.data.result
+        this.goodsList = result['goods']
+      })
+    },
+    methods: {
+      jumpWeb (_url) {
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'true'
+        })
+      },
+      onloading () {
+        modal.toast({ message: 'loading', duration: 0.3 })
+        this.showLoading = 'show'
+        setTimeout(() => {
+          this.goodsList.push(...this.recommend.goods1)
+          this.showLoading = 'hide'
+        }, 300)
+      },
+      onloadmore () {
+        modal.toast({ message: 'loading', duration: 0.3 })
+        setTimeout(() => {
+          this.goodsList.push(...this.recommend.goods1)
+        }, 100)
+      },
+      loadingDown () {
+        this.goodsList = []
+        this.goodsList.push(...this.recommend.goods2)
+        this.goodsList.push(...this.recommend.goods1)
+      }
     }
+  }
 </script>

@@ -55,20 +55,20 @@
   }
 </style>
 <script>
-  const dom = weex.requireModule('dom');
+  import { WxcFullPage, Utils, WxcPanItem, BindEnv } from 'weex-ui'
+  import WxcItem from '../wxc-item.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import { WxcFullPage, Utils,WxcPanItem, BindEnv } from 'weex-ui';
-  import WxcItem from '../wxc-item.vue';
-  const config = require('./config');
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const dom = weex.requireModule('dom')
+  const config = require('./config')
 
   module.exports = {
-    components: { WxcFullPage,WxcPanItem, WxcItem },
+    components: { WxcFullPage, WxcPanItem, WxcItem },
     data: () => ({
       tabTitles: config.tabTitles,
       tabStyles: config.tabStyles,
       tabList: [],
-      bgColors:['#263238','#635147','#FF7703','#9B7B56','#3B4950','#635147'],
+      bgColors: ['#263238', '#635147', '#FF7703', '#9B7B56', '#3B4950', '#635147'],
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       tabPageHeight: 1334,
       ref: 'viewport',
@@ -85,34 +85,34 @@
     }),
     created () {
       setTitle('TabPage')
-      this.tabPageHeight = Utils.env.getPageHeight();
-      this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
-      Vue.set(this.tabList, 0, this.demoList);
+      this.tabPageHeight = Utils.env.getPageHeight()
+      this.tabList = [...Array(this.tabTitles.length).keys()].map(i => [])
+      Vue.set(this.tabList, 0, this.demoList)
     },
     mounted () {
       // 适配plus高度问题
       dom.getComponentRect && dom.getComponentRect(this.ref, option => {
         if (option && option.result && option.size && option.size.height) {
-          this.tabPageHeight = option.size.height;
+          this.tabPageHeight = option.size.height
         }
-      });
+      })
     },
     methods: {
       wxcTabPageCurrentTabSelected (e) {
-        const self = this;
-        const index = e.page;
+        const self = this
+        const index = e.page
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self.tabList[index])) {
           setTimeout(() => {
-            Vue.set(self.tabList, index, self.demoList);
-          }, 100);
+            Vue.set(self.tabList, index, self.demoList)
+          }, 100)
         }
       },
       wxcItemGoodPan (e) {
         if (BindEnv.supportsEBForAndroid()) {
-          this.$refs['wxc-tab-page'].bindExp(e.element);
+          this.$refs['wxc-tab-page'].bindExp(e.element)
         }
       }
     }
-  };
+  }
 </script>

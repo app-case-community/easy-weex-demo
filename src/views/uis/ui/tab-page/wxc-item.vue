@@ -141,8 +141,8 @@
 </style>
 
 <script>
-  const expressionBinding = weex.requireModule('expressionBinding');
-  import { WxcRichText, WxcSpecialRichText, Utils } from 'weex-ui';
+  import { WxcRichText, WxcSpecialRichText, Utils } from 'weex-ui'
+  // const expressionBinding = weex.requireModule('expressionBinding')
 
   export default {
     components: { WxcRichText, WxcSpecialRichText },
@@ -193,8 +193,8 @@
     }),
     computed: {
       isTitleString () {
-        return Utils.isString(this.title);
+        return Utils.isString(this.title)
       }
     }
-  };
+  }
 </script>

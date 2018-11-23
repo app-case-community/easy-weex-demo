@@ -19,15 +19,15 @@
 </style>
 
 <script>
-import { AmNavBar, AmImage } from 'weex-amui'
+  import { AmNavBar, AmImage } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmImage },
-  methods: {
-    // load 事件和weex <image/> 组件一致
-    handleLoad ($event) {
-      console.log($event)
+  export default {
+    components: { AmNavBar, AmImage },
+    methods: {
+      // load 事件和weex <image/> 组件一致
+      handleLoad ($event) {
+        console.log($event)
+      }
     }
   }
-}
 </script>

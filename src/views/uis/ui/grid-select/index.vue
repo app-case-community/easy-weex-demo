@@ -78,12 +78,12 @@
 
 <script>
 
-  import { WxcGridSelect } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcGridSelect } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcGridSelect },
@@ -244,19 +244,19 @@
       }
     }),
     created () {
-      setTitle('GridSelect');
+      setTitle('GridSelect')
     },
     methods: {
       onSelect (res, { selectIndex, checked, checkedList }) {
         Vue.set(this, res, `本次选择的index：${selectIndex}\n是否选中：${checked
           ? '是'
-          : '否'}\n选中列表：${checkedList.map(item => item.title).join(',')}`);
+        : '否'}\n选中列表：${checkedList.map(item => item.title).join(',')}`)
       },
       onOverLimit (limit) {
         modal.toast({
           message: `最多选择${limit}个`,
           duration: 0.8
-        });
+        })
       }
     }
   }

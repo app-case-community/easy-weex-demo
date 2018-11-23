@@ -5,11 +5,11 @@
             <text class="auther-name">{{article.auther}}</text>
         </div> -->
         <div class="img-box">
-          
+
                 <image   resize="cover" :src="article.img[0]"  style="flex:1;height:100px;width:60px;" />
                 <image   resize="cover" :src="article.img[1]"  style="flex:1;height:100px;width:60px;" />
                 <image   resize="cover" :src="article.img[2]"  style="flex:1;height:100px;width:60px;" />
-            
+
         </div>
         <div class="tlt-box">
             <text class="tlt">{{article.tlt}}</text>
@@ -21,7 +21,6 @@
                     <text style="text-align:left;margin:2px">变形金刚交流</text>
                       <text style="text-align:left;margin:2px" >超赞的鱼塘</text>
                 </div>
-                
 
                 <text class="add">进鱼塘</text>
         </div>
@@ -75,7 +74,6 @@
         margin-bottom: 3px;
     }
     .tlt-box{
-       
 
         display: flex;
         flex-wrap: nowrap;
@@ -121,23 +119,23 @@
     }
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@xianyu/assets/util';
-    export default {
-        props:["article","url"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) _url = 'http://m.you.163.com/topic/v1/pub/XLymbwEO0J.html';
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/web.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            }
-        }
+  import util from '@xianyu/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    props: ['article', 'url'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) _url = 'http://m.you.163.com/topic/v1/pub/XLymbwEO0J.html'
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/web.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

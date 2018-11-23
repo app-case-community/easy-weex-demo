@@ -77,28 +77,28 @@
 </style>
 
 <script>
-import { FmSearchbar, FmIcon } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-const modal = weex.requireModule('modal');
+  import { FmSearchbar, FmIcon } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  data () {
-    return {
-      searchText: '搜索内容'
-    };
-  },
-  components: { Title, Category, FmSearchbar, FmIcon },
-  methods: {
-    submit (e) {
-      modal.toast({ message: e.value });
+  export default {
+    data () {
+      return {
+        searchText: '搜索内容'
+      }
     },
-    back (e) {
-      modal.toast({ message: '返回' });
-    },
-    inputing (e) {
-      this.searchText = e.value;
+    components: { Title, Category, FmSearchbar, FmIcon },
+    methods: {
+      submit (e) {
+        modal.toast({ message: e.value })
+      },
+      back (e) {
+        modal.toast({ message: '返回' })
+      },
+      inputing (e) {
+        this.searchText = e.value
+      }
     }
   }
-};
 </script>

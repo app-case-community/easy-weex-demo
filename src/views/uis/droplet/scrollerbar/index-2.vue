@@ -11,78 +11,77 @@
     </div>
 </template>
 <script>
-    var dom = weex.requireModule('dom')
-    var animation = weex.requireModule('animation')
-    export default {
-        data () {
-            return {
-                items: ['保单信息1', '保单信息2', '保单信息3', '保单信息4', '保单信息5', '保单信息6',
-                    '保单信息7', '保单信息8', '保单信息9', '保单信息10', '保单信息11', '保单信息12'],
-                selectIndex: 0,
-                bottom: 1,
-                top: 1
-            }
-        },
-        methods: {
-            changeTab (index) {
-                this.selectIndex = index
+  var dom = weex.requireModule('dom')
+  var animation = weex.requireModule('animation')
+  export default {
+    data () {
+      return {
+        items: ['保单信息1', '保单信息2', '保单信息3', '保单信息4', '保单信息5', '保单信息6',
+                '保单信息7', '保单信息8', '保单信息9', '保单信息10', '保单信息11', '保单信息12'],
+        selectIndex: 0,
+        bottom: 1,
+        top: 1
+      }
+    },
+    methods: {
+      changeTab (index) {
+        this.selectIndex = index
 
-                let c = this.deviceHeight / 2, m = 125
-                let selectItemRef = this.$refs['cell'][index]
-                dom.getComponentRect(selectItemRef, item => {
-                    let selectItemTop = item.size.top
+        let c = this.deviceHeight / 2
+        // let m = 125
+        let selectItemRef = this.$refs['cell'][index]
+        dom.getComponentRect(selectItemRef, item => {
+          let selectItemTop = item.size.top
 
-                    if(selectItemTop > c){
-                        dom.getComponentRect(this.$refs['cell'][this.items.length - 1], option => {
-                            let listBottom = option.size.bottom
-                            if(listBottom - 64 > this.deviceHeight){
-                                let q = listBottom - this.deviceHeight
-                                this.triggerAnimation(q - c)
-                            }
-                        })
-                    }else{
-                        dom.getComponentRect(this.$refs['cell'][0], option => {
-                            let listBottom = option.size.bottom - 150
-                            console.log('listBottom:',listBottom)
-                            console.log('selectItemTop:',selectItemTop)
-                            if(listBottom + selectItemTop <= 0){
-                                this.triggerAnimation(listBottom + selectItemTop)
-                            }
-                        })
-                    }
+          if (selectItemTop > c) {
+            dom.getComponentRect(this.$refs['cell'][this.items.length - 1], option => {
+              let listBottom = option.size.bottom
+              if (listBottom - 64 > this.deviceHeight) {
+                let q = listBottom - this.deviceHeight
+                this.triggerAnimation(q - c)
+              }
+            })
+          } else {
+            dom.getComponentRect(this.$refs['cell'][0], option => {
+              let listBottom = option.size.bottom - 150
+              console.log('listBottom:', listBottom)
+              console.log('selectItemTop:', selectItemTop)
+              if (listBottom + selectItemTop <= 0) {
+                this.triggerAnimation(listBottom + selectItemTop)
+              }
+            })
+          }
+        })
+      },
 
-                })
-            },
+      scroller (index) {
+        // let mid = this.deviceHeight / 2
+        // let move = 125
+        //                let q =
+        let selectItemRef = this.$refs['item'][index]
+        dom.getComponentRect(selectItemRef, option => {
+          // let selectItemTop = option.size.top
+        })
+      },
 
-            scroller(index){
-                let mid = this.deviceHeight / 2
-                let move = 125
-//                let q =
-                let selectItemRef = this.$refs['item'][index]
-                dom.getComponentRect(selectItemRef, option => {
-                    let selectItemTop = option.size.top
-                })
-            },
-
-
-            triggerAnimation(top){
-                let el = this.$refs['list']
-                animation.transition(el, {
-                    styles: {
-                        transform: `translateY(${top}px)`,
-                        transformOrigin: 'center center'
-                    },
-                    duration: 300,
-                    timingFunction: 'ease-out',
-                    needLayout: false,
-                    delay: 0 //ms
-                });
-            }
-        },
-        created(){
-            this.deviceHeight = weex.config.env.deviceHeight
-        }
+      triggerAnimation (top) {
+        let el = this.$refs['list']
+        animation.transition(el, {
+          styles: {
+            transform: `translateY(${top}px)`,
+            transformOrigin: 'center center'
+          },
+          duration: 300,
+          timingFunction: 'ease-out',
+          needLayout: false,
+          delay: 0 // ms
+        })
+      }
+    },
+    created () {
+      this.deviceHeight = weex.config.env.deviceHeight
     }
+  }
 </script>
 <style scoped>
     .wxs-list {

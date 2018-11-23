@@ -77,44 +77,44 @@
 </style>
 
 <script>
-import { FmText, FmImage, FmItem } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import category from './category.js';
-const navigator = weex.requireModule('navigator');
-const modal = weex.requireModule('modal');
-const env = weex.config.env;
-const url = weex.config.bundleUrl;
+  import { FmText, FmImage, FmItem } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import category from './category.js'
+  const navigator = weex.requireModule('navigator')
+  // const modal = weex.requireModule('modal')
+  const env = weex.config.env
+  const url = weex.config.bundleUrl
 
-export default {
-  data () {
-    return {
-      category: category
-    };
-  },
-  components: { FmText, FmImage, FmItem, Title },
-  methods: {
-    jump (path) {
-      if (env.platform === 'Web') {
-        let url;
-        if (window.location.href.indexOf('index.html') !== -1) {
-          url = window.location.href.replace('index.html', `${path}/index.html`);
+  export default {
+    data () {
+      return {
+        category: category
+      }
+    },
+    components: { FmText, FmImage, FmItem, Title },
+    methods: {
+      jump (path) {
+        if (env.platform === 'Web') {
+          let url
+          if (window.location.href.indexOf('index.html') !== -1) {
+            url = window.location.href.replace('index.html', `${path}/index.html`)
+          } else {
+            url = window.location.href + path
+          }
+          window.location.href = url
         } else {
-          url = window.location.href + path;
+          let target = url.replace('index.js', `${path}/index.js`)
+          if (path.startsWith('http')) {
+            target = path
+          }
+          navigator.push({
+            key: target,
+            url: target,
+            router: path,
+            animated: 'true'
+          })
         }
-        window.location.href = url;
-      } else {
-        let target = url.replace('index.js', `${path}/index.js`);
-        if (path.startsWith('http')) {
-          target = path;
-        }
-        navigator.push({
-          key: target,
-          url: target,
-          router: path,
-          animated: 'true'
-        });
       }
     }
   }
-};
 </script>

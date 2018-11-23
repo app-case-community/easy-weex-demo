@@ -72,11 +72,11 @@
 </template>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcLoading, WxcPartLoading, WxcCell } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcLoading, WxcPartLoading, WxcCell } from 'weex-ui'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcLoading, WxcCell, WxcPartLoading },
@@ -89,34 +89,34 @@
         interval: 0,
         type: 'default',
         loadingText: ''
-      };
+      }
     },
     created () {
       setTitle('Loading')
     },
     methods: {
       openLoading () {
-        this.isShow = !this.isShow;
-        this.interval = 0;
+        this.isShow = !this.isShow
+        this.interval = 0
       },
       openTripLoading () {
-        const { type } = this;
-        this.type = (type === 'trip') ? 'default' : 'trip';
+        const { type } = this
+        this.type = (type === 'trip') ? 'default' : 'trip'
       },
       openIntervalLoading () {
-        this.isShow = false;
+        this.isShow = false
         setTimeout(() => {
           // 正常使用时候直接设置即可，不需setTimeout
-          this.interval = 1000;
-          this.isShow = true;
+          this.interval = 1000
+          this.isShow = true
         }, 10)
       },
       openTextLoading () {
-        this.interval = 0;
-        this.loadingText = this.loadingText ? '' : '正在加载中';
+        this.interval = 0
+        this.loadingText = this.loadingText ? '' : '正在加载中'
       }
     }
-  };
+  }
 </script>
 
 <style scoped>

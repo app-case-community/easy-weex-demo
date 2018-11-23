@@ -21,12 +21,12 @@
 </style>
 
 <script>
-  import { WxcTag } from 'weex-ui';
+  import { WxcTag } from 'weex-ui'
   import Data from './data'
   export default {
     components: { WxcTag },
     data: () => ({
-      demoData:Data
+      demoData: Data
     })
   }
 </script>

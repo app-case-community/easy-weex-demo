@@ -100,39 +100,39 @@
 </style>
 
 <script>
-    import util from '@yanxuan/assets/util';
-    import refresher from '../components/refresh.vue';
-    import Header3 from '../components/Header3.vue';
-    var navigator = weex.requireModule('navigator')
-    export default {
-        components: {
-            'refresher': refresher,
-            'header3': Header3
-        },
-        data () {
-            return {
-                classes: [],
-                subclasses:[]
-            }
-        },
-        created () {
-            this.GET('api/class/index', res => {
-                let result = res.data.result;
-                this.classes = result['classes'];
-            });
-            this.GET('api/class/subclasses', res => {
-                let result = res.data.result;
-                this.subclasses = result['subclasses'];
-            })
-        },
-        methods: {
-            jumpWeb (_url) {
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            },
-        }
+  import util from '@yanxuan/assets/util'
+  import refresher from '../components/refresh.vue'
+  import Header3 from '../components/Header3.vue'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    components: {
+      'refresher': refresher,
+      'header3': Header3
+    },
+    data () {
+      return {
+        classes: [],
+        subclasses: []
+      }
+    },
+    created () {
+      this.GET('api/class/index', res => {
+        let result = res.data.result
+        this.classes = result['classes']
+      })
+      this.GET('api/class/subclasses', res => {
+        let result = res.data.result
+        this.subclasses = result['subclasses']
+      })
+    },
+    methods: {
+      jumpWeb (_url) {
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

@@ -42,58 +42,58 @@
   </div>
 </template>
 <script>
-  import sourceData from './data';
-  import * as Util from 'weex-ui/packages/wxc-city/util';
-  import { WxcCity } from 'weex-ui';
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
+  import sourceData from './data'
+  // import * as Util from 'weex-ui/packages/wxc-city/util'
+  import { WxcCity } from 'weex-ui'
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
 
   export default {
     components: { WxcCity, Title, Category },
     data: () => ({
       currentCity: '',
       sourceData,
-      cityStyleType:'list',
+      cityStyleType: 'list',
       location: '定位中',
-      animationTypePush:'push', // 默认使用push方式，若使用push模式此参数可以不传
-      animationTypeModel:'model'
+      animationTypePush: 'push', // 默认使用push方式，若使用push模式此参数可以不传
+      animationTypeModel: 'model'
     }),
     mounted () {
       // 模拟定位
       setTimeout(() => {
-        this.location = '杭州';
-      }, 500);
+        this.location = '杭州'
+      }, 500)
     },
     methods: {
       showListCityPush () {
         this.cityStyleType = 'list'
         // 默认使用push方式，若使用push模式此参数可以不传
         this.animationTypePush = 'push'
-        this.$refs['wxcCityPush'].show();
+        this.$refs['wxcCityPush'].show()
       },
       showGroupCityPush () {
         this.cityStyleType = 'group'
         // 默认使用push方式，若使用push模式此参数可以不传
         this.animationTypePush = 'push'
-        this.$refs['wxcCityPush'].show();
+        this.$refs['wxcCityPush'].show()
       },
       showListCityModel () {
         this.cityStyleType = 'list'
         this.animationTypePush = 'model'
-        this.$refs['wxcCityModel'].show();
+        this.$refs['wxcCityModel'].show()
       },
       showGroupCityModel () {
         this.cityStyleType = 'group'
         this.animationTypeModel = 'model'
-        this.$refs['wxcCityModel'].show();
+        this.$refs['wxcCityModel'].show()
       },
       citySelect (e) {
-        this.currentCity = e.item;
+        this.currentCity = e.item
       },
       onInput (e) {
       }
     }
-  };
+  }
 </script>
 
 <style scoped>

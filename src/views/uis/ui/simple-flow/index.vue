@@ -73,10 +73,10 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcSimpleFlow } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcSimpleFlow } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcSimpleFlow },
@@ -169,7 +169,7 @@
       ]
     }),
     created () {
-      setTitle('SimpleFlow');
+      setTitle('SimpleFlow')
     }
   }
 </script>

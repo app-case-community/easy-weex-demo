@@ -17,10 +17,10 @@
 </style>
 
 <script>
-export default {
-  name: "select-animation",
-  props: {
-    animations: Array
+  export default {
+    name: 'select-animation',
+    props: {
+      animations: Array
+    }
   }
-};
 </script>

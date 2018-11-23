@@ -112,19 +112,19 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcPageCalendar } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcPageCalendar } from 'weex-ui'
 
-  const modal = weex.requireModule('modal');
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcPageCalendar },
     data: () => ({
-      animationTypePush:'push', // 默认使用push方式，若使用push模式此参数可以不传
-      animationTypeModel:'model',
+      animationTypePush: 'push', // 默认使用push方式，若使用push模式此参数可以不传
+      animationTypeModel: 'model',
       currentDate: '',
       selectedDate: ['2017-12-20', '2017-12-30'],
       isRange: true,
@@ -146,12 +146,12 @@
       ]
     }),
     created () {
-      setTitle('PageCalendar');
+      setTitle('PageCalendar')
     },
     methods: {
       wxcPageCalendarDateSelected (e) {
-        this.selectedDate = e.date;
-        this.currentDate = e.date;
+        this.selectedDate = e.date
+        this.currentDate = e.date
       },
       wxcPageCalendarBackClicked () {
         modal.toast({
@@ -159,29 +159,29 @@
         })
       },
       showCalendarPush () {
-        this.isRange = false;
+        this.isRange = false
         setTimeout(() => {
-          this.$refs['wxcPageCalendarPush'].show();
-        }, 1);
+          this.$refs['wxcPageCalendarPush'].show()
+        }, 1)
       },
       showReturnCalendarPush () {
-        this.isRange = true;
+        this.isRange = true
         setTimeout(() => {
-          this.$refs['wxcPageCalendarPush'].show();
-        }, 1);
+          this.$refs['wxcPageCalendarPush'].show()
+        }, 1)
       },
       showCalendarModel () {
-        this.isRange = false;
+        this.isRange = false
         setTimeout(() => {
-          this.$refs['wxcPageCalendarModel'].show();
-        }, 1);
+          this.$refs['wxcPageCalendarModel'].show()
+        }, 1)
       },
       showReturnCalendarModel () {
-        this.isRange = true;
+        this.isRange = true
         setTimeout(() => {
-          this.$refs['wxcPageCalendarModel'].show();
-        }, 1);
+          this.$refs['wxcPageCalendarModel'].show()
+        }, 1)
       }
     }
-  };
+  }
 </script>

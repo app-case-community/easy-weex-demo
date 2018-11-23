@@ -47,7 +47,6 @@
             </scroller>
         </div>
 
-
     </div>
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
@@ -62,217 +61,217 @@
 }
 </style>
 <script>
-import { BuiHeader, BuiGridSelect } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiGridSelect
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      testData1: [
-        {
-          title: "云应用平台",
-          disabled: true
+  import { BuiHeader, BuiGridSelect } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiGridSelect
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        {
-          title: "云应用产品",
-          selected: true
+        testData1: [
+          {
+            title: '云应用平台',
+            disabled: true
+          },
+          {
+            title: '云应用产品',
+            selected: true
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '展示一行'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '轨道交通'
+          }
+        ],
+        testData2: [
+          {
+            disabled: true,
+            title: '云应用平台'
+          },
+          {
+            title: '云应用产品',
+            selected: true
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '展示一行'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '轨道交通'
+          }
+        ],
+        testData3: [
+          {
+            title: '云应用平台'
+          },
+          {
+            title: '云应用产品'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通',
+            selected: true
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '展示一行'
+          }
+        ],
+        testData4: [
+          {
+            title: '云应用平台'
+          },
+          {
+            title: '云应用产品',
+            selected: true
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '展示一行'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '轨道交通'
+          }
+        ],
+        testData5: [
+          {
+            title: '云应用平台'
+          },
+          {
+            title: '云应用产品',
+            selected: true
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '轨道交通'
+          },
+          {
+            title: '财政'
+          },
+          {
+            title: '人力资源'
+          },
+          {
+            title: '展示一行'
+          },
+          {
+            title: '超过一行文本将被截断展示'
+          },
+          {
+            title: '轨道交通'
+          }
+        ],
+        customStyles: {
+          lineSpacing: '20px',
+          width: '130px',
+          height: '50px',
+          icon: '',
+          color: '#333333',
+          selectedColor: '#ffffff',
+          disabledColor: '#eeeeee',
+          borderColor: '#e8e8e8',
+          selectedBorderColor: '#3399ff',
+          backgroundColor: '#ffffff',
+          selectedBackgroundColor: '#3399ff'
         },
-        {
-          title: "轨道交通"
+        customStyles2: {
+          width: '235px'
         },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "展示一行"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "轨道交通"
+        customStyles3: {
+          width: '360px'
         }
-      ],
-      testData2: [
-        {
-          disabled: true,
-          title: "云应用平台"
-        },
-        {
-          title: "云应用产品",
-          selected: true
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "展示一行"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "轨道交通"
-        }
-      ],
-      testData3: [
-        {
-          title: "云应用平台"
-        },
-        {
-          title: "云应用产品"
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "轨道交通",
-          selected: true
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "展示一行"
-        }
-      ],
-      testData4: [
-        {
-          title: "云应用平台"
-        },
-        {
-          title: "云应用产品",
-          selected: true
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "展示一行"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "轨道交通"
-        }
-      ],
-      testData5: [
-        {
-          title: "云应用平台"
-        },
-        {
-          title: "云应用产品",
-          selected: true
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "轨道交通"
-        },
-        {
-          title: "财政"
-        },
-        {
-          title: "人力资源"
-        },
-        {
-          title: "展示一行"
-        },
-        {
-          title: "超过一行文本将被截断展示"
-        },
-        {
-          title: "轨道交通"
-        }
-      ],
-      customStyles: {
-        lineSpacing: "20px",
-        width: "130px",
-        height: "50px",
-        icon: "",
-        color: "#333333",
-        selectedColor: "#ffffff",
-        disabledColor: "#eeeeee",
-        borderColor: "#e8e8e8",
-        selectedBorderColor: "#3399ff",
-        backgroundColor: "#ffffff",
-        selectedBackgroundColor: "#3399ff"
-      },
-      customStyles2: {
-        width: "235px"
-      },
-      customStyles3: {
-        width: "360px"
       }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
     },
-    centerClick () {
+    methods: {
+      back () {
+        this.$pop()
+      },
+      centerClick () {
 
-    },
-    onOverLimit () {
+      },
+      onOverLimit () {
 
-    },
-    _click(e) {
-      this.$toast(e.selectedList[0].title);
-    },
-    _click2(e) {
-      this.$toast(this.testData2[e.selectIndex].title);
-    },
-    _click3(e) {
-      this.$toast(this.testData3[e.selectIndex].title);
-    },
-    overLimit(e) {
-      this.$toast(`最多选择${e}个`);
+      },
+      _click (e) {
+        this.$toast(e.selectedList[0].title)
+      },
+      _click2 (e) {
+        this.$toast(this.testData2[e.selectIndex].title)
+      },
+      _click3 (e) {
+        this.$toast(this.testData3[e.selectIndex].title)
+      },
+      overLimit (e) {
+        this.$toast(`最多选择${e}个`)
+      }
     }
   }
-};
 </script>
 <style>
 </style>

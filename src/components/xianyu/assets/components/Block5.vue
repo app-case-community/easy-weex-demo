@@ -102,23 +102,23 @@
     }
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@xianyu/assets/util';
-    export default {
-        props:["article","url"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) _url = 'http://m.you.163.com/topic/v1/pub/XLymbwEO0J.html';
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/web.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            }
-        }
+  import util from '@xianyu/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    props: ['article', 'url'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) _url = 'http://m.you.163.com/topic/v1/pub/XLymbwEO0J.html'
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/web.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

@@ -110,17 +110,17 @@
 </style>
 
 <script>
-import { FmItem, FmButton, FmTag } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-const modal = weex.requireModule('modal');
+  import { FmItem, FmButton, FmTag } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmItem, FmButton, FmTag },
-  methods: {
-    click () {
-      modal.toast({ message: '点击了安装' });
+  export default {
+    components: { Title, Category, FmItem, FmButton, FmTag },
+    methods: {
+      click () {
+        modal.toast({ message: '点击了安装' })
+      }
     }
   }
-};
 </script>

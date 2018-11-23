@@ -25,34 +25,34 @@
 </style>
 
 <script>
-import { FmNativeTab, Utils } from 'weex-flymeui';
+  import { FmNativeTab, Utils } from 'weex-flymeui'
 
-export default {
-  components: { FmNativeTab },
-  data () {
-    return {
-      tabTitles: [{
-        text: '标签1'
-      }, {
-        text: '标签标签',
-        selected: false
-      }, {
-        text: 'NBA'
-      }, {
-        text: '超长的标签啊啊啊'
-      }, {
-        text: '标签'
-      }],
-      listData: ['哈哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈'],
-      select: 1
-    };
-  },
-  methods: {
-    fmPanItemPan (e) {
-      if (Utils.env.supportsEBForAndroid()) {
-        this.$refs['fm-tab-page'].bindExp(e.element);
+  export default {
+    components: { FmNativeTab },
+    data () {
+      return {
+        tabTitles: [{
+          text: '标签1'
+        }, {
+          text: '标签标签',
+          selected: false
+        }, {
+          text: 'NBA'
+        }, {
+          text: '超长的标签啊啊啊'
+        }, {
+          text: '标签'
+        }],
+        listData: ['哈哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈', '哈哈'],
+        select: 1
+      }
+    },
+    methods: {
+      fmPanItemPan (e) {
+        if (Utils.env.supportsEBForAndroid()) {
+          this.$refs['fm-tab-page'].bindExp(e.element)
+        }
       }
     }
   }
-};
 </script>

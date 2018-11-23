@@ -84,23 +84,23 @@
     }
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@yanxuan/assets/util';
-    export default {
-        props:["newGoods","hotGoods","head","hasMore","goods"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) _url = 'http%3A%2F%2Fm.you.163.com%2Fitem%2Fdetail%3Fid%3D1009024%23%2F%3F_k%3Dfakdg7';
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/webview.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            }
-        }
+  import util from '@yanxuan/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    props: ['newGoods', 'hotGoods', 'head', 'hasMore', 'goods'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) _url = 'http%3A%2F%2Fm.you.163.com%2Fitem%2Fdetail%3Fid%3D1009024%23%2F%3F_k%3Dfakdg7'
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/webview.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

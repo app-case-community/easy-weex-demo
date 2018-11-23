@@ -66,53 +66,53 @@
 </style>
 <script>
 
-    var modal = weex.requireModule('modal');
-    export default {
-//        props: {
-//            indexKey: {
-//                type: String,
-//                default: 'home'
-//            },
-//            reClick: {
-//                type: Boolean,
-//                default: false
-//            },
-//            items: {
-//                type: Array,
-//                default: function(){
-//                    return [
-//                        {
-//                            icon:'&#xe660;',
-//                            name:"首页",
-//                            key:'home'
-//                        }
-//                    ]
-//                }
-//            }
-//        },
-        computed:{
-            testCS:function () {
-                return this.pIndexKey == 'home'?'color:#b4282d;':''
-            }
-        },
-        data () {
-            return {
-                pIndexKey:'home'
-            }
-        },
-        mounted(){
-        },
-        methods: {
-            tabTo(_key){
-                if(this.pIndexKey == _key) return;
-                this.pIndexKey = _key;
-                this.$emit('tabTo',{
-                    status : 'tabTo',
-                    data : {
-                        key : _key
-                    }
-                })
-            }
-        }
+//   var modal = weex.requireModule('modal')
+  export default {
+    //        props: {
+    //            indexKey: {
+    //                type: String,
+    //                default: 'home'
+    //            },
+    //            reClick: {
+    //                type: Boolean,
+    //                default: false
+    //            },
+    //            items: {
+    //                type: Array,
+    //                default: function(){
+    //                    return [
+    //                        {
+    //                            icon:'&#xe660;',
+    //                            name:"首页",
+    //                            key:'home'
+    //                        }
+    //                    ]
+    //                }
+    //            }
+    //        },
+    computed: {
+      testCS: function () {
+        return this.pIndexKey === 'home' ? 'color:#b4282d;' : ''
+      }
+    },
+    data () {
+      return {
+        pIndexKey: 'home'
+      }
+    },
+    mounted () {
+    },
+    methods: {
+      tabTo (_key) {
+        if (this.pIndexKey === _key) return
+        this.pIndexKey = _key
+        this.$emit('tabTo', {
+          status: 'tabTo',
+          data: {
+            key: _key
+          }
+        })
+      }
     }
+  }
 </script>

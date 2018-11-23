@@ -4,11 +4,11 @@
       <div class="demo cen">
         <text class="demo-text">使用案例</text>
       </div>
-        
+
       <div class="demo">
         <wxProgress :percent='50' :bar_width='650'></wxProgress>
       </div>
-      
+
       <div class="demo">
         <wxProgress :percent="70"
                     wx_color="#9B7B56"
@@ -16,9 +16,9 @@
                     :wx_radius="8"
                     :wx_width="650"></wxProgress>
       </div>
-      
+
       <div class="demo cen">
-        <wxcProgress 
+        <wxcProgress
               :percent="60"
               :wxc_radius='100'>
           <div class="cen">
@@ -30,10 +30,9 @@
   </div>
 </template>
 
-
 <script>
-  import {wxProgress, wxcProgress} from '@components/wx-progress';
-  
+  import { wxProgress, wxcProgress } from '@components/wx-progress'
+
   export default {
     components: { wxProgress, wxcProgress }
   }

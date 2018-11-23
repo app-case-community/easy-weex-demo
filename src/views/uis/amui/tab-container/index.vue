@@ -107,44 +107,44 @@
 </style>
 
 <script>
-import { AmNavBar, AmTabBar, AmTabBarItem, AmTabContainer, AmTabContainerItem, AmTabs } from 'weex-amui'
-const dom = weex.requireModule('dom')
+  import { AmNavBar, AmTabBar, AmTabBarItem, AmTabContainer, AmTabContainerItem, AmTabs } from 'weex-amui'
+  const dom = weex.requireModule('dom')
 
-export default {
-  components: { AmNavBar, AmTabBar, AmTabBarItem, AmTabContainer, AmTabContainerItem, AmTabs },
-  data () {
-    return {
-      selected: 0,
-      tabSelected: 0,
-      tabBar: [
-        {
-          icon: '\ue7ce',
-          title: '首页'
-        },
-        {
-          icon: '\ue7ac',
-          title: '钱包'
-        },
-        {
-          icon: '\ue800',
-          title: '心'
-        },
-        {
-          icon: '\ue7e8',
-          title: '我'
-        }
-      ],
-      lists: [
-        'First', 'Second', 'Third', 'Fourth',
-        'Fifth', 'Sixth', 'Seventh', 'Eighth'
-      ]
+  export default {
+    components: { AmNavBar, AmTabBar, AmTabBarItem, AmTabContainer, AmTabContainerItem, AmTabs },
+    data () {
+      return {
+        selected: 0,
+        tabSelected: 0,
+        tabBar: [
+          {
+            icon: '\ue7ce',
+            title: '首页'
+          },
+          {
+            icon: '\ue7ac',
+            title: '钱包'
+          },
+          {
+            icon: '\ue800',
+            title: '心'
+          },
+          {
+            icon: '\ue7e8',
+            title: '我'
+          }
+        ],
+        lists: [
+          'First', 'Second', 'Third', 'Fourth',
+          'Fifth', 'Sixth', 'Seventh', 'Eighth'
+        ]
+      }
+    },
+    beforeCreate () {
+      dom.addRule('fontFace', {
+        'fontFamily': 'testIcon',
+        'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
+      })
     }
-  },
-  beforeCreate () {
-    dom.addRule('fontFace', {
-      'fontFamily': 'testIcon',
-      'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
-    })
   }
-}
 </script>

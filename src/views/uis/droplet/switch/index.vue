@@ -1,6 +1,6 @@
 <template>
     <div class="wx-demo">
-        <wx-cell 
+        <wx-cell
             text="有无住房"
             width="690px"
             height="140px"
@@ -8,15 +8,15 @@
             textFontSize="32px"
             :hasArrow="false"
             @wxClick="handleClick">
-                <wx-switch 
+                <wx-switch
                     slot="right"
-                    class="switch" 
-                    v-model="value1" 
-                    @wxChange="handleChange" 
+                    class="switch"
+                    v-model="value1"
+                    @wxChange="handleChange"
                     :disabled="false">
                 </wx-switch>
         </wx-cell>
-        <wx-cell 
+        <wx-cell
             text="有公积金"
             width="690px"
             height="120px"
@@ -24,11 +24,11 @@
             textFontSize="32px"
             :hasArrow="false"
             @wxClick="handleClick">
-                <wx-switch 
+                <wx-switch
                     slot="right"
-                    class="switch" 
-                    v-model="value2" 
-                    @wxChange="handleChange" 
+                    class="switch"
+                    v-model="value2"
+                    @wxChange="handleChange"
                     :disabled="false">
                 </wx-switch>
         </wx-cell>
@@ -50,28 +50,28 @@
 </style>
 
 <script>
-    import { WxSwitch, WxCell } from 'weex-droplet-ui';
+  import { WxSwitch, WxCell } from 'weex-droplet-ui'
 
-    export default {
-        data () {
-            return {
-                value1: false,
-                value2: true,
-            }
-        },
+  export default {
+    data () {
+      return {
+        value1: false,
+        value2: true
+      }
+    },
 
-        methods: {
-            handleChange (checked) {
+    methods: {
+      handleChange (checked) {
 
-            },
-            handleClick (checked) {
+      },
+      handleClick (checked) {
 
-            },
-        },
+      }
+    },
 
-        components: {
-            WxSwitch,
-            WxCell
-        }
+    components: {
+      WxSwitch,
+      WxCell
     }
+  }
 </script>

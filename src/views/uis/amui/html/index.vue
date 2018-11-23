@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import { AmNavBar, AmHtml } from 'weex-amui'
+  import { AmNavBar, AmHtml } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmHtml },
-  data () {
-    return {
-      html: `<style>.my-html{background: red}</style>
+  export default {
+    components: { AmNavBar, AmHtml },
+    data () {
+      return {
+        html: `<style>.my-html{background: red}</style>
 <div class="my-html">
   <h1>h1</h1>
   <h2>h2</h2>
@@ -26,7 +26,7 @@ export default {
   <p>p</p>
   <img src="https://www.vue-js.com/public/images/vue.png"/>
 </div>`
+      }
     }
   }
-}
 </script>

@@ -46,65 +46,65 @@
 
 </style>
 <script>
-    var animation = weex.requireModule('animation')
-    var modal = weex.requireModule('modal')
-    export default {
-        props:[],
-        data () {
-            return {
-                refreshing: false,
-                loadingAR:[
-                    {ref :'lTxt1',p:[-77,-75],delay:0},
-                    {ref :'lTxt2',p:[-47,-81],delay:50},
-                    {ref :'lTxt3',p:[-15,-88],delay:100},
-                    {ref :'lTxt4',p:[12,-90],delay:150},
-                    {ref :'lTxt5',p:[-5,-49],delay:200},
-                    {ref :'lTxt6',p:[25,-55],delay:250},
-                    {ref :'lTxt7',p:[55,-61],delay:300},
-                    {ref :'lTxt8',p:[85,-61],delay:350}
-                ]
-            }
-        },
-        methods: {
+  var animation = weex.requireModule('animation')
+  var modal = weex.requireModule('modal')
+  export default {
+    props: [],
+    data () {
+      return {
+        refreshing: false,
+        loadingAR: [
+          { ref: 'lTxt1', p: [-77, -75], delay: 0 },
+          { ref: 'lTxt2', p: [-47, -81], delay: 50 },
+          { ref: 'lTxt3', p: [-15, -88], delay: 100 },
+          { ref: 'lTxt4', p: [12, -90], delay: 150 },
+          { ref: 'lTxt5', p: [-5, -49], delay: 200 },
+          { ref: 'lTxt6', p: [25, -55], delay: 250 },
+          { ref: 'lTxt7', p: [55, -61], delay: 300 },
+          { ref: 'lTxt8', p: [85, -61], delay: 350 }
+        ]
+      }
+    },
+    methods: {
 
-            loadingAni(){
-                for(var i=0;i<this.loadingAR.length;i++){
-                    this.shake(this.$refs[this.loadingAR[i].ref],this.loadingAR[i].p[0],this.loadingAR[i].p[1],3,1,200,this.loadingAR[i].delay);
-                }
-            },
-            loadingAniDown(){
-                for(var i=0;i<this.loadingAR.length;i++){
-                    this.shake(this.$refs[this.loadingAR[i].ref],0,0,0,0,200);
-                }
-                this.$emit('loadingDown',{
-                    status : 'loadingDown'
-                })
-            },
-            shake(_ref,_x,_y,_k,_d,_duration,_delay){
-                animation.transition(_ref, {
-                    styles: {
-                        transform:'translate('+(_x-0)+'px,'+(_y-_k*_d)+'px)',
-                    },
-                    duration: _duration | 500, //ms
-                    timingFunction: 'ease-out',
-                    delay: _delay | 0 //ms
-                },function () {
-                    this.refreshing&&this.shake(_ref,_x,_y,_k,-1*_d);
-                }.bind(this))
-            },
-            onrefresh (event) {
-//                console.log('is refreshing')
-                modal.toast({ message: 'refresh', duration: 1 })
-
-                this.loadingAni();
-                this.refreshing = true;
-                setTimeout(() => {
-                    this.refreshing = false;
-                    this.loadingAniDown();
-                }, 1300)
-            },
-            onpullingdown (event) {
-            }
+      loadingAni () {
+        for (var i = 0; i < this.loadingAR.length; i++) {
+          this.shake(this.$refs[this.loadingAR[i].ref], this.loadingAR[i].p[0], this.loadingAR[i].p[1], 3, 1, 200, this.loadingAR[i].delay)
         }
+      },
+      loadingAniDown () {
+        for (var i = 0; i < this.loadingAR.length; i++) {
+          this.shake(this.$refs[this.loadingAR[i].ref], 0, 0, 0, 0, 200)
+        }
+        this.$emit('loadingDown', {
+          status: 'loadingDown'
+        })
+      },
+      shake (_ref, _x, _y, _k, _d, _duration, _delay) {
+        animation.transition(_ref, {
+          styles: {
+            transform: 'translate(' + (_x - 0) + 'px,' + (_y - _k * _d) + 'px)'
+          },
+          duration: _duration | 500, // ms
+          timingFunction: 'ease-out',
+          delay: _delay | 0 // ms
+        }, function () {
+          this.refreshing && this.shake(_ref, _x, _y, _k, -1 * _d)
+        }.bind(this))
+      },
+      onrefresh (event) {
+        //                console.log('is refreshing')
+        modal.toast({ message: 'refresh', duration: 1 })
+
+        this.loadingAni()
+        this.refreshing = true
+        setTimeout(() => {
+          this.refreshing = false
+          this.loadingAniDown()
+        }, 1300)
+      },
+      onpullingdown (event) {
+      }
     }
+  }
 </script>

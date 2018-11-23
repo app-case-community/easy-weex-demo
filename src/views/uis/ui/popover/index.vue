@@ -95,13 +95,13 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcMinibar, WxcButton, WxcPopover } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcMinibar, WxcButton, WxcPopover } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  import { WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type'
 
-  const modal = weex.requireModule('modal');
-  import { setTitle } from '@components/ui/_mods/set-nav';
-  import {WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcMinibar, WxcButton, WxcPopover },
@@ -144,24 +144,24 @@
       popoverPosition2: { x: 200, y: 520 },
       popoverArrowPosition2: { pos: 'bottom', x: 160 },
       btns3: [
-        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
-        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
-        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1' },
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2' },
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3' }
       ],
       popoverPosition3: { x: 325, y: 550 },
       popoverArrowPosition3: { pos: 'left', y: 0 },
       btns4: [
-        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
-        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
-        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1' },
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2' },
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3' }
       ],
       popoverPosition4: { x: 175, y: 380 },
       popoverArrowPosition4: { pos: 'right', y: -50 },
-      btn3Style:{
+      btn3Style: {
         height: '200px',
         width: '300px'
       },
-      btn4Style:{
+      btn4Style: {
         position: 'absolute',
         right: '40px',
         top: '60px',
@@ -174,14 +174,14 @@
     },
     methods: {
       minibarRightButtonClick () {
-        this.$refs['wxc-popover1'].wxcPopoverShow();
+        this.$refs['wxc-popover1'].wxcPopoverShow()
       },
       popoverButtonClicked (obj) {
-        modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
+        modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 })
       },
-      wxcButtonClicked (ref='wxc-popover2') {
-        this.$refs[ref].wxcPopoverShow();
+      wxcButtonClicked (ref = 'wxc-popover2') {
+        this.$refs[ref].wxcPopoverShow()
       }
     }
-  };
+  }
 </script>

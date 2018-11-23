@@ -16,36 +16,36 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiSearchbarCenter, BuiSearchbarLeft } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiSearchbarCenter,
-    BuiSearchbarLeft
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiSearchbarCenter, BuiSearchbarLeft } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiSearchbarCenter,
+      BuiSearchbarLeft
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        }
       }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
     },
-    onSearch(value) {
-      this.$toast(value);
-    },
-    onfocus(e) {
-      this.$toast("focus");
-    },
-    onblur(e) {
-      this.$toast("blur");
-    },
-    onclear() {
-      this.$toast("clear");
+    methods: {
+      back () {
+        this.$pop()
+      },
+      onSearch (value) {
+        this.$toast(value)
+      },
+      onfocus (e) {
+        this.$toast('focus')
+      },
+      onblur (e) {
+        this.$toast('blur')
+      },
+      onclear () {
+        this.$toast('clear')
+      }
     }
   }
-};
 </script>

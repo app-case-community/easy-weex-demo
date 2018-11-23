@@ -8,7 +8,7 @@
                 <text class="tp-name">{{i.name}}</text>
                 <!-- <div style="width:100%;justify-content:center"> --><text class="add">+加入</text><!-- </div> -->
                 <!-- <text style="margin-top:30px;text-align:center">新增</text> -->
-                 
+
             </div>
         </scroller>
     </div>
@@ -64,13 +64,13 @@
     }
 </style>
 <script>
-    export default {
-        props:["topics"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-        }
+  export default {
+    props: ['topics'],
+    data () {
+      return {
+      }
+    },
+    methods: {
     }
+  }
 </script>

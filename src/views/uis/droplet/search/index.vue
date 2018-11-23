@@ -22,22 +22,22 @@
 </template>
 
 <script>
-    import { WxSearch } from 'weex-droplet-ui'
+  import { WxSearch } from 'weex-droplet-ui'
 
-    export default {
-        data () {
-            return {
-                searchContent1: '',
-                searchContent2: ''
-            }
-        },
+  export default {
+    data () {
+      return {
+        searchContent1: '',
+        searchContent2: ''
+      }
+    },
 
-        methods: {
+    methods: {
 
-        },
+    },
 
-        components: {WxSearch}
-    }
+    components: { WxSearch }
+  }
 </script>
 <style scoped>
     .result {

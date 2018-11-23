@@ -24,6 +24,8 @@
     "indent": "off",
     "no-var": "off",
     "no-new": "off",
+    "no-tabs": "off",
+    "no-redeclare": "off",
     "no-useless-escape": "off",
     "vue/script-indent": [
       "error",

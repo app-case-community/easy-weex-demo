@@ -4,7 +4,7 @@
     </bui-header>
 		<list @scroll="scroll">
 			<cell>
-      
+
       <div class="panel__box" >
         <div class="panel__row" v-for="(item,i) in list" :key="i">
           <text @click="handleItemClick(inner)" :ref="inner.ref" class="panel__item" v-for="(inner,idx) in item" :key="idx">{{inner.text}}</text>
@@ -25,124 +25,124 @@
   </div>
 </template>
 <script>
-import { BuiHeader, BuiPopover } from "weex-bui";
-const dom = weex.requireModule("dom");
-export default {
-  components: {
-    BuiHeader,
-    BuiPopover
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiPopover } from 'weex-bui'
+  const dom = weex.requireModule('dom')
+  export default {
+    components: {
+      BuiHeader,
+      BuiPopover
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        list: [
+          [
+            {
+              placement: 'top-start',
+              text: '上左'
+            },
+            {
+              placement: 'top',
+              text: '上边'
+            },
+            {
+              placement: 'top-end',
+              text: '上右'
+            }
+          ],
+          [
+            {
+              placement: 'bottom-start',
+              text: '下左'
+            },
+            {
+              placement: 'bottom',
+              text: '下边'
+            },
+            {
+              placement: 'bottom-end',
+              text: '下右'
+            }
+          ],
+          [
+            {
+              placement: 'left-start',
+              text: '左上'
+            },
+            {
+              placement: 'left',
+              text: '左边'
+            },
+            {
+              placement: 'left-end',
+              text: '左下'
+            }
+          ],
+          [
+            {
+              placement: 'right-start',
+              text: '右上'
+            },
+            {
+              placement: 'right',
+              text: '右边'
+            },
+            {
+              placement: 'right-end',
+              text: '右下'
+            }
+          ]
+        ],
+        placement: 'bottom',
+        visible: false,
+        pos: {}
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
       },
-      list: [
-        [
-          {
-            placement: "top-start",
-            text: "上左"
-          },
-          {
-            placement: "top",
-            text: "上边"
-          },
-          {
-            placement: "top-end",
-            text: "上右"
-          }
-        ],
-        [
-          {
-            placement: "bottom-start",
-            text: "下左"
-          },
-          {
-            placement: "bottom",
-            text: "下边"
-          },
-          {
-            placement: "bottom-end",
-            text: "下右"
-          }
-        ],
-        [
-          {
-            placement: "left-start",
-            text: "左上"
-          },
-          {
-            placement: "left",
-            text: "左边"
-          },
-          {
-            placement: "left-end",
-            text: "左下"
-          }
-        ],
-        [
-          {
-            placement: "right-start",
-            text: "右上"
-          },
-          {
-            placement: "right",
-            text: "右边"
-          },
-          {
-            placement: "right-end",
-            text: "右下"
-          }
-        ]
-      ],
-      placement: "bottom",
-      visible: false,
-      pos: {}
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
+      handleItemClick ({ placement }) {
+        this.placement = placement
+        this.open()
+      },
+      open (e) {
+        this.visible = true
+      },
+      close () {
+        this.visible = false
+      },
+      scroll (e) {
+        // 页面滚动跟随
+        this.setPos(this.$refs.target, 'pos')
+      },
+      setPos (ref, pos) {
+        setTimeout(() => {
+          dom.getComponentRect(ref, option => {
+            this[pos] = option.size
+          })
+        }, 50)
+      }
     },
-    handleItemClick({ placement }) {
-      this.placement = placement;
-      this.open();
+    created () {},
+    mounted () {
+      this.setPos(this.$refs.target, 'pos')
     },
-    open(e) {
-      this.visible = true;
-    },
-    close() {
-      this.visible = false;
-    },
-    scroll(e) {
-      // 页面滚动跟随
-      this.setPos(this.$refs.target, "pos");
-    },
-    setPos(ref, pos) {
-      setTimeout(() => {
-        dom.getComponentRect(ref, option => {
-          this[pos] = option.size;
-        });
-      }, 50);
-    }
-  },
-  created() {},
-  mounted() {
-    this.setPos(this.$refs.target, "pos");
-  },
-  computed: {
-    maskStyle() {
-      return {
-        opacity: 0.7
-      };
-    },
-    panelStyle() {
-      return {
-        backgroundColor: "#fff"
-      };
+    computed: {
+      maskStyle () {
+        return {
+          opacity: 0.7
+        }
+      },
+      panelStyle () {
+        return {
+          backgroundColor: '#fff'
+        }
+      }
     }
   }
-};
 </script>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <style lang="scss">

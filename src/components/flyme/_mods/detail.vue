@@ -53,50 +53,50 @@
 </style>
 
 <script>
-import { FmText, FmImage, FmIcon } from 'weex-flymeui';
-import DCell from './cell.vue';
-import category from '@views/flyme/category';
-const navigator = weex.requireModule('navigator');
-const env = weex.config.env;
-const url = weex.config.bundleUrl;
+  import { FmText, FmImage, FmIcon } from 'weex-flymeui'
+  import DCell from './cell.vue'
+  import category from '@views/flyme/category'
+  const navigator = weex.requireModule('navigator')
+  const env = weex.config.env
+  const url = weex.config.bundleUrl
 
-export default {
-  props: {
-    type: String,
-    category: {
-      type: Object,
-      default: () => ({})
-    }
-  },
-  components: { FmText, FmImage, FmIcon, DCell },
-  created () {
-    this.category = category[this.type];
-  },
-  methods: {
-    jump (path) {
-      if (env.platform === 'Web') {
-        window.location.href = '/' + path;
-      } else {
-        let target = url.replace(`categories/${this.type}`, path);
-        if (path.startsWith('http')) {
-          target = path;
-        }
-        navigator.push({
-          url: target,
-          animated: 'true',
-          theme: {
-            immersion: true, // 沉浸式状态栏
-            softmode: 'adjustResize',
+  export default {
+    props: {
+      type: String,
+      category: {
+        type: Object,
+        default: () => ({})
+      }
+    },
+    components: { FmText, FmImage, FmIcon, DCell },
+    created () {
+      this.category = category[this.type]
+    },
+    methods: {
+      jump (path) {
+        if (env.platform === 'Web') {
+          window.location.href = '/' + path
+        } else {
+          let target = url.replace(`categories/${this.type}`, path)
+          if (path.startsWith('http')) {
+            target = path
+          }
+          navigator.push({
+            url: target,
+            animated: 'true',
             theme: {
-              statusBar: { // 状态栏
-                transparent: true, // 设置后color、alpha不起作用，状态栏颜色同actionbar
-                darkIcon: false // 是否使用深色图标
+              immersion: true, // 沉浸式状态栏
+              softmode: 'adjustResize',
+              theme: {
+                statusBar: { // 状态栏
+                  transparent: true, // 设置后color、alpha不起作用，状态栏颜色同actionbar
+                  darkIcon: false // 是否使用深色图标
+                }
               }
             }
-          }
-        });
+          })
+        }
       }
     }
   }
-};
 </script>

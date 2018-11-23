@@ -20,10 +20,10 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
-  import { WxcIndexlist } from 'weex-ui';
-  import { dataList } from './data.js';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { WxcIndexlist } from 'weex-ui'
+  import { dataList } from './data.js'
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { WxcIndexlist },
@@ -42,12 +42,12 @@
       }
     }),
     created () {
-      setTitle('IndexList');
+      setTitle('IndexList')
     },
     methods: {
       wxcIndexlistItemClicked (e) {
-        modal.toast({ 'message': JSON.stringify(e.item), 'duration': 1 });
+        modal.toast({ 'message': JSON.stringify(e.item), 'duration': 1 })
       }
     }
-  };
+  }
 </script>

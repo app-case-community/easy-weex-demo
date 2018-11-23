@@ -38,10 +38,10 @@
 </style>
 
 <script>
-import { AmNavBar, AmCheckbox } from 'weex-amui'
-import Placeholder from '@components/amui/_mods/placeholder.vue'
+  import { AmNavBar, AmCheckbox } from 'weex-amui'
+  import Placeholder from '@components/amui/_mods/placeholder.vue'
 
-export default {
-  components: { Placeholder, AmNavBar, AmCheckbox }
-}
+  export default {
+    components: { Placeholder, AmNavBar, AmCheckbox }
+  }
 </script>

@@ -15,11 +15,11 @@
     }
 </style>
 <script>
-    module.exports = {
-        props: {
-            title: {
-                type: String
-            }
-        }
+  module.exports = {
+    props: {
+      title: {
+        type: String
+      }
     }
+  }
 </script>

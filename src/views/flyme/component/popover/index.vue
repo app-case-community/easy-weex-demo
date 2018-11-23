@@ -70,32 +70,32 @@
 </style>
 
 <script>
-import { FmPopover, FmTitlebar, FmButton, FmFooter } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
+  import { FmPopover, FmTitlebar, FmButton, FmFooter } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
 
-const modal = weex.requireModule('modal');
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmPopover, FmTitlebar, FmButton, FmFooter },
-  data: () => ({
-    overShow: false,
-    buttons: [{
-      text: '查看',
-      icon: 'saomiao'
-    }, {
-      text: '查看'
-    }, {
-      text: '查看'
-    }]
-  }),
-  methods: {
-    show (pos) {
-      this.$refs[`popover-${pos}`].visible(true);
-    },
-    onClicked (e) {
-      modal.toast({ message: e.index });
+  export default {
+    components: { Title, Category, FmPopover, FmTitlebar, FmButton, FmFooter },
+    data: () => ({
+      overShow: false,
+      buttons: [{
+        text: '查看',
+        icon: 'saomiao'
+      }, {
+        text: '查看'
+      }, {
+        text: '查看'
+      }]
+    }),
+    methods: {
+      show (pos) {
+        this.$refs[`popover-${pos}`].visible(true)
+      },
+      onClicked (e) {
+        modal.toast({ message: e.index })
+      }
     }
   }
-};
 </script>

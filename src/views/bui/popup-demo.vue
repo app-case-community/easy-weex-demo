@@ -39,47 +39,47 @@
 </style>
 
 <script>
-import { BuiHeader, BuiButton, BuiPopup } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiButton,
-    BuiPopup
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiButton, BuiPopup } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiButton,
+      BuiPopup
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        showPopup1: false,
+        showPopup2: false,
+        showPopup3: false,
+        showPopup4: false,
+        selectedValue: ['1', '2'],
+        items: [
+          { value: '1', title: '全部1' },
+          { value: '2', title: '选项一' },
+          { value: '3', title: '选项二' },
+          { value: '4', title: '选项三' }
+        ]
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
       },
-      showPopup1: false,
-      showPopup2: false,
-      showPopup3: false,
-      showPopup4: false,
-      selectedValue: ["1", "2"],
-      items: [
-        { value: "1", title: "全部1" },
-        { value: "2", title: "选项一" },
-        { value: "3", title: "选项二" },
-        { value: "4", title: "选项三" }
-      ]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
-    },
-    open1() {
-      this.showPopup1 = true;
-    },
-    open2() {
-      this.showPopup2 = true;
-    },
-    open3() {
-      this.showPopup3 = true;
-    },
-    open4() {
-      this.showPopup4 = true;
+      open1 () {
+        this.showPopup1 = true
+      },
+      open2 () {
+        this.showPopup2 = true
+      },
+      open3 () {
+        this.showPopup3 = true
+      },
+      open4 () {
+        this.showPopup4 = true
+      }
     }
   }
-};
 </script>

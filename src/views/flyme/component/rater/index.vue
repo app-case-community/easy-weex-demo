@@ -77,17 +77,17 @@
 </style>
 
 <script>
-import { FmRater } from 'weex-flymeui';
-import Title from '@components/flyme/_mods/title.vue';
-import Category from '@components/flyme/_mods/category.vue';
-const modal = weex.requireModule('modal');
+  import { FmRater } from 'weex-flymeui'
+  import Title from '@components/flyme/_mods/title.vue'
+  import Category from '@components/flyme/_mods/category.vue'
+  const modal = weex.requireModule('modal')
 
-export default {
-  components: { Title, Category, FmRater },
-  methods: {
-    scoreChanged (e) {
-      modal.toast({ message: e });
+  export default {
+    components: { Title, Category, FmRater },
+    methods: {
+      scoreChanged (e) {
+        modal.toast({ message: e })
+      }
     }
   }
-};
 </script>

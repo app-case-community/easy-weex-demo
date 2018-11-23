@@ -104,16 +104,16 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListItem, AmListInput, AmButton, AmSwitch } from 'weex-amui'
+  import { AmNavBar, AmList, AmListItem, AmListInput, AmButton, AmSwitch } from 'weex-amui'
 
-export default {
-  components: { AmNavBar, AmList, AmListItem, AmListInput, AmButton, AmSwitch },
-  data () {
-    return {
-      inputValue: '',
-      inputValue2: '',
-      inputDisbled: false
+  export default {
+    components: { AmNavBar, AmList, AmListItem, AmListInput, AmButton, AmSwitch },
+    data () {
+      return {
+        inputValue: '',
+        inputValue2: '',
+        inputDisbled: false
+      }
     }
   }
-}
 </script>

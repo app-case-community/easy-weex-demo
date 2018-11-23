@@ -42,79 +42,79 @@
 </style>
 
 <script>
-import { BuiHeader, BuiRadio, BuiPopup } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiRadio,
-    BuiPopup
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      showPopup1: false,
-      changevalue: "",
-      selectedValue: "2",
-      selectedValue1: "2",
-      items: [
-        { value: "1", title: "全部" },
-        {
-          value: "2",
-          title:
-            "选项一sfsdfsdfsdfsdfsdf djsdfsdjfks dj sdfksd fsdjfsdjfksdfksdfk k  dsfsdfk fdskjfsdjfsdf sdf sdfsdfj "
+  import { BuiHeader, BuiRadio, BuiPopup } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiRadio,
+      BuiPopup
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
         },
-        { value: "3", title: "选项二" },
-        { value: "4", title: "选项三" }
-      ],
-      items1: [
-        { value: "1", title: "全部" },
-        { value: "2", title: "选项一" },
-        { value: "3", title: "选项二" },
-        { value: "4", title: "选项三" }
-      ]
-    };
-  },
-  computed: {
-    textStyles() {
-      return {
-        marginLeft: "30px"
-      };
+        showPopup1: false,
+        changevalue: '',
+        selectedValue: '2',
+        selectedValue1: '2',
+        items: [
+          { value: '1', title: '全部' },
+          {
+            value: '2',
+            title:
+              '选项一sfsdfsdfsdfsdfsdf djsdfsdjfks dj sdfksd fsdjfsdjfksdfksdfk k  dsfsdfk fdskjfsdjfsdf sdf sdfsdfj '
+          },
+          { value: '3', title: '选项二' },
+          { value: '4', title: '选项三' }
+        ],
+        items1: [
+          { value: '1', title: '全部' },
+          { value: '2', title: '选项一' },
+          { value: '3', title: '选项二' },
+          { value: '4', title: '选项三' }
+        ]
+      }
     },
-    containerStyle() {
-      return {
-        paddingLeft: "20px",
-        paddingRight: "20px",
-        paddingTop: "30px",
-        paddingBottom: "30px",
-        borderBottomColor: "#f2f2f2",
-        borderBottomWidth: "1px",
-        borderBottomStyle: "solid"
-      };
-    }
-  },
-  methods: {
-    back() {
-      this.$pop();
+    computed: {
+      textStyles () {
+        return {
+          marginLeft: '30px'
+        }
+      },
+      containerStyle () {
+        return {
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingTop: '30px',
+          paddingBottom: '30px',
+          borderBottomColor: '#f2f2f2',
+          borderBottomWidth: '1px',
+          borderBottomStyle: 'solid'
+        }
+      }
     },
-    open1() {
-      this.showPopup1 = true;
-      this.changevalue = this.selectedValue;
-    },
-    changeValue(value, index) {
-      // this.$toast(value);
-      // this.$toast(index);
-      this.selectedValue1 = value;
-    },
-    confirm() {
-      this.$toast(JSON.stringify(this.changevalue));
-      this.showPopup1 = false;
-    },
-    reset() {
-      debugger;
-      this.selectedValue1 = "";
+    methods: {
+      back () {
+        this.$pop()
+      },
+      open1 () {
+        this.showPopup1 = true
+        this.changevalue = this.selectedValue
+      },
+      changeValue (value, index) {
+        // this.$toast(value);
+        // this.$toast(index);
+        this.selectedValue1 = value
+      },
+      confirm () {
+        this.$toast(JSON.stringify(this.changevalue))
+        this.showPopup1 = false
+      },
+      reset () {
+        debugger
+        this.selectedValue1 = ''
+      }
     }
   }
-};
 </script>

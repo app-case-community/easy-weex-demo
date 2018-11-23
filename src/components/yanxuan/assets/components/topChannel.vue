@@ -74,50 +74,48 @@
     }
 </style>
 <script>
-    const dom = weex.requireModule('dom');
-    const animation = weex.requireModule('animation');
-    export default {
-        data () {
-            return {
-                jLPosition:{left:'30px',width:'80px'}
-            }
-        },
-        mounted () {
-//            this.initJLine();
-        },
-        methods: {
-            initJLine:function () {
-                if(!this.$refs.actJC) return;
-                let l = this.$refs.actJC.$el.offsetLeft;
-                let w = this.$refs.actJC.$el.offsetWidth;
-                this.jLPosition = {
-                    left: l+30 +"px",
-                    width:w-60+"px"
-                };
-            },
-
-            chooseChannel:function (event) {
-//                const _target = event.target;
-//                if(_target.dataset.act !== "j-c") return;
-//                let l = _target.offsetLeft || 0;
-//                let w =  _target.offsetWidth || 0;
-//                if(w<=0) return;
-//                this.jLPosition = {
-//                    left: l+30 +"px",
-//                    width:w-60+"px"
-//                };
-//                animation.transition(this.$refs.jcLine, {
-//                    styles: {
-//                        left : l+30+"px",
-//                        width : w-60+"px"
-//                    },
-//                    duration: 300, //ms
-//                    timingFunction: 'ease',
-//                    delay: 0 //ms
-//                }, function () {});
-            }
+//   const dom = weex.requireModule('dom')
+//   const animation = weex.requireModule('animation')
+  export default {
+    data () {
+      return {
+        jLPosition: { left: '30px', width: '80px' }
+      }
+    },
+    mounted () {
+      //            this.initJLine();
+    },
+    methods: {
+      initJLine: function () {
+        if (!this.$refs.actJC) return
+        let l = this.$refs.actJC.$el.offsetLeft
+        let w = this.$refs.actJC.$el.offsetWidth
+        this.jLPosition = {
+          left: l + 30 + 'px',
+          width: w - 60 + 'px'
         }
+      },
+
+      chooseChannel: function (event) {
+        //                const _target = event.target;
+        //                if(_target.dataset.act !== "j-c") return;
+        //                let l = _target.offsetLeft || 0;
+        //                let w =  _target.offsetWidth || 0;
+        //                if(w<=0) return;
+        //                this.jLPosition = {
+        //                    left: l+30 +"px",
+        //                    width:w-60+"px"
+        //                };
+        //                animation.transition(this.$refs.jcLine, {
+        //                    styles: {
+        //                        left : l+30+"px",
+        //                        width : w-60+"px"
+        //                    },
+        //                    duration: 300, //ms
+        //                    timingFunction: 'ease',
+        //                    delay: 0 //ms
+        //                }, function () {});
+      }
     }
+  }
 </script>
-
-

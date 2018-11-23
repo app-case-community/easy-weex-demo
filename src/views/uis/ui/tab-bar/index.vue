@@ -22,9 +22,9 @@
   }
 </style>
 <script>
-  import { WxcTabBar, Utils } from 'weex-ui';
+  import { WxcTabBar, Utils } from 'weex-ui'
   import Config from './config'
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { WxcTabBar },
@@ -33,16 +33,16 @@
       tabStyles: Config.tabStyles
     }),
     created () {
-      setTitle('TabBar');
-      const tabPageHeight = Utils.env.getPageHeight();
-      const { tabStyles } = this;
-      this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+      setTitle('TabBar')
+      const tabPageHeight = Utils.env.getPageHeight()
+      const { tabStyles } = this
+      this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' }
     },
     methods: {
       wxcTabBarCurrentTabSelected (e) {
-        const index = e.page;
+        // const index = e.page
         // console.log(index);
       }
     }
-  };
+  }
 </script>

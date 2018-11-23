@@ -6,7 +6,6 @@
                 @leftClick="back">
         </bui-header>
 
-
         <div style="padding: 10px;flex: 1">
             <scroller>
                 <text class="h4 titleEx">简单滑动菜单-手势向左边滑动,菜单按钮操作</text>
@@ -49,74 +48,74 @@
 </style>
 
 <script>
-import { BuiHeader, BuiSwipeCell } from "weex-bui";
-var animation = weex.requireModule("animation");
-export default {
-  components: {
-    BuiHeader,
-    BuiSwipeCell
-  },
-  data: function() {
-    return {
-      leftItem: {
-        icon: "ion-chevron-left"
+  import { BuiHeader, BuiSwipeCell } from 'weex-bui'
+  // var animation = weex.requireModule('animation')
+  export default {
+    components: {
+      BuiHeader,
+      BuiSwipeCell
+    },
+    data: function () {
+      return {
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        btnAry1: [
+          {
+            title: '取消',
+            bgcolor: '#c6c7c8'
+          },
+          {
+            title: '标记',
+            bgcolor: '#3399ff'
+          }
+        ],
+        btnAry: [
+          {
+            title: '取消',
+            bgcolor: '#c6c7c8'
+          },
+          {
+            title: '删除',
+            bgcolor: '#fa3300'
+          },
+          {
+            title: '标记',
+            bgcolor: '#3399ff'
+          }
+        ],
+        items: [
+          {
+            title: '腾讯新闻'
+          },
+          {
+            title: '网易新闻'
+          },
+          {
+            title: '新浪微博'
+          },
+          {
+            title: '搜狐门户'
+          }
+        ]
+      }
+    },
+    methods: {
+      back () {
+        this.$pop()
       },
-      btnAry1: [
-        {
-          title: "取消",
-          bgcolor: "#c6c7c8"
-        },
-        {
-          title: "标记",
-          bgcolor: "#3399ff"
-        }
-      ],
-      btnAry: [
-        {
-          title: "取消",
-          bgcolor: "#c6c7c8"
-        },
-        {
-          title: "删除",
-          bgcolor: "#fa3300"
-        },
-        {
-          title: "标记",
-          bgcolor: "#3399ff"
-        }
-      ],
-      items: [
-        {
-          title: "腾讯新闻"
-        },
-        {
-          title: "网易新闻"
-        },
-        {
-          title: "新浪微博"
-        },
-        {
-          title: "搜狐门户"
-        }
-      ]
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
-    },
 
-    fn() {
-      this.$toast("点击click");
-    },
+      fn () {
+        this.$toast('点击click')
+      },
 
-    clickmenu(e) {
-      if (e == 0) {
-        this.$toast(this.btnAry1[e - 0].title);
-      } else if (e == 1) {
-        this.$toast(this.btnAry1[e - 0].title);
+      clickmenu (e) {
+        if (e === 0) {
+          this.$toast(this.btnAry1[e - 0].title)
+        } else if (e === 1) {
+          this.$toast(this.btnAry1[e - 0].title)
+        }
       }
     }
   }
-};
 </script>

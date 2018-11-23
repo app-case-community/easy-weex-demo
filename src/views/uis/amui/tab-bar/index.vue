@@ -65,65 +65,65 @@
 </style>
 
 <script>
-import { AmTabBar, AmTabBarItem, AmNavBar, AmWhiteSpace } from 'weex-amui'
-const dom = weex.requireModule('dom')
+  import { AmTabBar, AmTabBarItem, AmNavBar, AmWhiteSpace } from 'weex-amui'
+  const dom = weex.requireModule('dom')
 
-export default {
-  components: { AmTabBar, AmTabBarItem, AmNavBar, AmWhiteSpace },
-  data () {
-    return {
-      selected: '首页',
-      tabBar: [
-        {
-          icon: '\ue7ce',
-          title: '首页'
-        },
-        {
-          icon: '\ue7ac',
-          title: '钱包'
-        },
-        {
-          icon: '\ue800',
-          title: '心'
-        },
-        {
-          icon: '\ue7e8',
-          title: '我'
-        }
-      ],
-      selected2: '首页',
-      // 图片用图片
-      tabBar2: [
-        {
-          title: '首页',
-          image: 'https://gw.alicdn.com/tfs/TB1MWXdSpXXXXcmXXXXXXXXXXXX-72-72.png',
-          activeImage: 'https://gw.alicdn.com/tfs/TB1kCk2SXXXXXXFXFXXXXXXXXXX-72-72.png'
-        },
-        {
-          title: '特别推荐',
-          image: 'https://gw.alicdn.com/tfs/TB1ARoKSXXXXXc9XVXXXXXXXXXX-72-72.png',
-          activeImage: 'https://gw.alicdn.com/tfs/TB19Z72SXXXXXamXFXXXXXXXXXX-72-72.png'
-        },
-        {
-          title: '消息中心',
-          image: 'https://gw.alicdn.com/tfs/TB1VKMISXXXXXbyaXXXXXXXXXXX-72-72.png',
-          activeImage: 'https://gw.alicdn.com/tfs/TB1aTgZSXXXXXazXFXXXXXXXXXX-72-72.png',
-          badge: 5
-        },
-        {
-          title: '我的主页',
-          image: 'https://gw.alicdn.com/tfs/TB1Do3tSXXXXXXMaFXXXXXXXXXX-72-72.png',
-          activeImage: 'https://gw.alicdn.com/tfs/TB1LiNhSpXXXXaWXXXXXXXXXXXX-72-72.png',
-          dot: true
-        }
-      ]
+  export default {
+    components: { AmTabBar, AmTabBarItem, AmNavBar, AmWhiteSpace },
+    data () {
+      return {
+        selected: '首页',
+        tabBar: [
+          {
+            icon: '\ue7ce',
+            title: '首页'
+          },
+          {
+            icon: '\ue7ac',
+            title: '钱包'
+          },
+          {
+            icon: '\ue800',
+            title: '心'
+          },
+          {
+            icon: '\ue7e8',
+            title: '我'
+          }
+        ],
+        selected2: '首页',
+        // 图片用图片
+        tabBar2: [
+          {
+            title: '首页',
+            image: 'https://gw.alicdn.com/tfs/TB1MWXdSpXXXXcmXXXXXXXXXXXX-72-72.png',
+            activeImage: 'https://gw.alicdn.com/tfs/TB1kCk2SXXXXXXFXFXXXXXXXXXX-72-72.png'
+          },
+          {
+            title: '特别推荐',
+            image: 'https://gw.alicdn.com/tfs/TB1ARoKSXXXXXc9XVXXXXXXXXXX-72-72.png',
+            activeImage: 'https://gw.alicdn.com/tfs/TB19Z72SXXXXXamXFXXXXXXXXXX-72-72.png'
+          },
+          {
+            title: '消息中心',
+            image: 'https://gw.alicdn.com/tfs/TB1VKMISXXXXXbyaXXXXXXXXXXX-72-72.png',
+            activeImage: 'https://gw.alicdn.com/tfs/TB1aTgZSXXXXXazXFXXXXXXXXXX-72-72.png',
+            badge: 5
+          },
+          {
+            title: '我的主页',
+            image: 'https://gw.alicdn.com/tfs/TB1Do3tSXXXXXXMaFXXXXXXXXXX-72-72.png',
+            activeImage: 'https://gw.alicdn.com/tfs/TB1LiNhSpXXXXaWXXXXXXXXXXXX-72-72.png',
+            dot: true
+          }
+        ]
+      }
+    },
+    beforeCreate () {
+      dom.addRule('fontFace', {
+        'fontFamily': 'testIcon',
+        'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
+      })
     }
-  },
-  beforeCreate () {
-    dom.addRule('fontFace', {
-      'fontFamily': 'testIcon',
-      'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
-    })
   }
-}
 </script>

@@ -70,10 +70,10 @@
   }
 </style>
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcRichText, WxcSpecialRichText } from 'weex-ui';
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcRichText, WxcSpecialRichText } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
   export default {
     components: { Title, Category, WxcRichText, WxcSpecialRichText },
@@ -145,12 +145,12 @@
       ]
     }),
     created () {
-      setTitle('RichText');
+      setTitle('RichText')
     },
     methods: {
       wxcRichTextLinkClick (e) {
-        console.log(e);
+        console.log(e)
       }
     }
-  };
+  }
 </script>

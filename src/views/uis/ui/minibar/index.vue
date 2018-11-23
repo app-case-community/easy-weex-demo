@@ -72,13 +72,13 @@
 </style>
 
 <script>
-  import Title from '@components/ui/_mods/title.vue';
-  import Category from '@components/ui/_mods/category.vue';
-  import { WxcMinibar } from 'weex-ui';
+  import Title from '@components/ui/_mods/title.vue'
+  import Category from '@components/ui/_mods/category.vue'
+  import { WxcMinibar } from 'weex-ui'
+  import { setTitle } from '@components/ui/_mods/set-nav'
+  import { CART_ICON, RETURN_ICON } from './type'
 
-  const modal = weex.requireModule('modal');
-  import { setTitle } from '@components/ui/_mods/set-nav';
-  import { CART_ICON, RETURN_ICON } from './type';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { Title, Category, WxcMinibar },
@@ -93,8 +93,8 @@
       minibarLeftButtonClick () {
       },
       minibarRightButtonClick () {
-        modal.toast({ 'message': 'click rightButton!', 'duration': 1 });
+        modal.toast({ 'message': 'click rightButton!', 'duration': 1 })
       }
     }
-  };
+  }
 </script>

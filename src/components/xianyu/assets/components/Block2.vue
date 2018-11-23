@@ -129,23 +129,23 @@
     }
 </style>
 <script>
-    var navigator = weex.requireModule('navigator')
-    import util from '@xianyu/assets/util';
-    export default {
-        props:["newGoods","hotGoods","head","hasMore","goods"],
-        data () {
-            return {
-            }
-        },
-        methods: {
-            jumpWeb (_url) {
-                if(!_url) return;
-                const url = this.$getConfig().bundleUrl;
-                navigator.push({
-                    url: util.setBundleUrl(url, 'page/web.js?weburl='+_url) ,
-                    animated: "true"
-                });
-            }
-        }
+  import util from '@xianyu/assets/util'
+  var navigator = weex.requireModule('navigator')
+  export default {
+    props: ['newGoods', 'hotGoods', 'head', 'hasMore', 'goods'],
+    data () {
+      return {
+      }
+    },
+    methods: {
+      jumpWeb (_url) {
+        if (!_url) return
+        const url = this.$getConfig().bundleUrl
+        navigator.push({
+          url: util.setBundleUrl(url, 'page/web.js?weburl=' + _url),
+          animated: 'true'
+        })
+      }
     }
+  }
 </script>

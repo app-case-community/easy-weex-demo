@@ -100,21 +100,21 @@
 </style>
 
 <script>
-import { AmNavBar, AmButton } from 'weex-amui'
+  import { AmNavBar, AmButton } from 'weex-amui'
 
-const modal = weex.requireModule('modal')
-export default {
-  components: { AmNavBar, AmButton },
-  data: () => ({
-    typeList: ['default', 'primary', 'warning']
-  }),
-  methods: {
-    handleClick (e) {
-      const { type } = e
-      modal.toast({
-        message: type
-      })
+  const modal = weex.requireModule('modal')
+  export default {
+    components: { AmNavBar, AmButton },
+    data: () => ({
+      typeList: ['default', 'primary', 'warning']
+    }),
+    methods: {
+      handleClick (e) {
+        const { type } = e
+        modal.toast({
+          message: type
+        })
+      }
     }
   }
-}
 </script>

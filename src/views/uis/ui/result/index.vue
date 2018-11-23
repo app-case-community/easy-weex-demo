@@ -23,11 +23,11 @@
 </style>
 
 <script>
-  const modal = weex.requireModule('modal');
+  import { WxcResult } from 'weex-ui'
 
-  import { WxcResult } from 'weex-ui';
+  import { setTitle } from '@components/ui/_mods/set-nav'
 
-  import { setTitle } from '@components/ui/_mods/set-nav';
+  const modal = weex.requireModule('modal')
 
   export default {
     components: { WxcResult },
@@ -44,7 +44,7 @@
     }),
     computed: {},
     created () {
-      setTitle('Result');
+      setTitle('Result')
     },
     methods: {
       resultButtonClick (e) {
@@ -54,5 +54,5 @@
         })
       }
     }
-  };
+  }
 </script>

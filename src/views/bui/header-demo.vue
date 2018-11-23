@@ -52,55 +52,55 @@
 </template>
 <style lang="scss" src="@bui/theme/css/buiweex.scss"></style>
 <script>
-import { BuiHeader, BuiDropdown, BuiCell, BuiIcon } from "weex-bui";
-export default {
-  components: {
-    BuiHeader,
-    BuiDropdown,
-    BuiCell,
-    BuiIcon
-  },
-  data: function() {
-    return {
-      showDropdown: false,
-      leftItem: {
-        icon: "ion-chevron-left"
-      },
-      rightItem: {
-        text: "更多"
-      },
-      rightMenu: {
-        icon: "ion-navicon-round"
-      },
-      rightMenu1: {
-        icon: "ion-android-more-vertical"
-      },
-      leftMenu: {
-        icon: "ion-chevron-left",
-        text: "新闻中心"
-      },
-      leftMenu1: {
-        icon: "ion-chevron-left",
-        text: "返回"
+  import { BuiHeader, BuiDropdown, BuiCell, BuiIcon } from 'weex-bui'
+  export default {
+    components: {
+      BuiHeader,
+      BuiDropdown,
+      BuiCell,
+      BuiIcon
+    },
+    data: function () {
+      return {
+        showDropdown: false,
+        leftItem: {
+          icon: 'ion-chevron-left'
+        },
+        rightItem: {
+          text: '更多'
+        },
+        rightMenu: {
+          icon: 'ion-navicon-round'
+        },
+        rightMenu1: {
+          icon: 'ion-android-more-vertical'
+        },
+        leftMenu: {
+          icon: 'ion-chevron-left',
+          text: '新闻中心'
+        },
+        leftMenu1: {
+          icon: 'ion-chevron-left',
+          text: '返回'
+        }
       }
-    };
-  },
-  methods: {
-    back() {
-      this.$pop();
     },
-    rightclick() {
-      this.$toast("right");
-    },
-    centerclick() {
-      this.$toast("center");
-    },
-    open(e) {
-      this.showDropdown = true;
-      this.$refs.dropdown.show(e);
+    methods: {
+      back () {
+        this.$pop()
+      },
+      rightclick () {
+        this.$toast('right')
+      },
+      centerclick () {
+        this.$toast('center')
+      },
+      open (e) {
+        this.showDropdown = true
+        this.$refs.dropdown.show(e)
+      }
     }
   }
-};
 </script>
 <style>
 .pdl10 {
