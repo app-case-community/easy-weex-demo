@@ -1644,4 +1644,4 @@ const district = [
   }
 ]
 
-export {seasons, district}
+export { seasons, district }

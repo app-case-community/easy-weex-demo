@@ -1,10 +1,9 @@
-'use strict';
-const path = require('path')
+'use strict'
 const merge = require('lodash.merge')
 const buildPlugins = require('./configs/plugin')()
 const { urlRelativeOption } = require('./configs/global')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const isProd = 'production' === process.env.NODE_ENV
+const isProd = process.env.NODE_ENV === 'production'
 
 const loaders = {}
 const plugins = []
@@ -35,7 +34,7 @@ const config = {
   },
   loaders,
   plugins,
-  done() {}
-};
+  done () {}
+}
 
 module.exports = merge(buildPlugins, config)

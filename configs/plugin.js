@@ -7,25 +7,25 @@ const {
 } = require('./global')
 const config = require('./config')
 const helper = require('./helper')
-const glob = require('glob');
-const isWin = /^win/.test(process.platform);
+const glob = require('glob')
+const isWin = /^win/.test(process.platform)
 
 const templateDir = helper.rootNode(config.templateDir)
 
 const getSingleEntryFileContent = (entryFile, relativeVuePath, vueParser) => {
-  var content = fs.readFileSync(entryFile).toString()
+  let content = fs.readFileSync(entryFile).toString()
   // TODO: 还需要替换更多相对路径
-  var rootPath = relativeVuePath.replace(vueParser.base, '')
-  var reg = new RegExp('\'./', 'g')
+  let rootPath = relativeVuePath.replace(vueParser.base, '')
+  let reg = new RegExp('\'./', 'g')
   content = content.replace(reg, '\'' + rootPath) // 替换 './ -> 和vue文件同级目录
   return content
 }
 
 const getEntryFileContent = (entryPath, vueFilePath) => {
   // *.vue 相对地址
-  let relativeVuePath = path.relative(path.join(entryPath, '../'), vueFilePath);
+  let relativeVuePath = path.relative(path.join(entryPath, '../'), vueFilePath)
   if (isWin) {
-    relativeVuePath = relativeVuePath.replace(/\\/g, '\\\\');
+    relativeVuePath = relativeVuePath.replace(/\\/g, '\\\\')
   }
   // 单vue 入口配置
   const vueParser = path.parse(helper.rootNode(vueFilePath))
@@ -43,7 +43,7 @@ const getEntryFileContent = (entryPath, vueFilePath) => {
   }
   // 导出new Vue
   contents += 'export default new Vue(Vue.util.extend({el: \'#root\'}, App));'
-  return contents;
+  return contents
 }
 
 const getTemplateContent = vueFilePath => {
@@ -51,12 +51,12 @@ const getTemplateContent = vueFilePath => {
 }
 
 const getEntryFile = (dir) => {
-  dir = dir || config.pageDir;
+  dir = dir || config.pageDir
   let entrys = {}
   const entries = glob.sync(`${dir}/**/*.vue`, {})
   fs.removeSync(templateDir)
   entries.forEach(entry => {
-    const extname = path.extname(entry);
+    const extname = path.extname(entry)
     const basename = entry.replace(`${dir}/`, '').replace(extname, '')
     const templateJsPath = path.join(templateDir, basename + '.js')
     const templateHtmlPath = path.join(templateDir, basename + '.html')
@@ -66,7 +66,6 @@ const getEntryFile = (dir) => {
   })
   return entrys
 }
-
 
 const loaders = {
   weex: {
@@ -81,7 +80,7 @@ const plugins = [{
   uglifyJs: false
 }]
 
-if ('production' === process.env.NODE_ENV) {
+if (process.env.NODE_ENV === 'production') {
   plugins.push(new UglifyJsPlugin({
     parallel: 4
   }))

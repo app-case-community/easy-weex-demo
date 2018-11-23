@@ -1,15 +1,15 @@
-let stream = weex.requireModule('stream');
+let stream = weex.requireModule('stream')
 export default {
   methods: {
-    jump(to) {
+    jump (to) {
       if (this.$router) {
         this.$router.push(to)
       }
     },
-    isIpx() {
-      return weex && (weex.config.env.deviceModel === 'iPhone10,3' || weex.config.env.deviceModel === 'iPhone10,6');
+    isIpx () {
+      return weex && (weex.config.env.deviceModel === 'iPhone10,3' || weex.config.env.deviceModel === 'iPhone10,6')
     },
-    GET(api, callback) {
+    GET (api, callback) {
       return stream.fetch({
         method: 'GET',
         type: 'json',

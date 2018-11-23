@@ -1,4 +1,5 @@
-const fs = require('fs-extra');
+const fs = require('fs-extra')
+const path = require('path')
 const config = require('./config')
 const helper = require('./helper')
 
@@ -22,14 +23,14 @@ const getDirName = vueFilePath => {
 }
 
 const getGlobalCode = vueFilePath => {
-  let globalFilePath = helper.root(`${config.globalName}.js`);
+  let globalFilePath = helper.root(`${config.globalName}.js`)
   let dir = getDirName(vueFilePath)
   // global 配置
   let globalContents
   const defaultGlobal = () => {
     let content
     if (fs.existsSync(globalFilePath)) {
-      content = fs.readFileSync(globalFilePath).toString();
+      content = fs.readFileSync(globalFilePath).toString()
     }
     return content
   }
@@ -37,7 +38,7 @@ const getGlobalCode = vueFilePath => {
     // global.${dir}.js
     const dirGlobalFilePath = helper.root(`${config.globalName}.${dir}.js`)
     if (fs.existsSync(dirGlobalFilePath)) {
-      globalContents = fs.readFileSync(dirGlobalFilePath).toString();
+      globalContents = fs.readFileSync(dirGlobalFilePath).toString()
     } else {
       globalContents = defaultGlobal()
     }
@@ -48,20 +49,20 @@ const getGlobalCode = vueFilePath => {
 }
 
 const getTemplateCode = (vueFilePath) => {
-  let templateFilePath = helper.rootNode(`${config.templateName}.html`);
+  let templateFilePath = helper.rootNode(`${config.templateName}.html`)
   let dir = getDirName(vueFilePath)
   let templateCode
   const defaultTemplate = () => {
     let content
     if (fs.existsSync(templateFilePath)) {
-      content = fs.readFileSync(templateFilePath).toString();
+      content = fs.readFileSync(templateFilePath).toString()
     }
     return content
   }
   if (dir) {
     const dirTemplateFilePath = helper.rootNode(`${config.templateName}.${dir}.html`)
     if (fs.existsSync(dirTemplateFilePath)) {
-      templateCode = fs.readFileSync(dirTemplateFilePath).toString();
+      templateCode = fs.readFileSync(dirTemplateFilePath).toString()
     } else {
       templateCode = defaultTemplate()
     }
@@ -73,24 +74,24 @@ const getTemplateCode = (vueFilePath) => {
 
 const urlRelativeOption = type => {
   return {
-    publicPath(file, entryfile) {
+    publicPath (file, entryfile) {
       const isWeb = file.indexOf(`web/${type}/`) > -1
       const isWeex = file.indexOf(`weex/${type}/`) > -1
       const pos = entryfile.indexOf(config.templateDir + '/') + config.templateDir.length
       let entryPath = entryfile.substr(pos)
       // 删除文件名
-      const lastPos = entryPath.lastIndexOf('\/')
+      const lastPos = entryPath.lastIndexOf('/')
       entryPath = entryPath.substr(0, lastPos)
 
       let entryTargetPath = ''
       let urlFileEmitPath = ''
-      
+
       if (isWeb) {
         entryTargetPath = helper.rootNode('dist/web/js' + entryPath)
         urlFileEmitPath = helper.rootNode('dist/' + file)
       }
       if (isWeex) {
-        entryTargetPath = helper.rootNode('dist/weex/js'+ entryPath)
+        entryTargetPath = helper.rootNode('dist/weex/js' + entryPath)
         urlFileEmitPath = helper.rootNode('dist/' + file)
       }
       return path.relative(entryTargetPath, urlFileEmitPath)

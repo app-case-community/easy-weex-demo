@@ -20,63 +20,60 @@ import MyPublish from '@components/xianyu/assets/components/My/MyPublish.vue'
 
 Vue.use(Router)
 
-
 export default new Router({
   // mode: 'abstract',
   routes: [{
-    path: '/home',
-    component: ViewHome
-  },
-  {
-    path: '/topic',
-    component: ViewTopic
-  },
-  {
-    path: '/class',
-    component: ViewClass
-  },
-  {
-    path: '/shop',
-    component: ViewShop
-  },
-  {
-    path: '/my',
-    component: ViewMy
-  },
-  {
-    path: '/goodsdetail',
-    component: GoodsDetail
-  },
-  {
-    path: '/chat',
-    component: Chat
-  },
-  {
-    path: '/pay',
-    component: Pay
-  },
-  {
-    path: '/addr',
-    component: Addr
-  },
-  {
-    path: '/chatlist',
-    component: ChatList
-  },
-  {
-    path: '/category',
-    component: Category
-  },
-  {
-    path: '/mypublish',
-    component: MyPublish
-  },
+             path: '/home',
+             component: ViewHome
+           },
+           {
+             path: '/topic',
+             component: ViewTopic
+           },
+           {
+             path: '/class',
+             component: ViewClass
+           },
+           {
+             path: '/shop',
+             component: ViewShop
+           },
+           {
+             path: '/my',
+             component: ViewMy
+           },
+           {
+             path: '/goodsdetail',
+             component: GoodsDetail
+           },
+           {
+             path: '/chat',
+             component: Chat
+           },
+           {
+             path: '/pay',
+             component: Pay
+           },
+           {
+             path: '/addr',
+             component: Addr
+           },
+           {
+             path: '/chatlist',
+             component: ChatList
+           },
+           {
+             path: '/category',
+             component: Category
+           },
+           {
+             path: '/mypublish',
+             component: MyPublish
+           },
 
-
-
-  {
-    path: '/',
-    redirect: '/home'
-  }
+           {
+             path: '/',
+             redirect: '/home'
+           }
   ]
 })

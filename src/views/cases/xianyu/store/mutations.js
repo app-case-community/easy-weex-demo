@@ -14,6 +14,6 @@ export const SET_ITEMS = (state, { items }) => {
   })
 }
 
-export const SET_USER  = (state, { user }) => {
+export const SET_USER = (state, { user }) => {
   Vue.set(state.users, user.id, user)
 }

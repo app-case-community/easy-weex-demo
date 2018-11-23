@@ -6,7 +6,18 @@
     "build": "cross-env NODE_ENV=production easy build prod",
     "start": "cross-env NODE_ENV=develop easy start",
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "precommit": "lint-staged",
+  },
+  "lint-staged": {
+    "*.{json,scss,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,vue}": [
+      "npm run fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "extend": "^3.0.0",
@@ -43,11 +54,15 @@
     "easywebpack": "https://github.com/snice/easywebpack.git#3.10.5",
     "easywebpack-cli": "^3.12.1",
     "easywebpack-weex": "https://github.com/snice/easywebpack-weex.git",
-    "eslint": "^3.18.0",
+    "eslint": "^5.9.0",
     "eslint-config-eslint": "^5.0.1",
+    "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-vue": "^2.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
     "html-webpack-plugin": "^3.2.0",
     "imagemin-webpack-plugin": "^2.3.0",
     "less": "^3.8.1",

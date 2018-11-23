@@ -185,4 +185,4 @@ export default {
       path: 'component/actionSheet'
     }]
   }
-};
+}

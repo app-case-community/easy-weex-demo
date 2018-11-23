@@ -1,44 +1,43 @@
 {
-  "env": {
-    "es6": true
-  },
+  "extends": [
+    "plugin:vue/essential",
+    "standard"
+  ],
+  "plugins": [
+    "vue"
+  ],
   "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 6,
     "sourceType": "module",
-    "ecmaVersion": 2018
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true
+
   },
   "rules": {
-    "indent": [
-      "error",
-      2
-    ],
-    "no-tabs": "off",
-    "new-cap": "off",
-    "eol-last": "off",
-    "newline-after-var": "off",
-    "no-invalid-this": "off",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "no-unused-vars": "off",
-    "no-underscore-dangle": "off",
-    "guard-for-in": "off",
+    "no-debugger": "off",
     "no-console": "off",
-    "no-undefined": "off",
-    "array-bracket-spacing": "off",
-    "no-unused-expressions": "off",
-    "func-style": [
+    "indent": "off",
+    "no-var": "off",
+    "no-new": "off",
+    "no-useless-escape": "off",
+    "vue/script-indent": [
       "error",
-      "expression"
-    ],
-    "comma-dangle": [
-      "error",
-      "never"
+      2,
+      {
+        "baseIndent": 1,
+        "switchCase": 1
+      }
     ]
   },
   "globals": {
     "window": true,
-    "Vue": true
-  },
-  "parser": "babel-eslint"
+    "Vue": true,
+    "weex": true,
+    "WXEnvironment": true
+  }
 }

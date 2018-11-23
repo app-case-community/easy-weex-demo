@@ -11,7 +11,7 @@ export const setParams = () => {
     return
   }
   location.search.slice(1).split('&').map(kv => {
-    var ks = kv.split('=')
+    let ks = kv.split('=')
     return {
       k: ks[0],
       v: ks[1]

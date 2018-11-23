@@ -8,10 +8,9 @@ export const fetch = (path) => {
       url: `${baseURL}/${path}.json`,
       type: 'json'
     }, (response) => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         resolve(response.data)
-      }
-      else {
+      } else {
         reject(response)
       }
     }, () => {})

@@ -143,5 +143,4 @@ export default {
     { cityName: '资阳', pinYin: 'ziyang', py: 'zy' },
     { cityName: '张掖', pinYin: 'zhangye', py: 'zy' }
   ]
-};
-
+}
