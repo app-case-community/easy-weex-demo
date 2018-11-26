@@ -82,7 +82,19 @@ const plugins = [{
 
 if (process.env.NODE_ENV === 'production') {
   plugins.push(new UglifyJsPlugin({
-    parallel: 4
+    parallel: 4,
+    uglifyOptions: {
+      ie8: false,
+      ecma: 5,
+      warnings: false,
+      compress: true,
+      mangle: {
+        safari10: true
+      },
+      output: {
+        comments: false
+      }
+    }
   }))
   // new UglifyJsPlugin({
   //   // 使用外部引入的新版本的js压缩工具

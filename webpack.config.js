@@ -23,7 +23,7 @@ const config = {
   framework: 'weex',
   port: 9090,
   buildPath: 'dist',
-  publicPath: isProd ? './' : 'dist/',
+  publicPath: isProd ? 'dist/' : 'dist/',
   alias: {
     '@': 'src',
     '@views': 'src/views',
