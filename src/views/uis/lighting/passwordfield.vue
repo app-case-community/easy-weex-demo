@@ -38,7 +38,7 @@
 </style>
 
 <script>
-  import LcPasswordfield from 'lighting-ui/packages/lc-passwordfield'
+  import { LcPasswordfield } from 'lighting-ui'
   import Category from '@components/lighting/_mods/category.vue'
   import Title from '@components/lighting/_mods/title.vue'
 

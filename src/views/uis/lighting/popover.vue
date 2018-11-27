@@ -81,9 +81,7 @@
 <script>
   import Title from '@components/lighting/_mods/title.vue'
   import Category from '@components/lighting/_mods/category.vue'
-  import LcMinibar from 'lighting-ui/packages/lc-minibar'
-  import LcButton from 'lighting-ui/packages/lc-button'
-  import LcPopover from 'lighting-ui/packages/lc-popover'
+  import { LcMinibar, LcButton, LcPopover } from 'lighting-ui'
 
   import { WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './lib/popover.js'
 

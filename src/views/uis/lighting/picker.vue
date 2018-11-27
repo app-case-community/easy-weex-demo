@@ -24,7 +24,7 @@
                 ref="LcPopup"
                 @LcPopupOverlayClicked="closePicker">
         <text class="text" @click="selectPicker1">完成</text>
-        <picker ref="picker1" :pickerData="pickerData1" class="date-picker"></picker>
+        <lc-picker ref="picker1" :pickerData="pickerData1" class="date-picker"></lc-picker>
 
     </lc-popup>
 
@@ -36,7 +36,7 @@
                 @LcPopupOverlayClicked="closePicker">
         <text class="text" @click="selectPicker2">完成</text>
 
-        <picker ref="picker2" :pickerData="pickerData2" class="date-picker"></picker>
+        <lc-picker ref="picker2" :pickerData="pickerData2" class="date-picker"></lc-picker>
     </lc-popup>
 
     <lc-popup width="750"
@@ -47,7 +47,7 @@
                 @LcPopupOverlayClicked="closePicker">
         <text class="text" @click="selectPicker3">完成</text>
 
-        <picker ref="picker3" :pickerData="pickerData3" class="date-picker"></picker>
+        <lc-picker ref="picker3" :pickerData="pickerData3" class="date-picker"></lc-picker>
     </lc-popup>
 
   </div>
@@ -78,15 +78,13 @@
 </style>
 
 <script>
-  import LcPopup from 'lighting-ui/packages/lc-popup'
-  import picker from 'lighting-ui/packages/lc-picker'
+  import { LcPopup, LcButton, LcPicker } from 'lighting-ui'
   import Title from '@components/lighting/_mods/title.vue'
   import Category from '@components/lighting/_mods/category.vue'
-  import LcButton from 'lighting-ui/packages/lc-button'
   import Date from './lib/date.js'
 
   export default {
-    components: { Title, Category, LcPopup, picker, LcButton },
+    components: { Title, Category, LcPopup, LcPicker, LcButton },
     data: () => ({
       val: '',
       show1: false,

@@ -37,7 +37,7 @@
 </style>
 
 <script>
-  import LcTextfield from 'lighting-ui/packages/lc-textfield'
+  import { LcTextfield } from 'lighting-ui'
   import Category from '@components/lighting/_mods/category.vue'
   import Title from '@components/lighting/_mods/title.vue'
 

@@ -144,7 +144,7 @@
   import Data from '@components/lighting/tools/tag-data'
   import Title from '@components/lighting/_mods/title.vue'
   import Category from '@components/lighting/_mods/category.vue'
-  import { LcTag, LcCell } from 'lighting-ui/packages/lc-tag'
+  import { LcTag, LcCell } from 'lighting-ui'
   //   import ImageAdvance from './image-advance.vue';
   //   import SpecialAdvance from './special-advance.vue';
 
