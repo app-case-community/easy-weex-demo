@@ -33,6 +33,11 @@
           "libraryName": "weex-bui",
           "libDir": "packages",
           "style": false
+        },
+        {
+          "libraryName": "lighting-ui",
+          "libDir": "packages",
+          "style": false
         }
       ]
     ]

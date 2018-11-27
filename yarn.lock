@@ -254,6 +254,10 @@ animation-util@^1.0.10:
   dependencies:
     object-assign "^4.1.1"
 
+animationjs@^0.1.5:
+  version "0.1.7"
+  resolved "https://registry.npmjs.org/animationjs/-/animationjs-0.1.7.tgz#0357da29f568d6b4469c9ae351fdf814c0291287"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -306,6 +310,10 @@ anymatch@^2.0.0:
   dependencies:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
+
+appearjs@^0.1.4:
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/appearjs/-/appearjs-0.1.6.tgz#2f4c1006754a9f35f3d2727adacef2d068068e95"
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
@@ -2175,9 +2183,40 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
+component-clone@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/component-clone/-/component-clone-0.2.2.tgz#c7f5979822880fad8cfb0962ba29186d061ee04f"
+  dependencies:
+    component-type "*"
+
+component-emitter@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/component-emitter/-/component-emitter-1.2.0.tgz#ccd113a86388d06482d03de3fc7df98526ba8efe"
+
 component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
+
+component-raf@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/component-raf/-/component-raf-1.2.0.tgz#b2bc72d43f1b014fde7a4b3c447c764bc73ccbaa"
+
+component-tween@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/component-tween/-/component-tween-1.2.0.tgz#cc39ce5dbab05b52825f41d1947638a0b01b2b8a"
+  dependencies:
+    component-clone "0.2.2"
+    component-emitter "1.2.0"
+    component-type "1.1.0"
+    ease-component "1.0.0"
+
+component-type@*:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/component-type/-/component-type-1.2.1.tgz#8a47901700238e4fc32269771230226f24b415a9"
+
+component-type@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/component-type/-/component-type-1.1.0.tgz#95b666aad53e5c8d1f2be135c45b5d499197c0c5"
 
 composition@^2.1.1:
   version "2.3.0"
@@ -2612,6 +2651,10 @@ cssom@0.3.x, "cssom@>= 0.3.0 < 0.4.0":
   resolved "https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.37.tgz#541097234cb2513c83ceed3acddc27ff27987d54"
   dependencies:
     cssom "0.3.x"
+
+cubicbezier@^0.1.1:
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/cubicbezier/-/cubicbezier-0.1.2.tgz#ee0fb29df9398c99ed2dd57ea2afbe3a17496d39"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -3109,6 +3152,10 @@ each-async@^1.0.0, each-async@^1.1.1:
   dependencies:
     onetime "^1.0.0"
     set-immediate-shim "^1.0.0"
+
+ease-component@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/ease-component/-/ease-component-1.0.0.tgz#b375726db0b5b04595b77440396fec7daa5d77c9"
 
 easywebpack-cli@^3.12.1:
   version "3.12.1"
@@ -5513,6 +5560,10 @@ isarray@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/isarray/-/isarray-2.0.4.tgz#38e7bcbb0f3ba1b7933c86ba1894ddfc3781bbb7"
 
+iscroll@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/iscroll/-/iscroll-5.2.0.tgz#d513307088b5b25a4f893af474804468481829c8"
+
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -5841,6 +5892,12 @@ lazy-req@^1.0.0:
   version "1.1.0"
   resolved "http://registry.npmjs.org/lazy-req/-/lazy-req-1.1.0.tgz#bdaebead30f8d824039ce0ce149d4daa07ba1fac"
 
+lazyimg@^0.1.5:
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/lazyimg/-/lazyimg-0.1.6.tgz#f7fbb347dbc8c5409f2be80373beaea63931dabc"
+  dependencies:
+    appearjs "^0.1.4"
+
 lazystream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/lazystream/-/lazystream-1.0.0.tgz#f6995fe0f820392f61396be89462407bb77168e4"
@@ -5889,6 +5946,18 @@ levn@~0.2.5:
   dependencies:
     prelude-ls "~1.1.0"
     type-check "~0.3.1"
+
+light@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/light/-/light-1.0.1.tgz#b38d32e8c3a29c89f0114844c4597ee3c08a9493"
+
+lighting-ui@^0.3.100:
+  version "0.3.100"
+  resolved "https://registry.npmjs.org/lighting-ui/-/lighting-ui-0.3.100.tgz#8713cbf7a3fc61e73d51858b8dbe46e42d6afc4e"
+  dependencies:
+    url-parse "^1.1.9"
+    weex-bindingx "0.0.17"
+    weex-picker "^0.1.0"
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -6414,6 +6483,10 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   resolved "http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+modals@^0.1.6:
+  version "0.1.9"
+  resolved "https://registry.npmjs.org/modals/-/modals-0.1.9.tgz#3c199851982d3e17839a019e804303f96db8326e"
 
 module-deps@^4.0.2:
   version "4.1.1"
@@ -7290,6 +7363,10 @@ pify@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
 
+pikaday@^1.5.1:
+  version "1.8.0"
+  resolved "https://registry.npmjs.org/pikaday/-/pikaday-1.8.0.tgz#ce930e257042e852e6aadee1115e01554b2d71c5"
+
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -7776,7 +7853,7 @@ qs@^6.4.0, qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.npmjs.org/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-query-string@^4.1.0, query-string@^4.3.2:
+query-string@^4.1.0, query-string@^4.2.3, query-string@^4.3.2:
   version "4.3.4"
   resolved "https://registry.npmjs.org/query-string/-/query-string-4.3.4.tgz#bbb693b9ca915c232515b228b1a02b609043dbeb"
   dependencies:
@@ -8299,6 +8376,13 @@ schema-utils@^0.4.0, schema-utils@^0.4.2:
   dependencies:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
+
+scroll-to@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/scroll-to/-/scroll-to-0.0.2.tgz#936d398a9133660a2492145c2c0081dfcb0728f3"
+  dependencies:
+    component-raf "1.2.0"
+    component-tween "1.2.0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
@@ -9588,6 +9672,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+validator@^10.9.0:
+  version "10.9.0"
+  resolved "https://registry.npmjs.org/validator/-/validator-10.9.0.tgz#d10c11673b5061fb7ccf4c1114412411b2bac2a8"
+
 vary@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -9887,6 +9975,10 @@ weex-bindingx@^0.0.49:
   dependencies:
     vue "^2.5.17"
 
+weex-components@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/weex-components/-/weex-components-0.2.1.tgz#33a250a5ac7d264c3f396def893d992d30fe5707"
+
 weex-droplet-ui@^1.0.0-alpha.100:
   version "1.0.0-alpha.100"
   resolved "https://registry.npmjs.org/weex-droplet-ui/-/weex-droplet-ui-1.0.0-alpha.100.tgz#2740f89c9cf8db5b78193507437a0aa10bdfe301"
@@ -9922,6 +10014,26 @@ weex-loader@^0.5.3:
     weex-templater "^0.3.5"
     weex-transformer "^0.4.5"
     weex-vue-loader "^0.4.1"
+
+weex-picker@^0.1.0:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/weex-picker/-/weex-picker-0.1.4.tgz#4d648096274277f5f70828a40ba909e4ff143fa0"
+  dependencies:
+    animationjs "^0.1.5"
+    core-js "^2.4.0"
+    cubicbezier "^0.1.1"
+    envd "^0.1.1"
+    httpurl "^0.1.1"
+    iscroll "^5.2.0"
+    lazyimg "^0.1.5"
+    modals "^0.1.6"
+    moment "^2.17.1"
+    pikaday "^1.5.1"
+    query-string "^4.2.3"
+    scroll-to "0.0.2"
+    semver "^5.1.0"
+    weex-components "^0.2.0"
+    weex-vue-framework "2.1.8-weex.1"
 
 weex-scripter@^0.1.5, weex-scripter@~0.1.5:
   version "0.1.6"
@@ -9988,6 +10100,10 @@ weex-ui@^0.6.7:
   dependencies:
     url-parse "^1.4.3"
     weex-bindingx "0.0.17"
+
+weex-vue-framework@2.1.8-weex.1:
+  version "2.1.8-weex.1"
+  resolved "http://registry.npmjs.org/weex-vue-framework/-/weex-vue-framework-2.1.8-weex.1.tgz#74e586bfbf6e8dffde26e3b1d46ce0b08fc2974f"
 
 weex-vue-loader@^0.4.1, weex-vue-loader@^0.4.2:
   version "0.4.2"
