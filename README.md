@@ -20,6 +20,7 @@
 * weex-bui (改自bui-weex)
 * weex-droplet-ui
 * wx-progress
+* lighting-ui
 
 ## 集成了开源案例
 
