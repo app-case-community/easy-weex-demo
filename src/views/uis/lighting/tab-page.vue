@@ -226,13 +226,13 @@
     created () {
       // this.tabPageHeight = Utils.env.getPageHeight();
       this.tabList = [...Array(this.tabTitles.length).keys()].map(i => [])
-      // Light.Vue.set(this.tabList, 0, this.demoList)
+      this.$set(this.tabList, 0, this.demoList)
       this.tabList1 = [...Array(this.tabTitles1.length).keys()].map(i => [])
-      // Light.Vue.set(this.tabList1, 0, this.demoList)
+      this.$set(this.tabList1, 0, this.demoList)
       this.tabList2 = [...Array(this.tabTitles2.length).keys()].map(i => [])
-      // Light.Vue.set(this.tabList2, 0, this.demoList)
+      this.$set(this.tabList2, 0, this.demoList)
       this.tabList3 = [...Array(this.tabTitles3.length).keys()].map(i => [])
-      // Light.Vue.set(this.tabList3, 0, this.demoList)
+      this.$set(this.tabList3, 0, this.demoList)
     },
     methods: {
       LcTabPageCurrentTabSelected (e) {
@@ -241,7 +241,7 @@
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self.tabList[index])) {
           setTimeout(() => {
-            // Light.Vue.set(self.tabList, index, self.demoList)
+            self.$set(self.tabList, index, self.demoList)
           }, 100)
         }
       },
@@ -251,7 +251,7 @@
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self1.tabList1[index1])) {
           setTimeout(() => {
-            // Light.Vue.set(self1.tabList1, index1, self1.demoList)
+            self1.$set(self1.tabList1, index1, self1.demoList)
           }, 100)
         }
       },
@@ -261,7 +261,7 @@
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self2.tabList2[index2])) {
           setTimeout(() => {
-            // Light.Vue.set(self2.tabList2, index2, self2.demoList)
+            self2.$set(self2.tabList2, index2, self2.demoList)
           }, 100)
         }
       },
@@ -271,7 +271,7 @@
         /* 未加载tab模拟数据请求 */
         if (!Utils.isNonEmptyArray(self3.tabList3[index3])) {
           setTimeout(() => {
-            // Light.Vue.set(self3.tabList3, index3, self3.demoList)
+            self3.$set(self3.tabList3, index3, self3.demoList)
           }, 100)
         }
       },
