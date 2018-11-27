@@ -13,7 +13,7 @@
                     v-for="(d,i) in data.comp" :key="i"
                     :label="d.label"
                     @LcCellClicked="LcCellClicked(d.path,d.label)"
-                    :icon="require('./' + d.icon)"
+                    :icon="d.icon"
                     :icon-style="iconStyle"
                 ></lc-cell>
             </div>

@@ -20,6 +20,7 @@
     ]
   },
   "dependencies": {
+    "@weex-project/weex-picker": "^0.2.4",
     "extend": "^3.0.0",
     "flyio": "^0.6.2",
     "light": "^1.0.1",
