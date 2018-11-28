@@ -23,6 +23,7 @@
     "@weex-project/weex-picker": "^0.2.4",
     "extend": "^3.0.0",
     "flyio": "^0.6.2",
+    "gcanvas.js": "^0.0.8",
     "light": "^1.0.1",
     "lighting-ui": "^0.3.100",
     "lodash": "^4.17.4",
@@ -38,7 +39,6 @@
     "weex-bui": "https://github.com/snice/weex-bui.git",
     "weex-droplet-ui": "^1.0.0-alpha.100",
     "weex-flymeui": "https://github.com/snice/weex-flymeui.git#0.1.25",
-    "weex-gcanvas": "^0.5.49",
     "weex-ui": "^0.6.7"
   },
   "devDependencies": {

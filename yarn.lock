@@ -4340,6 +4340,10 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
+gcanvas.js@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/gcanvas.js/-/gcanvas.js-0.0.8.tgz#54cc834583cbdeed383b474aba87523dc0e6b1e3"
+
 get-assigned-identifiers@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/get-assigned-identifiers/-/get-assigned-identifiers-1.2.0.tgz#6dbf411de648cbaf8d9169ebb0d2d576191e2ff1"
@@ -10027,10 +10031,6 @@ weex-droplet-ui@^1.0.0-alpha.100:
   resolved "https://github.com/snice/weex-flymeui.git#3f92e41e36178b4f98c1bcb0bae7a58b35ee8e92"
   dependencies:
     weex-bindingx "^0.0.24"
-
-weex-gcanvas@^0.5.49:
-  version "0.5.49"
-  resolved "https://registry.npmjs.org/weex-gcanvas/-/weex-gcanvas-0.5.49.tgz#96c8d9831bc1b78ad748453a25ad245728cf7730"
 
 weex-loader@^0.5.3:
   version "0.5.3"

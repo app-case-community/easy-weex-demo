@@ -56,50 +56,50 @@
           {
             name: 'ui',
             subname: 'weex-ui',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/ui'
           },
           {
             name: 'flymeui',
             subname: 'weex-flymeui',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'flyme'
           },
           {
             name: 'amui',
             subname: 'weex-amui',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/amui'
           },
           {
             name: 'droplet',
             subname: 'weex-droplet-ui',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/droplet'
           },
           {
             isWeb: env.platform === 'Web',
             name: 'bui',
             subname: 'bui-weex',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'bui'
           },
           {
             name: 'lighting',
             subname: 'lighting-ui',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/lighting'
           },
           {
             name: 'progress',
             subname: 'wx-progress',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/wx-progress'
           },
           {
             name: 'animation',
             subname: '动画',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'uis/animation'
           }
         ],
@@ -107,13 +107,13 @@
           {
             name: 'BindingX',
             subname: 'bindingx',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/bindingx'
           },
           {
             name: 'GCanvas',
             subname: 'gcanvas',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/gcanvas'
           }
         ],
@@ -121,13 +121,13 @@
           {
             name: '咸鱼',
             subname: 'weex-xianyu',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'cases/xianyu'
           },
           {
             name: '严选',
             subname: 'weex-yanxuan',
-            icon: 'http://p1nq9peby.bkt.clouddn.com/weex-flymeui/button.png',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'cases/yanxuan'
           }
         ]

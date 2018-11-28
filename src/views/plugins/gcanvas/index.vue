@@ -1,66 +1,77 @@
 <template>
-    <div ref="test" style="background-color: #1ba1e2">
-        <gcanvas @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend" ref="gcanvess"
-                style="width: 650px;height: 1000px;background-color: yellow;margin-left: 50px"></gcanvas>
-    </div>
+<div>
+    <am-nav-bar
+        title="Easy Weex Demo"
+        :left-btn="[]"
+      ></am-nav-bar>
+    <scroller>
+        <am-list header="gcanvas 示例">
+            <template v-for="(component, idx) in openUiList">
+                <am-list-item class="list-item" v-if="component.isWeb === undefined || !component.isWeb"
+                    :key="idx"
+                    :title="component.name"
+                    :extra="component.subname"
+                    :thumb="component.icon"
+                    @click="jump(component.path)" />
+            </template>
+        </am-list>
+    </scroller>
+</div>
 </template>
-<style type="text/css" scoped>
-</style>
 <script>
-var libGCanvas = require("weex-gcanvas");
-// libGCanvas.htmlPlugin.init(weex);
-var modal = weex.requireModule("modal");
-export default {
-  data: {
-    startX: 0,
-    startY: 0,
-    currentX: 0,
-    currentY: 0,
-    context: {},
-    canvasObj: {}
-  },
-  methods: {
-    touchstart(event) {
-      this.startX = event.changedTouches[0].pageX;
-      this.startY = event.changedTouches[0].pageY;
-      this.context.strokeStyle = "#17acf6"; //设置线的颜色状态
-      this.context.lineWidth = 10; //设置线宽状态
+  import { AmNavBar, AmList, AmListItem } from 'weex-amui'
+  import GLog from '@/glog'
+  const navigator = weex.requireModule('navigator')
+  const env = weex.config.env
+  const url = weex.config.bundleUrl
+  export default {
+    components: {
+      AmNavBar,
+      AmList,
+      AmListItem
     },
-    touchmove(event) {
-      this.currentX = event.changedTouches[0].pageX;
-      this.currentY = event.changedTouches[0].pageY;
-      //进行绘制
-      this.context.moveTo(this.startX, this.startY);
-      this.context.lineTo(this.currentX, this.currentY);
-      this.context.stroke();
-
-      this.startX = event.changedTouches[0].pageX;
-      this.startY = event.changedTouches[0].pageY;
+    data () {
+      return {
+        openUiList: [
+          {
+            name: 'simple',
+            subname: '官方simple',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'simple'
+          }
+        ]
+      }
     },
-    touchend(event) {}
-  },
-  created() {
-    var self = this;
-    var globalEvent = weex.requireModule("globalEvent");
-    globalEvent.addEventListener("onPageInit", function(e) {
-      //以下是核心代代码，需在合适的时机调用，我这里在自己定义的界面加载完成的全局事件中调用了
-      /*获取元素引用*/
-    //   var ref = self.$refs.gcanvess;
-    //   /*通过元素引用获取canvas对象*/
-    //   self.canvasObj = libGCanvas.start(ref);
-    //   /*获取绘图所需的上下文，目前不支持3d*/
-    //   self.context = self.canvasObj.getContext("2d");
-    //   /*设置字体大小*/
-    //   self.context.font = "34px";
-    //   /*在指定位置绘制文字*/
-    //   self.context.fillText("Hello Word", 200, 100);
-    //   /*指定绘制图形的线的宽度*/
-    //   self.context.lineWidth = 10;
-    //   /*在指定位置绘制矩形*/
-    //   self.context.strokeRect(200, 200, 200, 90);
-    //   /*绘制三角形*/
-    //   self.context.beginPath();
-    });
+    methods: {
+      jump (path) {
+        GLog.d('jump->' + path)
+        if (env.platform === 'Web') {
+          let url
+          if (window.location.href.indexOf('index.html') !== -1) {
+            url = window.location.href.replace(
+              'index.html',
+              `${path}/index.html`
+            )
+          } else {
+            url = window.location.href + '/' + path
+            if (url.indexOf('/index.html') === -1) {
+              url += '/index.html'
+            }
+          }
+          window.location.href = url
+        } else {
+          let target = url.replace('index.js', `${path}/index.js`)
+          if (path.startsWith('http')) {
+            target = path
+          }
+          navigator.push({
+            key: target,
+            url: target,
+            router: path,
+            animated: 'true'
+          })
+        }
+      }
+    }
   }
-};
 </script>
