@@ -20,6 +20,7 @@
     ]
   },
   "dependencies": {
+    "@antv/f2": "^3.3.0",
     "@weex-project/weex-picker": "^0.2.4",
     "extend": "^3.0.0",
     "flyio": "^0.6.2",
@@ -39,7 +40,8 @@
     "weex-bui": "https://github.com/snice/weex-bui.git",
     "weex-droplet-ui": "^1.0.0-alpha.100",
     "weex-flymeui": "https://github.com/snice/weex-flymeui.git#0.1.25",
-    "weex-ui": "^0.6.7"
+    "weex-ui": "^0.6.7",
+    "wolfy87-eventemitter": "^5.2.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",

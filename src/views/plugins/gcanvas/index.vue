@@ -38,6 +38,12 @@
             subname: '官方simple',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'simple'
+          },
+          {
+            name: 'f2',
+            subname: 'f2',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'f2'
           }
         ]
       }
