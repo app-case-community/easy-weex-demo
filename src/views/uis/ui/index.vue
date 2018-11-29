@@ -16,7 +16,7 @@
           thumb="http://gw.alicdn.com/tfs/TB12uu9c9_I8KJjy0FoXXaFnVXa-128-128.png"
           @click="handleClick('cell')"
         />
-        <am-list-item v-if="isWeb"
+        <am-list-item
           title="EpSlider"
           thumb="http://gw.alicdn.com/tfs/TB1Tgrbc46I8KJjy0FgXXXXzVXa-128-128.png"
           @click="handleClick('ep-slider')"
@@ -90,7 +90,7 @@
           thumb="http://gw.alicdn.com/tfs/TB1TDe9c26H8KJjy0FjXXaXepXa-128-128.png"
           @click="handleClick('radio')"
         />
-        <am-list-item v-if="isWeb"
+        <am-list-item
           title="SlideBar"
           thumb="http://gw.alicdn.com/tfs/TB1UgK1cZrI8KJjy0FhXXbfnpXa-128-128.png"
           @click="handleClick('slider-bar')"

@@ -29,6 +29,7 @@ const config = {
     '@views': 'src/views',
     '@components': 'src/components',
     '@bui': 'node_modules/weex-bui',
+    '@official': 'src/views/cases/official',
     '@xianyu': 'src/views/cases/xianyu',
     '@yanxuan': 'src/views/cases/yanxuan'
   },

@@ -119,6 +119,12 @@
         ],
         openCasesList: [
           {
+            name: '官方示例',
+            subname: 'official',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'cases/official'
+          },
+          {
             name: '咸鱼',
             subname: 'weex-xianyu',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
