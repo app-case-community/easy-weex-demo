@@ -14,9 +14,9 @@
   dependencies:
     "@antv/util" "~1.2.5"
 
-"@antv/f2@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.npmjs.org/@antv/f2/-/f2-3.3.0.tgz#ee96183a1338eb1951b2f6411742032803155357"
+"@antv/f2@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/@antv/f2/-/f2-3.3.1.tgz#17ef9e6d9e7d7f8445becddb552649bc122473e4"
   dependencies:
     "@antv/adjust" "~0.0.3"
     "@antv/attr" "~0.0.3"
@@ -6272,6 +6272,10 @@ loose-envify@^1.0.0:
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+lottie-web@^5.4.2:
+  version "5.4.2"
+  resolved "https://registry.npmjs.org/lottie-web/-/lottie-web-5.4.2.tgz#efe727ce20170946969929b50f30bfef3ec7ae55"
 
 loud-rejection@^1.0.0:
   version "1.6.0"

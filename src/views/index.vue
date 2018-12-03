@@ -115,6 +115,18 @@
             subname: 'gcanvas',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/gcanvas'
+          },
+          {
+            name: 'lottie',
+            subname: 'lottie',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'plugins/lottie'
+          },
+          {
+            name: 'f2',
+            subname: 'f2',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'plugins/f2'
           }
         ],
         openCasesList: [

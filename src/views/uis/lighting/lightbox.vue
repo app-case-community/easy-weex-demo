@@ -66,7 +66,7 @@
         imageList1: [
           {
             src: require('./images/banner1.jpg'),
-            imgInfo: "'黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹" 
+            imgInfo: "'黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹'\n黑色星期一'后美股强力反弹"
           },
           {
             src: require('./images/banner2.jpg'),
