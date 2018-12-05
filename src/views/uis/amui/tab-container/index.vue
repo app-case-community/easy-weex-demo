@@ -143,7 +143,7 @@
     beforeCreate () {
       dom.addRule('fontFace', {
         'fontFamily': 'testIcon',
-        'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
+        'src': "url('local://weex.com/fonts/font_666154_scqtwgh1e27kqpvi.ttf')"
       })
     }
   }

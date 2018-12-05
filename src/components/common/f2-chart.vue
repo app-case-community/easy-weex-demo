@@ -27,7 +27,7 @@
         if (isWeb) {
           return `https://oss.zhuzhe.wang/f2/${this.type}.html`
         }
-        return `local://f2/${this.type}.html`
+        return `local://weex.com/f2/${this.type}.html`
       }
     },
     methods: {

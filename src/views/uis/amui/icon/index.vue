@@ -75,7 +75,7 @@
       // 添加自己的图标文件
       dom.addRule('fontFace', {
         'fontFamily': 'myIcon', // 与 <am-icon/> 组件的 fontFamily 属性对应
-        'src': "url('https://at.alicdn.com/t/font_666154_scqtwgh1e27kqpvi.ttf')"
+        'src': "url('local://weex.com/fonts/font_666154_scqtwgh1e27kqpvi.ttf')"
       })
     },
     methods: {}
