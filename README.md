@@ -46,3 +46,6 @@
     ```sh
     #!/usr/bin/env node --max-old-space-size=2048
     ```
+## 欢迎讨论
+
+![qq](https://oss.zhuzhe.wang/imgs/easy-weex-qq-qun.png)
