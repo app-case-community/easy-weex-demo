@@ -4,13 +4,16 @@
 ## 扫码体验
 
     weex
-
+    
 ![weex](https://oss.zhuzhe.wang/imgs/3071542550029_.pic_hd.png)
 
     web
     
 ![web](https://oss.zhuzhe.wang/imgs/3091542550275_.pic_hd.png)
 
+  [在线体验](http://oss.zhuzhe.wang/dist/web/index.html)
+  
+---
 
 ## 集成了第三方weex ui
 
@@ -22,9 +25,17 @@
 * wx-progress
 * lighting-ui
 
+## 集成插件
+* bindingx
+* gcanvas
+* lottie
+* f2
+
 ## 集成了开源案例
 
+* weex playground
 * 咸鱼
+* 严选
 
 
 ## 问题
