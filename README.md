@@ -1,6 +1,11 @@
 # easy weex demo
   [easy weex](https://github.com/snice/easy-weex)的demo
 
+## 下载
+
+    android
+ ![android](https://oss.zhuzhe.wang/dist/1544177718.png)
+
 ## 扫码体验
 
     weex
