@@ -4,17 +4,17 @@
 ## 下载
 
     android
- ![android](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/1544177718.png)
+ ![android](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/1544177718.png)
 
 ## 扫码体验
 
     weex
     
-![weex](https://snice.oss-cn-hangzhou.aliyuncs.com/imgs/3071542550029_.pic_hd.png)
+![weex](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/3071542550029_.pic_hd.png)
 
     web
     
-![web](https://snice.oss-cn-hangzhou.aliyuncs.com/imgs/3091542550275_.pic_hd.png)
+![web](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/3091542550275_.pic_hd.png)
 
   [在线体验](http://snice.oss-cn-hangzhou.aliyuncs.com/dist/web/index.html)
   
