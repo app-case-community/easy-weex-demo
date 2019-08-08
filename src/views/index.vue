@@ -127,6 +127,12 @@
             subname: 'f2',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/f2'
+          },
+          {
+            name: 'login',
+            subname: 'cross login',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'plugins/login'
           }
         ],
         openCasesList: [

@@ -33,6 +33,12 @@ const config = {
     '@xianyu': 'src/views/cases/xianyu',
     '@yanxuan': 'src/views/cases/yanxuan'
   },
+  externals: {
+    light: 'weex'
+  },
+  node: {
+    fs: 'empty'
+  },
   loaders,
   plugins,
   done () {}

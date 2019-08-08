@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <scroller>
     <gcanvas
       v-if="isWeex"
       ref="canvas_1"
@@ -37,7 +37,7 @@
       style="width:750px;height:400px;"
     ></canvas>
 
-  </div>
+  </scroller>
 </template>
 <script>
 import { enable, WeexBridge } from "gcanvas.js";
