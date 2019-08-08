@@ -4,19 +4,19 @@
 ## 下载
 
     android
- ![android](https://oss.zhuzhe.wang/dist/1544177718.png)
+ ![android](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/1544177718.png)
 
 ## 扫码体验
 
     weex
     
-![weex](https://oss.zhuzhe.wang/imgs/3071542550029_.pic_hd.png)
+![weex](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/3071542550029_.pic_hd.png)
 
     web
     
-![web](https://oss.zhuzhe.wang/imgs/3091542550275_.pic_hd.png)
+![web](https://snice.oss-cn-hangzhou.aliyuncs.com/dist/img/3091542550275_.pic_hd.png)
 
-  [在线体验](http://oss.zhuzhe.wang/dist/web/index.html)
+  [在线体验](http://snice.oss-cn-hangzhou.aliyuncs.com/dist/web/index.html)
   
 ---
 
@@ -53,4 +53,4 @@
     ```
 ## 欢迎讨论
 
-![qq](https://oss.zhuzhe.wang/imgs/easy-weex-qq-qun.png)
+![qq](https://snice.oss-cn-hangzhou.aliyuncs.com/imgs/easy-weex-qq-qun.png)
