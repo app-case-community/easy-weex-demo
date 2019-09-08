@@ -20,8 +20,8 @@
 body{
     background-color: white;
 }
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
         background-color: white;

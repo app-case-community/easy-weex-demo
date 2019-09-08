@@ -6,7 +6,7 @@ let utilFunc = {
   initIconFont () {
     let domModule = weex.requireModule('dom')
     domModule.addRule('fontFace', {
-      'fontFamily': 'iconfont',
+      'fontFamily': 'xyIconfont',
       'src': 'url(\'http://at.alicdn.com/t/font_426094_wezclb30gujtt9.ttf\')'
     })
   },

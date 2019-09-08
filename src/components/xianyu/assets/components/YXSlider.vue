@@ -7,8 +7,8 @@
     </slider>
 </template>
 <style scoped>
-.iconfont {
-  font-family: iconfont;
+.xyIconFont {
+  font-family: xyIconFont;
 }
 .image {
   width: 750px;

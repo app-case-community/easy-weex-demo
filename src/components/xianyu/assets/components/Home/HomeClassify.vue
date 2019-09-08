@@ -10,8 +10,8 @@
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
 

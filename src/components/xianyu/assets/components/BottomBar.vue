@@ -31,24 +31,24 @@
                     <div class="recomlist" >
                     <div class="recomlist-type" >
 
-                      <text class="bar-ic iconfont">&#xe679;</text>
+                      <text class="bar-ic xyIconFont">&#xe679;</text>
                       <text class="explain">卖闲置</text>
 
                       </div>
                     <div  class="recomlist-type">
 
-                      <text class="bar-ic iconfont">&#xe673;</text>
+                      <text class="bar-ic xyIconFont">&#xe673;</text>
 
                       <text class="explain">出租房屋</text>
                     </div>
                     <div  class="recomlist-type ">
-                      <text class="bar-ic iconfont">&#xe91e;</text>
+                      <text class="bar-ic xyIconFont">&#xe91e;</text>
 
                       <text class="explain">发布服务</text>
                     </div>
                 </div>
                   <div class="footer">
-                      <text class="bar-ic iconfont" @click="change3">&#xe91e;</text>
+                      <text class="bar-ic xyIconFont" @click="change3">&#xe91e;</text>
 
                      </div>
         </div>
@@ -57,34 +57,34 @@
     <div class="wrapper">
         <!--<div v-for="i in items">-->
             <!--<div class="bar-item" @click="tabTo(i.key)">-->
-                <!--<text class="bar-ic iconfont">{{i.icon}}</text>-->
+                <!--<text class="bar-ic xyIconFont">{{i.icon}}</text>-->
                 <!--<text class="bar-txt">{{i.name}}</text>-->
             <!--</div>-->
         <!--</div>-->
 
         <div class="bar-item" @click="tabTo('home')">
-            <text class="bar-ic iconfont" :style="testCS">&#xe665;</text>
+            <text class="bar-ic xyIconFont" :style="testCS">&#xe665;</text>
             <text class="bar-txt">首页</text>
         </div>
         <div class="bar-item" @click="tabTo('topic')">
-            <text class="bar-ic iconfont">&#xe679;</text>
+            <text class="bar-ic xyIconFont">&#xe679;</text>
             <text class="bar-txt">鱼塘</text>
         </div>
         <div class="bar-item act" @click="change1" >
           <div style="margin-top:-30px;margin-bottom:8px;">
-            <text class="bar-ic iconfont" style="font-size:40px;color:#ffda44;">&#xe62b;</text>
+            <text class="bar-ic xyIconFont" style="font-size:40px;color:#ffda44;">&#xe62b;</text>
 
           </div>
             <text class="bar-txt">添加</text>
         </div>
 
         <div class="bar-item" @click="tabTo('shop')">
-            <text class="bar-ic iconfont" >&#xe69d;</text>
+            <text class="bar-ic xyIconFont" >&#xe69d;</text>
 
             <text class="bar-txt">消息</text>
         </div>
         <div class="bar-item" @click="tabTo('my')">
-            <text class="bar-ic iconfont">&#xe759;</text>
+            <text class="bar-ic xyIconFont">&#xe759;</text>
             <text class="bar-txt">个人</text>
         </div>
     </div>
@@ -92,8 +92,8 @@
 
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
         position: fixed;

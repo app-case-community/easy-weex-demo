@@ -2,36 +2,36 @@
     <div class="wrapper">
         <!--<div v-for="i in items">-->
             <!--<div class="bar-item" @click="tabTo(i.key)">-->
-                <!--<text class="bar-ic iconfont">{{i.icon}}</text>-->
+                <!--<text class="bar-ic xyIconFont">{{i.icon}}</text>-->
                 <!--<text class="bar-txt">{{i.name}}</text>-->
             <!--</div>-->
         <!--</div>-->
 
         <div class="bar-item" @click="tabTo('home')">
-            <text class="bar-ic iconfont" :style="testCS">&#xe660;</text>
+            <text class="bar-ic xyIconFont" :style="testCS">&#xe660;</text>
             <text class="bar-txt">首页</text>
         </div>
         <div class="bar-item" @click="tabTo('topic')">
-            <text class="bar-ic iconfont">&#xe744;</text>
+            <text class="bar-ic xyIconFont">&#xe744;</text>
             <text class="bar-txt">专题</text>
         </div>
         <div class="bar-item act" @click="tabTo('class')">
-            <text class="bar-ic iconfont">&#xe605;</text>
+            <text class="bar-ic xyIconFont">&#xe605;</text>
             <text class="bar-txt">分类</text>
         </div>
         <div class="bar-item" @click="tabTo('shop')">
-            <text class="bar-ic iconfont">&#xe61a;</text>
+            <text class="bar-ic xyIconFont">&#xe61a;</text>
             <text class="bar-txt">购物车</text>
         </div>
         <div class="bar-item" @click="tabTo('my')">
-            <text class="bar-ic iconfont">&#xe639;</text>
+            <text class="bar-ic xyIconFont">&#xe639;</text>
             <text class="bar-txt">个人</text>
         </div>
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
         position: fixed;

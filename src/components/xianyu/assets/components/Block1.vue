@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <text class="tlt iconfont">{{title}} &#xe74b;</text>
+        <text class="tlt xyIconFont">{{title}} &#xe74b;</text>
         <div class="box">
             <div class="box-item" v-for="(i,idx) in items" :key="idx" @click="jumpWeb(i.url)">
                 <image class="i-image" resize="cover" :src="i.bg" />
@@ -12,8 +12,8 @@
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
         background-color: #fff;

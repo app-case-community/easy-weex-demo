@@ -16,12 +16,12 @@
             <text jact="true" class="i-c">婴童</text>
             <text jact="true" class="i-c">志趣</text>
         </scroller>
-        <text class="more iconfont">&#xe661;</text>
+        <text class="more xyIconFont">&#xe661;</text>
     </div>
 </template>
 <style scoped>
-.iconfont {
-  font-family: iconfont;
+.xyIconFont {
+  font-family: xyIconFont;
 }
 .wrapper {
   position: fixed;

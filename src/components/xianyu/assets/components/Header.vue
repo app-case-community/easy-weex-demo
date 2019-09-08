@@ -1,20 +1,20 @@
 <template>
     <div class="wrapper">
         <div class="scan">
-            <text class="ic iconfont">&#xe606;</text>
+            <text class="ic xyIconFont">&#xe606;</text>
             <text class="txt">扫一扫</text>
         </div>
-        <text class="search iconfont"  @click="jumpWeb()">&#xe65c; 搜索商品，共8888款好物</text>
+        <text class="search xyIconFont"  @click="jumpWeb()">&#xe65c; 搜索商品，共8888款好物</text>
         <div class="notice" @click="jumpto('category')">
-            <text class="ic iconfont">&#xe7f9;</text>
+            <text class="ic xyIconFont">&#xe7f9;</text>
             <text class="txt">分类</text>
         </div>
     </div>
 </template>
 <style scoped>
 
-    .iconfont {
-        font-family:iconfont;
+    .xyIconFont {
+        font-family:xyIconFont;
     }
     .wrapper{
         position: fixed;
