@@ -1,20 +1,20 @@
 <template>
     <div :class="['wrapper', isIpx&&isIpx()?'w-ipx':'']" >
         <div class="scan">
-            <text class="ic iconfont">&#xe689;</text>
+            <text class="ic yxIconFont">&#xe689;</text>
             <text class="txt">扫一扫</text>
         </div>
-        <text class="search iconfont"  @click="jumpWeb()">&#xe65c; 搜索商品，共8888款好物</text>
+        <text class="search yxIconFont"  @click="jumpWeb()">&#xe65c; 搜索商品，共8888款好物</text>
         <div class="notice">
-            <text class="ic iconfont">&#xe70a;</text>
+            <text class="ic yxIconFont">&#xe70a;</text>
             <text class="txt">消息</text>
         </div>
     </div>
 </template>
 <style scoped>
 
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
         position: fixed;

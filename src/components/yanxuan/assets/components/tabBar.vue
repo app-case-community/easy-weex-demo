@@ -2,38 +2,38 @@
     <div :class="['wrapper', isIpx&&isIpx()?'w-ipx':'']">
         <!--<div v-for="i in items">-->
             <!--<div class="bar-item" @click="tabTo(i.key)">-->
-                <!--<text class="bar-ic iconfont">{{i.icon}}</text>-->
+                <!--<text class="bar-ic yxIconFont">{{i.icon}}</text>-->
                 <!--<text class="bar-txt">{{i.name}}</text>-->
             <!--</div>-->
         <!--</div>-->
 
         <div class="bar-item" @click="tabTo('home')">
-            <text class="bar-ic iconfont" :class="[this.isActive('home')]">&#xe660;</text>
+            <text class="bar-ic yxIconFont" :class="[this.isActive('home')]">&#xe660;</text>
             <text class="bar-txt" :class="[this.isActive('home')]">首页</text>
         </div>
         <div class="bar-item" @click="tabTo('topic')">
-            <text class="bar-ic iconfont" :class="[this.pIndexKey == 'topic'?'bar-active':'']">&#xe744;</text>
+            <text class="bar-ic yxIconFont" :class="[this.pIndexKey == 'topic'?'bar-active':'']">&#xe744;</text>
             <text class="bar-txt" :class="[this.pIndexKey == 'topic'?'bar-active':'']">专题</text>
             <text class="notice-dot"></text>
         </div>
         <div class="bar-item" @click="tabTo('class')">
-            <text class="bar-ic iconfont" :class="[this.isActive('class')]">&#xe605;</text>
+            <text class="bar-ic yxIconFont" :class="[this.isActive('class')]">&#xe605;</text>
             <text class="bar-txt" :class="[this.isActive('class')]">分类</text>
         </div>
         <div class="bar-item" @click="tabTo('shop')">
-            <text class="bar-ic iconfont" :class="[this.isActive('shop')]">&#xe61a;</text>
+            <text class="bar-ic yxIconFont" :class="[this.isActive('shop')]">&#xe61a;</text>
             <text class="bar-txt" :class="[this.isActive('shop')]">购物车</text>
         </div>
         <div class="bar-item" @click="tabTo('my')">
-            <text class="bar-ic iconfont" :class="[this.isActive('my')]">&#xe639;</text>
+            <text class="bar-ic yxIconFont" :class="[this.isActive('my')]">&#xe639;</text>
             <text class="bar-txt" :class="[this.isActive('my')]">个人</text>
             <text class="i-notice">2</text>
         </div>
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
         position: fixed;

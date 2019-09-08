@@ -7,9 +7,9 @@
             <div class="cell-button" @click="jumpWeb('https://m.you.163.com/act/pub/DxDpYNfbBd.html')">
                 <yx-slider :imageList="YXBanners" ></yx-slider>
                 <div class="slogan">
-                    <text class="i-slg iconfont">&#xe63a; 网易自营品牌</text>
-                    <text class="i-slg iconfont">&#xe63a; 30天无忧退货</text>
-                    <text class="i-slg iconfont">&#xe63a; 48小时快速退款</text>
+                    <text class="i-slg yxIconFont">&#xe63a; 网易自营品牌</text>
+                    <text class="i-slg yxIconFont">&#xe63a; 30天无忧退货</text>
+                    <text class="i-slg yxIconFont">&#xe63a; 48小时快速退款</text>
                 </div>
             </div>
             <div class="cell-button">
@@ -31,8 +31,8 @@
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
     }

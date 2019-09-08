@@ -1,12 +1,12 @@
 <template>
     <div :class="['wrapper', isIpx&&isIpx()?'w-ipx':'']" >
-        <text class="search iconfont">&#xe65c; 搜索商品，共8888款好物</text>
+        <text class="search yxIconFont">&#xe65c; 搜索商品，共8888款好物</text>
     </div>
 </template>
 <style scoped>
 
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
         position: fixed;

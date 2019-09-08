@@ -2,9 +2,9 @@
     <div :class="['wrapper', isIpx&&isIpx()?'w-ipx':'']">
         <header4 title="购物车" :rightBtn="rightBtn"></header4>
         <div class="slogan">
-            <text class="i-slg iconfont">&#xe63a; 30天无忧退换货</text>
-            <text class="i-slg iconfont">&#xe63a; 48小时快速退款</text>
-            <text class="i-slg iconfont">&#xe63a; 满88元免邮费</text>
+            <text class="i-slg yxIconFont">&#xe63a; 30天无忧退换货</text>
+            <text class="i-slg yxIconFont">&#xe63a; 48小时快速退款</text>
+            <text class="i-slg yxIconFont">&#xe63a; 满88元免邮费</text>
         </div>
         <scroller class="main-list" offset-accuracy="300px">
             <refresher></refresher>
@@ -20,8 +20,8 @@
 </template>
 <style scoped>
 
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
         background-color: #f4f4f4;

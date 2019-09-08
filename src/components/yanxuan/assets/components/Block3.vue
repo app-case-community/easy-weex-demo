@@ -12,8 +12,8 @@
     </div>
 </template>
 <style scoped>
-    .iconfont {
-        font-family:iconfont;
+    .yxIconFont {
+        font-family:yxIconFont;
     }
     .wrapper{
         background-color: #fff;
