@@ -18,6 +18,7 @@
         <am-list header="weex 插件">
             <template v-for="(component, idx) in openPluginList">
                 <am-list-item class="list-item"
+                    v-if="component.isSupport === undefined || component.isSupport === true"
                     :key="idx"
                     :title="component.name"
                     :extra="component.subname"
@@ -105,30 +106,35 @@
         ],
         openPluginList: [
           {
+            isSupport: (weex.supports && weex.supports('@module/bindingx')) || false,
             name: 'BindingX',
             subname: 'bindingx',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/bindingx'
           },
           {
+            isSupport: (weex.supports && weex.supports('@component/gcanvas')) || false,
             name: 'GCanvas',
             subname: 'gcanvas',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/gcanvas'
           },
           {
+            isSupport: (weex.supports && weex.supports('@component/lottie')) || false,
             name: 'lottie',
             subname: 'lottie',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/lottie'
           },
           {
+            isSupport: (weex.supports && weex.supports('@component/gcanvas')) || false,
             name: 'f2',
             subname: 'f2',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'plugins/f2'
           },
           {
+            isSupport: false,
             name: 'login',
             subname: 'cross login',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
