@@ -12,8 +12,8 @@
       </div>
       <category title="自定义图标"></category>
       <div class="icon-total">
-        <lc-icon :type="true" :name="name1" fontFamily="iconfont" :src="src"></lc-icon>
-        <lc-icon :type="true" :name="name2" fontFamily="iconfont" :src="src" style="margin-left:80px;"></lc-icon>
+        <lc-icon :type="true" :name="name1" fontFamily="liconfont" :src="src"></lc-icon>
+        <lc-icon :type="true" :name="name2" fontFamily="liconfont" :src="src" style="margin-left:80px;"></lc-icon>
       </div>
 
     </scroller>

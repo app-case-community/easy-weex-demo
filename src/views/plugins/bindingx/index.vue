@@ -38,6 +38,12 @@
             subname: '官方simple',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
             path: 'simple'
+          },
+          {
+            name: 'Vue 案例',
+            subname: 'vue demo',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'vue'
           }
         ]
       }

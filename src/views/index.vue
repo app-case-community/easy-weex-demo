@@ -149,6 +149,18 @@
             path: 'cases/official'
           },
           {
+            name: 'Natjs',
+            subname: 'nat-explorer',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'cases/nat-explorer'
+          },
+          {
+            name: 'Rax',
+            subname: 'raxjs',
+            icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
+            path: 'https://market.m.taobao.com/app/raxjs/universal-demo-app/pages/index?wh_weex=true'
+          },
+          {
             name: '咸鱼',
             subname: 'weex-xianyu',
             icon: 'https://qr0ros6qh.lightyy.com/images/icon/button.png',
@@ -168,22 +180,28 @@
         GLog.d('jump->' + path)
         if (env.platform === 'Web') {
           let url
-          if (window.location.href.indexOf('index.html') !== -1) {
-            url = window.location.href.replace(
-              'index.html',
-              `${path}/index.html`
-            )
+          if (path.startsWith('http://') || path.startsWith('https://')) {
+            url = path
           } else {
-            url = window.location.href + '/' + path
-            if (url.indexOf('/index.html') === -1) {
-              url += '/index.html'
+            if (window.location.href.indexOf('index.html') !== -1) {
+              url = window.location.href.replace(
+                'index.html',
+                `${path}/index.html`
+              )
+            } else {
+              url = window.location.href + '/' + path
+              if (url.indexOf('/index.html') === -1) {
+                url += '/index.html'
+              }
             }
           }
           window.location.href = url
         } else {
-          let target = url.replace('index.js', `${path}/index.js`)
-          if (path.startsWith('http')) {
+          let target
+          if (path.startsWith('http://') || path.startsWith('https://')) {
             target = path
+          } else {
+            target = url.replace('index.js', `${path}/index.js`)
           }
           navigator.push({
             key: target,
