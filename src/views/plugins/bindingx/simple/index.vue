@@ -38,10 +38,10 @@ export default {
       flag: 0
     };
   },
+  mounted () {
+    this.bind();
+  },
   methods: {
-    onappear() {
-      // this.bind();
-    },
     bind() {
       var box = getEl(this.$refs.box);
       bindingx.bind(
