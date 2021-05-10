@@ -26,7 +26,7 @@
     "flyio": "^0.6.2",
     "gcanvas.js": "^0.0.8",
     "lighting-ui": "^0.3.100",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "lottie-web": "^5.4.2",
     "moment": "^2.17.1",
     "universal-env": "^0.6.6",
